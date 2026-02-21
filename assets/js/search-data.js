@@ -42,7 +42,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/publication/";
+                window.location.href = "/publications/";
               },
             },{id: "post-the-eq-side-of-ai",
         

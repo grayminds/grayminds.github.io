@@ -3,17 +3,17 @@
 ## Overview
 
 This package converts the about page from al-folio's default single-column layout to a
-two-column layout with a content-rich sidebar.  The bio text has been tightened (~40% shorter)
+two-column layout with a content-rich sidebar. The bio text has been tightened (~40% shorter)
 with visual emphasis elements.
 
 ## Files Included
 
-| File | Destination in Repo | Purpose |
-|------|-------------------|---------|
-| `_layouts/about_custom.liquid` | `_layouts/about_custom.liquid` | Custom two-column layout |
-| `_sass/_about_custom.scss` | `_sass/_about_custom.scss` | All custom styles |
-| `_pages/about.md` | `_pages/about.md` | Revised bio with new frontmatter |
-| `preview_about_page.html` | (do not deploy) | Visual preview only |
+| File                           | Destination in Repo            | Purpose                          |
+| ------------------------------ | ------------------------------ | -------------------------------- |
+| `_layouts/about_custom.liquid` | `_layouts/about_custom.liquid` | Custom two-column layout         |
+| `_sass/_about_custom.scss`     | `_sass/_about_custom.scss`     | All custom styles                |
+| `_pages/about.md`              | `_pages/about.md`              | Revised bio with new frontmatter |
+| `preview_about_page.html`      | (do not deploy)                | Visual preview only              |
 
 ## Installation Steps
 
@@ -72,11 +72,13 @@ git push
 ## What Changed in the Bio
 
 **Removed:**
+
 - Film score / cinematography paragraph (restated the tapestry point)
 - "Perhaps we might have threads in common" intro line (replaced by clusters)
 - "Get in Touch" H2 section (replaced by sidebar contact card)
 
 **Added / Changed:**
+
 - Opening question bolded for visual weight
 - "I call it a tapestry" pulled out as a styled block element with left border accent
 - "It shaped it" and "no algorithm should be trusted to handle alone" bolded as anchor phrases
@@ -86,12 +88,12 @@ git push
 ## Customization Notes
 
 **Theme color:** The SCSS uses `var(--global-theme-color)` which inherits from al-folio's
-theme settings.  No hardcoded colors.
+theme settings. No hardcoded colors.
 
 **Sidebar excerpts:** The teaser text in the sidebar cards is hardcoded in the layout file.
 If you change the content on those pages, update the excerpts in `about_custom.liquid` to match.
 
-**Cluster groupings:** Edit the clusters directly in `about_custom.liquid`.  If you add new
+**Cluster groupings:** Edit the clusters directly in `about_custom.liquid`. If you add new
 facet pages, add them to the appropriate cluster.
 
 **Mobile behavior:** On screens under 768px, the sidebar (photo + cards) stacks above the bio.
