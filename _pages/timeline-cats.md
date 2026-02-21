@@ -13,5 +13,4 @@ horizontal: false
 <link rel="stylesheet" href="/assets/timeline/css/timeline-custom.css">
 <script src="/assets/timeline/js/timeline.js"></script>
 
-
 {% include timeline.liquid datafile="timeline_cats" erasfile="timeline_eras" %}

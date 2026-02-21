@@ -9,7 +9,6 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
-
       {% comment %} Position title {% endcomment %}
       {% capture position_title %}{% if entry.position %}{{ entry.position }}{% endif %}{% endcapture %}
       {% assign position_title = position_title | strip %}
@@ -47,9 +46,7 @@
       {% if start_date != '' %}
         {% assign startYear = start_date | split: '-' | first %}
         {% assign endYear = end_date | split: '-' | first | default: 'Present' %}
-        <p class="mb-2" style="font-size: 0.85rem; color: #6c757d;">
-          <i class="fa-regular fa-calendar mr-1"></i>{{ startYear }} - {{ endYear }}
-        </p>
+        <p class="mb-2" style="font-size: 0.85rem; color: #6c757d;"><i class="fa-regular fa-calendar mr-1"></i>{{ startYear }} - {{ endYear }}</p>
       {% endif %}
 
       {% comment %} Summary (italic) {% endcomment %}
@@ -69,7 +66,6 @@
           {% endfor %}
         </ul>
       {% endif %}
-
     </li>
   {% endfor %}
 </ul>

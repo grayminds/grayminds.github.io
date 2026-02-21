@@ -339,15 +339,20 @@
 /* Icons
 ================================================== */
 @font-face {
-  font-family: 'tl-icons';
+  font-family: "tl-icons";
   src: url(../js/../css/icons/tl-icons.eot);
-  src: url(../js/../css/icons/tl-icons.eot?#iefix) format('embedded-opentype'), url(../js/../css/icons/tl-icons.ttf) format('truetype'), url(../js/../css/icons/tl-icons.woff2) format('woff2'), url(../js/../css/icons/tl-icons.woff) format('woff'), url(../js/../css/icons/tl-icons.svg#tl-icons) format('svg');
+  src:
+    url(../js/../css/icons/tl-icons.eot?#iefix) format("embedded-opentype"),
+    url(../js/../css/icons/tl-icons.ttf) format("truetype"),
+    url(../js/../css/icons/tl-icons.woff2) format("woff2"),
+    url(../js/../css/icons/tl-icons.woff) format("woff"),
+    url(../js/../css/icons/tl-icons.svg#tl-icons) format("svg");
   font-weight: normal;
   font-style: normal;
 }
 [class^="tl-icon-"],
 [class*=" tl-icon-"] {
-  font-family: 'tl-icons';
+  font-family: "tl-icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -598,7 +603,7 @@
 */
 @keyframes invertToBlack {
   from {
-    background-color: #FFF;
+    background-color: #fff;
   }
   to {
     background-color: #000;
@@ -606,7 +611,7 @@
 }
 @-webkit-keyframes invertToBlack {
   from {
-    background: #FFF;
+    background: #fff;
   }
   to {
     background: #000;
@@ -617,7 +622,7 @@
     background-color: #000;
   }
   to {
-    background-color: #FFF;
+    background-color: #fff;
   }
 }
 @-webkit-keyframes invertToWhite {
@@ -625,7 +630,7 @@
     background: #000;
   }
   to {
-    background: #FFF;
+    background: #fff;
   }
 }
 /* MenuBar Button
@@ -648,7 +653,7 @@
 .tl-menubar-button:hover,
 .tl-menubar-button:focus-visible {
   background: #333;
-  color: #FFF;
+  color: #fff;
 }
 .tl-menubar-button:hover:disabled,
 .tl-menubar-button:focus-visible:disabled {
@@ -664,11 +669,11 @@
 }
 .tl-mobile .tl-menubar-button:active {
   background: #c34528;
-  color: #FFF;
+  color: #fff;
 }
 @keyframes invertToBlack {
   from {
-    background-color: #FFF;
+    background-color: #fff;
   }
   to {
     background-color: #000;
@@ -676,7 +681,7 @@
 }
 @-webkit-keyframes invertToBlack {
   from {
-    background: #FFF;
+    background: #fff;
   }
   to {
     background: #000;
@@ -687,7 +692,7 @@
     background-color: #000;
   }
   to {
-    background-color: #FFF;
+    background-color: #fff;
   }
 }
 @-webkit-keyframes invertToWhite {
@@ -695,7 +700,7 @@
     background: #000;
   }
   to {
-    background: #FFF;
+    background: #fff;
   }
 }
 /* MESSAGE 
@@ -730,7 +735,7 @@
   text-transform: uppercase;
   margin-top: 7.5px;
   margin-bottom: 7.5px;
-  text-shadow: 1px 1px 1px #FFF;
+  text-shadow: 1px 1px 1px #fff;
 }
 .tl-message .tl-message-container .tl-message-content strong,
 .tl-message-full .tl-message-container .tl-message-content strong {
@@ -792,7 +797,7 @@
 .tl-message-full .tl-message-container .tl-message-content .tl-button {
   display: inline-block;
   cursor: pointer;
-  background-color: #FFF;
+  background-color: #fff;
   color: #333;
   padding: 10px;
   margin-top: 10px;
@@ -822,7 +827,7 @@
 }
 .tl-timenav .tl-timenav-line:before,
 .tl-timenav .tl-timenav-line:after {
-  font-family: 'tl-icons';
+  font-family: "tl-icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -897,10 +902,26 @@
   cursor: pointer;
   /* Animate Left Width and Top
 	================================================== */
-  -webkit-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -929,26 +950,54 @@
 	================================================== */
 }
 .tl-timemarker.tl-timemarker-fast {
-  -webkit-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 .tl-timemarker.tl-timemarker-fast .tl-timemarker-content-container {
-  -webkit-transition: width 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: width 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: width 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: width 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 .tl-timemarker.tl-timemarker-fast .tl-timemarker-timespan {
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 .tl-timemarker .tl-timemarker-timespan {
   pointer-events: none;
@@ -959,10 +1008,18 @@
   background-color: rgba(229, 229, 229, 0.15);
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -1005,7 +1062,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  box-shadow: 1px 1px 1px #FFF;
+  box-shadow: 1px 1px 1px #fff;
 }
 .tl-timemarker .tl-timemarker-line-left:after,
 .tl-timemarker .tl-timemarker-line-right:after {
@@ -1033,17 +1090,25 @@
   width: 100px;
   overflow: hidden;
   z-index: 6;
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   box-sizing: border-box;
   border: 1px solid #d9d9d9;
-  box-shadow: 1px 1px 1px #FFF;
+  box-shadow: 1px 1px 1px #fff;
 }
 .tl-timemarker .tl-timemarker-content-container:hover {
   z-index: 9;
@@ -1139,7 +1204,11 @@
   text-overflow: ellipsis;
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class^="tl-icon-"],
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class*=" tl-icon-"] {
+.tl-timemarker
+  .tl-timemarker-content-container
+  .tl-timemarker-content.tl-timemarker-content-small
+  .tl-timemarker-media-container
+  [class*=" tl-icon-"] {
   font-size: 12px;
 }
 .tl-timemarker:hover .tl-timemarker-timespan,
@@ -1166,10 +1235,18 @@
 .tl-timemarker:focus .tl-timemarker-content-container {
   background-color: #737373;
   border-color: #a6a6a6;
-  -webkit-transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1), width 250ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1), width 250ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1), width 250ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: height 250ms cubic-bezier(0.77, 0, 0.175, 1), width 250ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    height 250ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 250ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    height 250ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 250ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    height 250ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 250ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    height 250ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 250ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 .tl-timemarker:hover .tl-timemarker-content-container.tl-timemarker-content-container-small,
 .tl-timemarker:focus .tl-timemarker-content-container.tl-timemarker-content-container-small {
@@ -1177,7 +1254,7 @@
 }
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
-  color: #FFF;
+  color: #fff;
 }
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after,
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
@@ -1204,21 +1281,29 @@
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class^="tl-icon-"],
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"],
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"] {
-  color: #FFF;
+  color: #fff;
 }
-.tl-timemarker:hover.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after,
-.tl-timemarker:focus.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+.tl-timemarker:hover.tl-timemarker-active
+  .tl-timemarker-content-container
+  .tl-timemarker-content
+  .tl-timemarker-text
+  h2.tl-headline.tl-headline-fadeout:after,
+.tl-timemarker:focus.tl-timemarker-active
+  .tl-timemarker-content-container
+  .tl-timemarker-content
+  .tl-timemarker-text
+  h2.tl-headline.tl-headline-fadeout:after {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #FFF));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #fff));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* IE10+ */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
   /* IE6-9 */
@@ -1257,7 +1342,7 @@
   background-color: #333;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background-color: #FFF;
+  background-color: #fff;
   color: #333;
   z-index: 9;
   border-color: rgba(51, 51, 51, 0.5);
@@ -1266,18 +1351,22 @@
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
   color: #333;
 }
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+.tl-timemarker.tl-timemarker-active
+  .tl-timemarker-content-container
+  .tl-timemarker-content
+  .tl-timemarker-text
+  h2.tl-headline.tl-headline-fadeout:after {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #FFF));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #fff));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* IE10+ */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 80%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
   /* IE6-9 */
@@ -1357,10 +1446,26 @@
   z-index: 3;
   /* Animate Left Width and Top
 	================================================== */
-  -webkit-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -1371,10 +1476,22 @@
 	================================================== */
 }
 .tl-timeera.tl-timeera-fast {
-  -webkit-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 500ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -1414,10 +1531,18 @@
   height: 100%;
   width: 100px;
   overflow: hidden;
-  -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -1455,7 +1580,7 @@
   overflow: hidden;
   font-weight: normal;
   margin: 0;
-  color: #FFF;
+  color: #fff;
   margin-left: 10px;
 }
 .tl-timeera .tl-timeera-content-container .tl-timeera-content .tl-timeera-text h2.tl-headline.tl-headline-fadeout:after {
@@ -1504,10 +1629,26 @@
   -webkit-box-align: center;
   /* Animate Left Width and Top
 	================================================== */
-  -webkit-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition: left 1000ms cubic-bezier(0.77, 0, 0.175, 1), top 500ms cubic-bezier(0.77, 0, 0.175, 1), height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:
+    left 1000ms cubic-bezier(0.77, 0, 0.175, 1),
+    top 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    height 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -1515,7 +1656,7 @@
 }
 .tl-timegroup .tl-timegroup-message {
   color: #e0e0e0;
-  text-shadow: #FFF 0 2px 2px;
+  text-shadow: #fff 0 2px 2px;
   margin-left: 80px;
 }
 .tl-timegroup.tl-timegroup-alternate {
@@ -1538,7 +1679,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #FFF;
+  background-color: #fff;
   border-top: 1px solid #e5e5e5;
   z-index: 2;
 }
@@ -1580,7 +1721,7 @@
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick:before {
   content: "|";
   display: block;
-  color: #FFF;
+  color: #fff;
   width: 1px;
   overflow: hidden;
   border-left: 1px solid #bfbfbf;
@@ -1610,7 +1751,7 @@
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major {
   z-index: 1;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
   font-size: 12px;
@@ -1803,7 +1944,7 @@
 ================================================== */
 .tl-slide.tl-full-image-background,
 .tl-slide.tl-full-color-background {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background p,
@@ -1820,7 +1961,7 @@
 .tl-slide.tl-full-color-background h5,
 .tl-slide.tl-full-image-background h6,
 .tl-slide.tl-full-color-background h6 {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background a,
@@ -1845,28 +1986,28 @@
 .tl-slide.tl-full-color-background .tl-caption,
 .tl-slide.tl-full-image-background .tl-credit,
 .tl-slide.tl-full-color-background .tl-credit {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background .tl-media-twitter blockquote,
 .tl-slide.tl-full-color-background .tl-media-twitter blockquote,
 .tl-slide.tl-full-image-background .tl-media-blockquote blockquote,
 .tl-slide.tl-full-color-background .tl-media-blockquote blockquote {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background .tl-media-twitter blockquote p,
 .tl-slide.tl-full-color-background .tl-media-twitter blockquote p,
 .tl-slide.tl-full-image-background .tl-media-blockquote blockquote p,
 .tl-slide.tl-full-color-background .tl-media-blockquote blockquote p {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background .vcard a,
 .tl-slide.tl-full-color-background .vcard a,
 .tl-slide.tl-full-image-background .vcard .nickname,
 .tl-slide.tl-full-color-background .vcard .nickname {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 /* Full Image Background
@@ -2073,7 +2214,7 @@
 .tl-slidenav-next .tl-slidenav-content-container .tl-slidenav-title,
 .tl-slidenav-previous .tl-slidenav-content-container .tl-slidenav-description,
 .tl-slidenav-next .tl-slidenav-content-container .tl-slidenav-description {
-  text-shadow: 1px 1px 1px #FFF;
+  text-shadow: 1px 1px 1px #fff;
   color: #333;
 }
 .tl-slidenav-previous .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-icon,
@@ -2089,7 +2230,7 @@
 ================================================== */
 .tl-slidenav-next .tl-slidenav-icon,
 .tl-slidenav-previous .tl-slidenav-icon {
-  font-family: 'tl-icons';
+  font-family: "tl-icons";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2611,18 +2752,18 @@
   display: none;
 }
 .tl-media .tl-media-twitter .tl-icon-twitter {
-  color: #55ACEE;
+  color: #55acee;
 }
 .tl-media .tl-media-twitter .vcard a:hover,
 .tl-media .tl-media-twitter .vcard a.tl-date:hover {
   text-decoration: none;
-  color: #55ACEE;
+  color: #55acee;
 }
 .tl-media .tl-media-twitter .vcard a:hover .fn,
 .tl-media .tl-media-twitter .vcard a.tl-date:hover .fn,
 .tl-media .tl-media-twitter .vcard a:hover .nickname,
 .tl-media .tl-media-twitter .vcard a.tl-date:hover .nickname {
-  color: #55ACEE;
+  color: #55acee;
 }
 .tl-slide-media-only .tl-media .tl-media-twitter {
   width: 80%;
@@ -2776,7 +2917,7 @@
 }
 .tl-slide.tl-full-image-background .tl-media .tl-media-wikipedia h4 a,
 .tl-slide.tl-full-color-background .tl-media .tl-media-wikipedia h4 a {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background .tl-media .tl-media-wikipedia a:hover,
@@ -2849,7 +2990,7 @@
 }
 .tl-slide.tl-full-image-background .tl-media .tl-media-website h4 a,
 .tl-slide.tl-full-color-background .tl-media .tl-media-website h4 a {
-  color: #FFF !important;
+  color: #fff !important;
   text-shadow: 1px 1px 1px #000 !important;
 }
 .tl-slide.tl-full-image-background .tl-media .tl-media-website a:hover,
@@ -2875,7 +3016,7 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  background-color: #FFF;
+  background-color: #fff;
   color: #737373;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -2965,6 +3106,5 @@
 .tl-rtl .tl-credit {
   text-align: left;
 }
-
 
 /*# sourceMappingURL=timeline.css.map*/

@@ -18,12 +18,12 @@
   border: 1px solid #ccc;
 }
 
-#timeline-embed, #timeline-embed * {
+#timeline-embed,
+#timeline-embed * {
   color-scheme: light;
 }
 
-Increase the timenav height
-.tl-timenav {
+Increase the timenav height .tl-timenav {
   height: 350px !important;
 }
 

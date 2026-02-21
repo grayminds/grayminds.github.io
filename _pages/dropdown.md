@@ -10,14 +10,14 @@ children:
   - title: Timeline Testing with Cats
     permalink: /timeline-cats/
   - title: Publications
-    permalink: /publication/
+    permalink: /publications/
 
 #  - title: bookshelf
 #    permalink: /books/
 #  - title: divider
 #  - title: projects
 #    permalink: /projects/
-#  - title: teaching 
+#  - title: teaching
 #    permalink: /teaching/
 #  - title: repositories
 #    permalink: /repositories/

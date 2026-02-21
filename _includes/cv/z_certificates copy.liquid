@@ -21,7 +21,9 @@
       {% endif %}
 
       {% if entry.date or entry.valid_through %}
-        ({% if entry.date %}{{ entry.date | split: '-' | slice: 0, 1 | join: '' }}{% endif %}{% if entry.date and entry.valid_through %} to {% endif %}{% if entry.valid_through %}{{ entry.valid_through | split: '-' | slice: 0, 1 | join: '' }}{% endif %})
+        ({% if entry.date %}{{ entry.date | split: '-' | slice: 0, 1 | join: '' }}{% endif -%}
+        {%- if entry.date and entry.valid_through %} to {% endif -%}
+        {%- if entry.valid_through %}{{ entry.valid_through | split: '-' | slice: 0, 1 | join: '' }}{% endif %})
       {% endif %}
 
       {% if entry.credential_id %}

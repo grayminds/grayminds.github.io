@@ -134,7 +134,9 @@ layout: default
             {% assign body_parts = cv.summary_body | split: '
 
 ' %}
-            <p><strong>{{ cv.summary_lead }}</strong> <span class="font-weight-light">{{ body_parts[0] }}</span></p>
+            <p>
+              <strong>{{ cv.summary_lead }}</strong> <span class="font-weight-light">{{ body_parts[0] }}</span>
+            </p>
             {% if body_parts[1] %}
               <p class="font-weight-light">{{ body_parts[1] }}</p>
             {% endif %}
@@ -236,7 +238,9 @@ layout: default
           without requiring a layout edit every time.
           ============================================================
         {% endcomment %}
-        {% assign handled_sections = 'Experience,Volunteer,Overview,Key Accomplishments,Core Competencies,Education,Certificates,Skills' | split: ',' %}
+        {% assign handled_sections = 'Experience,Volunteer,Overview,Key Accomplishments,Core Competencies,Education,Certificates,Skills'
+          | split: ','
+        %}
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}

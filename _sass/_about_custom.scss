@@ -207,7 +207,9 @@
     text-decoration: none;
     padding: 0.15rem 0.5rem;
     border-radius: 3px;
-    transition: color 0.15s ease, background-color 0.15s ease;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease;
 
     &:hover {
       color: var(--global-theme-color);

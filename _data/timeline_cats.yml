@@ -73,7 +73,6 @@ title:
     text: "A chronological record of the cats who have shared my home."
 
 events:
-
   matisse:
     start_date:
       year: 1997
@@ -183,7 +182,7 @@ events:
         Peekaboo was a rehome after his first family had to move; he
         got his name from his habit of hiding under things and only
         peeking out.  But he quickly settled in and is known to be the 
-        most affectionate cat I've had.  
+        most affectionate cat I've had.
     media:
       url: "/assets/img/timeline_cats/peekaboo.20190128_131512.jpg"
       thumbnail: "/assets/img/timeline_cats/thumbs/peekaboo.20190128_131512_thumb.jpg"
@@ -194,7 +193,7 @@ events:
       - url: "/assets/img/timeline_cats/peekaboo+kaelie.20190730_110941.jpg"
         caption: "Peekie and Kaelie"
       - url: "/assets/img/timeline_cats/peekaboo+kaelie.20210915_131744.jpg"
-        caption: "Peekie and Kaelie"       
+        caption: "Peekie and Kaelie"
 
   kaelieko:
     start_date:
@@ -222,5 +221,4 @@ events:
       - url: "/assets/img/timeline_cats/peekaboo+kaelie.20190730_110941.jpg"
         caption: "Peekie and Kaelie"
       - url: "/assets/img/timeline_cats/peekaboo+kaelie.20210915_131744.jpg"
-        caption: "Peekie and Kaelie" 
-      
+        caption: "Peekie and Kaelie"

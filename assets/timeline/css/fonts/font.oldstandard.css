@@ -19,30 +19,30 @@ https://fonts.google.com/specimen/Old+Standard+TT
 /* GFX
 ================================================== */
 @font-face {
-  font-family: 'Old Standard TT';
+  font-family: "Old Standard TT";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQsbh3o1vLImiwAVvYawgcf2eVer1q9.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQsbh3o1vLImiwAVvYawgcf2eVer1q9.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Old Standard TT';
+  font-family: "Old Standard TT";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQubh3o1vLImiwAVvYawgcf2eVurQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQubh3o1vLImiwAVvYawgcf2eVurQ.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Old Standard TT';
+  font-family: "Old Standard TT";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-dTA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-dTA.ttf) format("truetype");
 }
 /*	Font Base
 ----------------------------------------------------- */
 .tl-timeline {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.3em;
@@ -53,7 +53,7 @@ https://fonts.google.com/specimen/Old+Standard+TT
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6 {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 46px;
@@ -64,34 +64,34 @@ https://fonts.google.com/specimen/Old+Standard+TT
   line-height: 52px;
 }
 .tl-timeline p {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-size: 16px;
   line-height: 1.3em;
 }
 .tl-timeline ul {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
 }
 .tl-timeline .tl-media .tl-media-wikipedia h4 a,
 .tl-timeline .tl-media h4,
 .tl-timeline .tl-media h4 a {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
 }
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
 }
 .tl-timeline .vcard {
-  font-family: 'Old Standard TT', serif !important;
+  font-family: "Old Standard TT", serif !important;
   font-weight: normal !important;
 }
 .tl-timeline .tl-slidenav-next,
 .tl-timeline .tl-slidenav-previous,
 .tl-timeline .tl-message,
 .tl-timeline .tl-timegroup-message {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -103,7 +103,7 @@ https://fonts.google.com/specimen/Old+Standard+TT
 }
 .tl-timeline .tl-headline-date,
 .tl-timeline h3.tl-headline-date {
-  font-family: 'Old Standard TT', serif !important;
+  font-family: "Old Standard TT", serif !important;
   font-weight: normal !important;
   text-transform: uppercase !important;
 }
@@ -112,31 +112,31 @@ https://fonts.google.com/specimen/Old+Standard+TT
   font-weight: normal !important;
 }
 .tl-timeline .tl-timenav-slider {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
 }
 .tl-timeline .tl-timenav-slider h2.tl-headline {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
   text-transform: uppercase;
 }
 .tl-timeline .tl-timenav-slider .tl-timeaxis {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-weight: 400;
   text-transform: uppercase;
 }
 .tl-timeline .tl-menubar {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
 }
 .tl-timeline blockquote,
 .tl-timeline blockquote p {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   font-style: italic;
   font-weight: 400;
   line-height: 1.3;
 }
 input[type="text"].editor-headline {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 46px;

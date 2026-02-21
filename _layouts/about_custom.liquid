@@ -1,39 +1,30 @@
 ---
 layout: default
 ---
-
 <div class="post">
   <article>
     {% if page.profile %}
       <div class="profile-container row">
-
         <!-- LEFT COLUMN: Name + Bio + Connect -->
         <div class="col-md-8 bio-column">
           <header class="post-header">
             <h1 class="post-title">
-              {% if site.title == "blank" %}
+              {% if site.title == 'blank' %}
                 <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
                 {{ site.last_name }}
               {% else %}
                 {{ site.title }}
               {% endif %}
             </h1>
-            <p class="about-subtitle">{{ page.subtitle }}
+            <p class="about-subtitle">
+              {{ page.subtitle }}
               <!-- Connect (end of bio column = natural CTA position) -->
               <div class="bio-connect">
                 <div class="connect-row">
-                  <a href="https://www.linkedin.com/in/graym" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                  </a>
-                  <a href="https://github.com/grayminds" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-youtube"></i> YouTube
-                  </a>
-                  <a href="mailto:grayminds@gmail.com">
-                    <i class="fas fa-envelope"></i> Email
-                  </a>
+                  <a href="https://www.linkedin.com/in/graym" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin"></i> LinkedIn </a>
+                  <a href="https://github.com/grayminds" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i> GitHub </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer"> <i class="fab fa-youtube"></i> YouTube </a>
+                  <a href="mailto:grayminds@gmail.com"> <i class="fas fa-envelope"></i> Email </a>
                 </div>
               </div>
             </p>
@@ -80,7 +71,8 @@ layout: default
               <a href="{{ '/what-i-believe/' | relative_url }}">What I Believe</a>
             </h3>
             <p class="sidebar-card-excerpt">
-              Good technology is invisible.  It removes friction, preserves human judgment, and gives people back the hours they were never supposed to lose.
+              Good technology is invisible. It removes friction, preserves human judgment, and gives people back the hours they were never supposed to
+              lose.
             </p>
             <a href="{{ '/what-i-believe/' | relative_url }}" class="sidebar-card-link">Read more &rarr;</a>
           </div>
@@ -91,7 +83,7 @@ layout: default
               <a href="{{ '/what-keeps-me-up/' | relative_url }}">What Keeps Me Up</a>
             </h3>
             <p class="sidebar-card-excerpt">
-              Technology lands on real people with real constraints.  The gaps between design intent and lived experience are where the damage happens.
+              Technology lands on real people with real constraints. The gaps between design intent and lived experience are where the damage happens.
             </p>
             <a href="{{ '/what-keeps-me-up/' | relative_url }}" class="sidebar-card-link">Read more &rarr;</a>
           </div>

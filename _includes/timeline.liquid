@@ -4,93 +4,93 @@
 <div id="timeline-embed" style="width:100%; height:800px;"></div>
 
 <script>
-  // Raw YAML data comes in as a map; we need to extract the values into an array.
-  var rawData = {{ timeline | jsonify }};
+    // Raw YAML data comes in as a map; we need to extract the values into an array.
+    var rawData = {{ timeline | jsonify }};
 
-  // Build the TimelineJS payload
-  var timelineData = {
-    title: rawData.title || {}
-  };
+    // Build the TimelineJS payload
+    var timelineData = {
+      title: rawData.title || {}
+    };
 
-  // Convert events from named map to array
-  if (rawData.events) {
-    if (Array.isArray(rawData.events)) {
-      timelineData.events = rawData.events;
+    // Convert events from named map to array
+    if (rawData.events) {
+      if (Array.isArray(rawData.events)) {
+        timelineData.events = rawData.events;
+      } else {
+        // events is a hash/map; extract values
+        timelineData.events = Object.keys(rawData.events).map(function(key) {
+          return rawData.events[key];
+        });
+      }
     } else {
-      // events is a hash/map; extract values
-      timelineData.events = Object.keys(rawData.events).map(function(key) {
-        return rawData.events[key];
-      });
+      timelineData.events = [];
     }
-  } else {
-    timelineData.events = [];
+
+    {% if eras_data and eras_data.eras %}
+    var erasData = {{ eras_data.eras | jsonify }};
+    timelineData.eras = erasData;
+    {% endif %}
+
+    console.log('TimelineJS payload:', JSON.stringify(timelineData, null, 2));
+
+    //window.timeline = new TL.Timeline('timeline-embed', timelineData);
+    window.timeline = new TL.Timeline('timeline-embed', timelineData, {
+      timenav_height: 300
+    });
+    //console.log('Timeline config:', window.timeline.config);
+
+  // Build a lookup of extra images per event
+  var imageData = {};
+  if (rawData.events) {
+    Object.keys(rawData.events).forEach(function(key) {
+      var evt = rawData.events[key];
+      if (evt.images && evt.images.length > 1) {
+        var headline = evt.text.headline;
+        imageData[headline] = {
+          images: evt.images,
+          current: 0
+        };
+      }
+    });
   }
 
-  {% if eras_data and eras_data.eras %}
-  var erasData = {{ eras_data.eras | jsonify }};
-  timelineData.eras = erasData;
-  {% endif %}
-
-  console.log('TimelineJS payload:', JSON.stringify(timelineData, null, 2));
-
-  //window.timeline = new TL.Timeline('timeline-embed', timelineData);
-  window.timeline = new TL.Timeline('timeline-embed', timelineData, {
-    timenav_height: 300
-  });
-  //console.log('Timeline config:', window.timeline.config);
-
-// Build a lookup of extra images per event
-var imageData = {};
-if (rawData.events) {
-  Object.keys(rawData.events).forEach(function(key) {
-    var evt = rawData.events[key];
-    if (evt.images && evt.images.length > 1) {
-      var headline = evt.text.headline;
-      imageData[headline] = {
-        images: evt.images,
-        current: 0
-      };
+  // Attach click-to-cycle on slide change and on click
+  document.getElementById('timeline-embed').addEventListener('click', function(e) {
+    var img = e.target;
+    if (img.tagName !== 'IMG') {
+      img = e.target.querySelector('img');
     }
+    if (!img) return;
+
+    // Find current event by matching unique_id to current_id
+    var currentId = window.timeline.current_id;
+    var currentEvent = window.timeline.config.events.find(function(evt) {
+      return evt.unique_id === currentId;
+    });
+
+    if (!currentEvent) return;
+
+    var headline = currentEvent.text.headline;
+    var data = imageData[headline];
+    if (!data) return;
+
+    data.current = (data.current + 1) % data.images.length;
+    var next = data.images[data.current];
+
+    img.src = next.url;
+
+    var captionEl = img.closest('.tl-media')?.querySelector('.tl-caption, .tl-credit');
+    if (captionEl && next.caption) {
+      captionEl.textContent = next.caption;
+    }
+
+    var counter = document.getElementById('img-counter');
+    if (!counter) {
+      counter = document.createElement('div');
+      counter.id = 'img-counter';
+      counter.style.cssText = 'text-align:center; font-size:12px; color:#888; margin-top:4px;';
+      img.parentElement?.appendChild(counter);
+    }
+    counter.textContent = (data.current + 1) + ' / ' + data.images.length;
   });
-}
-
-// Attach click-to-cycle on slide change and on click
-document.getElementById('timeline-embed').addEventListener('click', function(e) {
-  var img = e.target;
-  if (img.tagName !== 'IMG') {
-    img = e.target.querySelector('img');
-  }
-  if (!img) return;
-
-  // Find current event by matching unique_id to current_id
-  var currentId = window.timeline.current_id;
-  var currentEvent = window.timeline.config.events.find(function(evt) {
-    return evt.unique_id === currentId;
-  });
-
-  if (!currentEvent) return;
-
-  var headline = currentEvent.text.headline;
-  var data = imageData[headline];
-  if (!data) return;
-
-  data.current = (data.current + 1) % data.images.length;
-  var next = data.images[data.current];
-
-  img.src = next.url;
-
-  var captionEl = img.closest('.tl-media')?.querySelector('.tl-caption, .tl-credit');
-  if (captionEl && next.caption) {
-    captionEl.textContent = next.caption;
-  }
-
-  var counter = document.getElementById('img-counter');
-  if (!counter) {
-    counter = document.createElement('div');
-    counter.id = 'img-counter';
-    counter.style.cssText = 'text-align:center; font-size:12px; color:#888; margin-top:4px;';
-    img.parentElement?.appendChild(counter);
-  }
-  counter.textContent = (data.current + 1) + ' / ' + data.images.length;
-});
 </script>
