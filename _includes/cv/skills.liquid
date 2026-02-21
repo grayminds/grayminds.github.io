@@ -2,11 +2,11 @@
   Unified skills entry renderer for both formats
 {% endcomment %}
 
-<div class="card-text font-weight-light">
+<ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <div class="skill-item">
       {% if entry.icon %}
-        <i class="{{ entry.icon }}"></i>
+        <i class="{{ entry.icon }} mr-1"></i>
       {% endif %}
       <strong>
         {{- entry.name -}}
@@ -23,7 +23,7 @@
       {% endif %}
     </div>
   {% endfor %}
-</div>
+</ul>
 
 <style>
   .skill-item {

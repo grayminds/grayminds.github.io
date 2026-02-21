@@ -1,0 +1,62 @@
+// _sass/_facets.scss
+// Styles for the identity facets section on the homepage.
+// Import this in your main stylesheet or al-folio's custom SCSS.
+
+.facets-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--global-divider-color, #ddd);
+}
+
+.facets-group {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  gap: 1.5rem;
+}
+
+.facets-category {
+  font-family: var(--global-font-family, inherit);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-theme-color, #b5121b);
+  min-width: 5.5rem;
+  flex-shrink: 0;
+}
+
+.facets-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.facets-item {
+  font-size: 0.95rem;
+  color: var(--global-text-color, #333);
+  text-decoration: none;
+}
+
+a.facets-item:hover {
+  color: var(--global-theme-color, #b5121b);
+  text-decoration: underline;
+}
+
+.facets-separator {
+  color: var(--global-divider-color, #ccc);
+  margin: 0 0.25rem;
+}
+
+// Stack vertically on small screens
+@media (max-width: 576px) {
+  .facets-group {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .facets-category {
+    min-width: unset;
+  }
+}

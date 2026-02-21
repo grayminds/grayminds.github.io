@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-/* Built-in Sass modules you’ll likely use across partials */
+/* Built-in Sass modules you'll likely use across partials */
 @use "sass:math";
 @use "sass:string";
 
@@ -37,3 +37,7 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+// Custom page styles
+@use "about_custom";
+//@use "facets";

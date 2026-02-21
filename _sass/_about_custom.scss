@@ -1,0 +1,263 @@
+// _sass/_about_custom.scss
+// Custom styles for the two-column about page layout
+//
+// Activated via @use "about_custom"; in assets/css/main.scss
+
+// ============================================================
+// HEADER
+// ============================================================
+
+.bio-column .post-header {
+  margin-bottom: 1.5rem;
+
+  .post-title {
+    margin-bottom: 0.15rem;
+  }
+}
+
+.about-subtitle {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+}
+
+// ============================================================
+// GRID ALIGNMENT
+// ============================================================
+
+.profile-container.row {
+  align-items: flex-start;
+}
+
+// ============================================================
+// BIO COLUMN
+// ============================================================
+
+.bio-column {
+  padding-right: 2rem;
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+}
+
+.lead-question {
+  font-size: 1.15rem !important;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--global-text-color);
+  margin-bottom: 1.5rem;
+}
+
+.concept-highlight {
+  display: block !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  color: var(--global-theme-color) !important;
+  margin: 1.8rem 0 0.6rem 0 !important;
+  padding-left: 0.75rem !important;
+  border-left: 3px solid var(--global-theme-color) !important;
+  line-height: 1.4;
+}
+
+.bio-column hr {
+  border: none;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2rem 0;
+}
+
+// ============================================================
+// BIO CONNECT (bottom of left column)
+// ============================================================
+
+.bio-connect {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.connect-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+
+  a {
+    font-size: 0.88rem;
+    color: var(--global-text-color);
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.15s ease;
+
+    i {
+      color: var(--global-theme-color);
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// ============================================================
+// SIDEBAR
+// ============================================================
+
+.sidebar-column {
+  padding-left: 1.5rem;
+}
+
+.profile-photo {
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+// ============================================================
+// SIDEBAR CARDS
+// ============================================================
+
+.sidebar-card {
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+  border-top: 2px solid var(--global-theme-color) !important;
+}
+
+.sidebar-card-title {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+
+  a {
+    color: var(--global-text-color) !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--global-theme-color) !important;
+    }
+  }
+}
+
+.sidebar-card-excerpt {
+  font-size: 0.85rem !important;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-card-link {
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+// ============================================================
+// SIDEBAR CLUSTERS
+// ============================================================
+
+.sidebar-clusters {
+  padding-top: 1rem;
+  border-top: 2px solid var(--global-theme-color) !important;
+}
+
+.cluster {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cluster-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--global-theme-color);
+  min-width: 4.5rem;
+  flex-shrink: 0;
+}
+
+.cluster-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+
+  a {
+    font-size: 0.88rem;
+    color: var(--global-text-color);
+    text-decoration: none;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+
+    &:not(:last-child)::after {
+      content: "\00b7";
+      margin-left: 0.5rem;
+      color: var(--global-divider-color);
+    }
+  }
+}
+
+// ============================================================
+// MOBILE
+// ============================================================
+
+@media (max-width: 767.98px) {
+  .profile-container.row {
+    flex-direction: column-reverse;
+  }
+
+  .bio-column {
+    padding-right: 15px;
+    order: 2;
+  }
+
+  .sidebar-column {
+    padding-left: 15px;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .profile-photo img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .cluster {
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+  }
+
+  .cluster-label {
+    margin-bottom: 0.2rem;
+  }
+
+  .connect-row {
+    gap: 1rem;
+  }
+}

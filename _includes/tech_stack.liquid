@@ -1,0 +1,261 @@
+{% comment %}
+  _includes/tech_stack.liquid
+  Visible columns: toggle, dot, Vendor, Model/Product, Status, Notes
+  Expanded row shows: date/license, context, tags, proficiency, narrative (if present)
+  All rows get a + button.
+{% endcomment %}
+
+{% assign stack = site.data.tech_stack %}
+
+<section class="tech-stack">
+
+  <!-- JUMP NAV -- generated from sections, JS uses this class to intercept clicks -->
+  <nav class="tech-stack-jumpnav">
+    <strong>Jump to:</strong>
+    {% for section in stack.sections %}
+      <a href="#{{ section.id }}">{{ section.title }}</a>{% unless forloop.last %}&middot;{% endunless %}
+    {% endfor %}
+  </nav>
+
+  <hr>
+
+  {% if stack.intro %}
+  <p class="tech-stack__intro">{{ stack.intro }}</p>
+  {% endif %}
+
+  <!-- LEGEND -->
+  <div class="tech-stack__legend">
+    <span class="legend-group">
+      <span class="legend-label">Status:</span>
+      <span class="badge badge--active">active</span>
+      <span class="badge badge--retired">retired</span>
+      <span class="badge badge--evaluating">evaluating</span>
+    </span>
+    <span class="legend-sep">|</span>
+    <span class="legend-group">
+      <span class="legend-label">License:</span>
+      <span class="badge badge--open-source">open-source</span>
+      <span class="badge badge--commercial">commercial</span>
+      <span class="badge badge--freeware">freeware</span>
+      <span class="badge badge--subscription">subscription</span>
+    </span>
+    <span class="legend-sep">|</span>
+    <span class="legend-group">
+      <span class="legend-label">Sentiment:</span>
+      <span class="sentiment-dot sentiment--positive"></span>&nbsp;positive&nbsp;&nbsp;
+      <span class="sentiment-dot sentiment--mixed"></span>&nbsp;mixed&nbsp;&nbsp;
+      <span class="sentiment-dot sentiment--retired-regret"></span>&nbsp;retired&nbsp;w/&nbsp;regret
+    </span>
+    <span class="legend-sep">|</span>
+    <span class="legend-group">
+      <span class="legend-label">Proficiency:</span>
+      <span class="proficiency proficiency--expert">expert</span>&nbsp;&nbsp;
+      <span class="proficiency proficiency--proficient">proficient</span>&nbsp;&nbsp;
+      <span class="proficiency proficiency--familiar">familiar</span>
+    </span>
+  </div>
+
+  {% for section in stack.sections %}
+
+  <!-- SECTION HEADING (collapsible) -->
+  <div class="section-heading" onclick="tsToggleSection('{{ section.id }}-body')">
+    <button
+      class="section-toggle-btn"
+      aria-expanded="false"
+      aria-controls="{{ section.id }}-body"
+      id="{{ section.id }}-btn"
+      title="Expand section">+</button>
+    <h2 id="{{ section.id }}">{{ section.title }}</h2>
+  </div>
+
+  <div class="section-body is-collapsed" id="{{ section.id }}-body">
+    <table class="tech-stack__table">
+      <thead>
+        <tr>
+          <th class="col-toggle"></th>
+          <th class="col-sentiment"></th>
+          <th class="col-vendor">Vendor</th>
+          <th class="col-model">{% if section.type == 'software' %}Product{% else %}Model{% endif %}</th>
+          <th class="col-status">Status</th>
+          <th class="col-notes">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in section.items %}
+
+        {% assign row_id = section.id | append: '-row-' | append: forloop.index %}
+        {% assign detail_id = section.id | append: '-detail-' | append: forloop.index %}
+        {% assign has_narrative = false %}
+        {% if item.narrative and item.narrative != "" %}
+          {% assign has_narrative = true %}
+        {% endif %}
+
+        <tr class="status--{{ item.status }}" id="{{ row_id }}">
+
+          <!-- Row expand toggle -- all rows get button -->
+          <td class="col-toggle">
+            <button
+              class="expand-btn"
+              aria-expanded="false"
+              aria-controls="{{ detail_id }}"
+              data-target="{{ detail_id }}"
+              title="Show details">+</button>
+          </td>
+
+          <!-- Sentiment dot -->
+          <td class="col-sentiment">
+            <span class="sentiment-dot sentiment--{{ item.sentiment }}" title="{{ item.sentiment }}"></span>
+          </td>
+
+          <!-- Vendor -->
+          <td class="col-vendor">{{ item.vendor }}</td>
+
+          <!-- Product or Model (linked) -->
+          <td class="col-model">
+            {% if section.type == 'software' %}
+              {% if item.url and item.url != "" %}
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.product }}</a>
+              {% else %}
+                {{ item.product }}
+              {% endif %}
+            {% else %}
+              {% if item.url and item.url != "" %}
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.model }}</a>
+              {% else %}
+                {{ item.model }}
+              {% endif %}
+            {% endif %}
+          </td>
+
+          <!-- Status -->
+          <td class="col-status"><span class="badge badge--{{ item.status }}">{{ item.status }}</span></td>
+
+          <!-- Notes (short) -->
+          <td class="col-notes">{{ item.notes }}</td>
+
+        </tr>
+
+        <!-- Detail row -- always rendered, shown on expand -->
+        <tr class="detail-row" id="{{ detail_id }}">
+          <td class="detail-spacer" colspan="2"></td>
+          <td class="detail-content" colspan="4">
+
+            <!-- Meta row: date/license, context, proficiency -->
+            <div class="detail-meta">
+              {% if section.type == 'software' %}
+                {% if item.license and item.license != "" %}
+                <span class="detail-meta-item">
+                  <span class="detail-meta-label">License:</span>
+                  <span class="badge badge--{{ item.license }}">{{ item.license }}</span>
+                </span>
+                {% endif %}
+              {% else %}
+                {% if item.date and item.date != "" %}
+                <span class="detail-meta-item">
+                  <span class="detail-meta-label">Date:</span>
+                  <span class="detail-meta-value">{{ item.date }}</span>
+                </span>
+                {% endif %}
+              {% endif %}
+              {% if item.context and item.context.size > 0 %}
+              <span class="detail-meta-item">
+                <span class="detail-meta-label">Context:</span>
+                {% for ctx in item.context %}<span class="badge badge--context">{{ ctx }}</span>{% endfor %}
+              </span>
+              {% endif %}
+              {% if item.proficiency and item.proficiency != "" %}
+              <span class="detail-meta-item">
+                <span class="detail-meta-label">Proficiency:</span>
+                <span class="proficiency proficiency--{{ item.proficiency }}">{{ item.proficiency }}</span>
+              </span>
+              {% endif %}
+              {% if item.tags and item.tags.size > 0 %}
+              <span class="detail-meta-item">
+                <span class="detail-meta-label">Tags:</span>
+                {% for tag in item.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+              </span>
+              {% endif %}
+            </div>
+
+            <!-- Narrative (only if present) -->
+            {% if has_narrative %}
+            <div class="detail-sentiment">
+              <span class="sentiment-dot sentiment--{{ item.sentiment }}"></span>
+              {{ item.sentiment | replace: '-', ' ' }}
+            </div>
+            <div class="detail-narrative">{{ item.narrative | markdownify }}</div>
+            {% endif %}
+
+          </td>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </div><!-- /.section-body -->
+
+  {% endfor %}
+
+</section>
+
+<script>
+/* Row expand/collapse */
+document.querySelectorAll('.expand-btn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var targetId = btn.getAttribute('data-target');
+    var row = document.getElementById(targetId);
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    if (open) {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = '+';
+      row.classList.remove('is-open');
+    } else {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = '\u2212';
+      row.classList.add('is-open');
+    }
+  });
+});
+
+/* Section expand -- one-way, used by jump nav */
+function tsExpandSection(bodyId) {
+  var body = document.getElementById(bodyId);
+  var btnId = bodyId.replace('-body', '-btn');
+  var btn = document.getElementById(btnId);
+  if (!body || !btn) return;
+  body.classList.remove('is-collapsed');
+  btn.setAttribute('aria-expanded', 'true');
+  btn.innerHTML = '\u2212';
+  btn.title = 'Collapse section';
+}
+
+/* Section toggle -- opens and closes via heading click */
+function tsToggleSection(bodyId) {
+  var body = document.getElementById(bodyId);
+  var btnId = bodyId.replace('-body', '-btn');
+  var btn = document.getElementById(btnId);
+  if (!body || !btn) return;
+  var collapsed = body.classList.contains('is-collapsed');
+  if (collapsed) {
+    body.classList.remove('is-collapsed');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.innerHTML = '\u2212';
+    btn.title = 'Collapse section';
+  } else {
+    body.classList.add('is-collapsed');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = '+';
+    btn.title = 'Expand section';
+  }
+}
+
+/* Jump nav: expand target section when a jump link is clicked */
+document.querySelectorAll('.tech-stack-jumpnav a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    var hash = link.getAttribute('href');
+    if (!hash || hash.charAt(0) !== '#') return;
+    tsExpandSection(hash.slice(1) + '-body');
+  });
+});
+</script>

@@ -139,7 +139,10 @@ pagination:
           <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
         {% endif %}
       </h3>
-      <p>{{ post.description }}</p>
+      <!-- <p>{{ post.description }}</p> BLOG POST LENGTH -->
+      <!-- <p>{{ post.description | default: post.excerpt | strip_html | truncate: 1000 }}</p> -->
+      <!-- <p>{{ post.description | default: post.excerpt | markdownify | truncatewords: 50 }}</p> -->
+      <div class="post-description">{{ post.description | default: post.content | markdownify | truncatewords: 50 }}</div>
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %d, %Y' }}

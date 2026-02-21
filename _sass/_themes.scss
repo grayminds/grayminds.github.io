@@ -6,7 +6,8 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #{v.$white-color};
+    //# #FAF0E6 (linen) or #FFFDD0 (classic cream) depending on warmth
+  --global-bg-color: #FDF5E6;  // old lace, a warm cream #{v.$white-color};
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$grey-color};

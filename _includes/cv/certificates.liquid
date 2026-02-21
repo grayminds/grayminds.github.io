@@ -1,28 +1,52 @@
 {% comment %}
   Unified certificates entry renderer for both formats
+  Full-width stacked layout matching experience and education sections.
 {% endcomment %}
 
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
-      {% if entry.icon %}
-        <i class="{{ entry.icon }}"></i>
-      {% endif %}
+
+      {% comment %} Certificate name with optional icon {% endcomment %}
       {% if entry.url %}
-        <strong
-          ><a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a></strong
-        >
+        <h6 class="title font-weight-bold">
+          {% if entry.icon %}<i class="{{ entry.icon }} mr-1"></i>{% endif %}
+          <a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a>
+        </h6>
       {% else %}
-        <strong>{{ entry.name }}</strong>
+        <h6 class="title font-weight-bold">
+          {% if entry.icon %}<i class="{{ entry.icon }} mr-1"></i>{% endif %}
+          {{ entry.name }}
+        </h6>
       {% endif %}
 
+      {% comment %} Issuer {% endcomment %}
       {% if entry.issuer %}
-        - <em>{{ entry.issuer }}</em>
+        <h6 style="font-size: 0.95rem">{{ entry.issuer }}</h6>
       {% endif %}
 
-      {% if entry.date %}
-        ({{ entry.date | split: '-' | slice: 0, 1 | join: '' }})
+      {% comment %} Date range and credential ID on one line {% endcomment %}
+      {% assign has_dates = false %}
+      {% if entry.date and entry.date != '' %}{% assign has_dates = true %}{% endif %}
+      {% if entry.valid_through and entry.valid_through != '' %}{% assign has_dates = true %}{% endif %}
+
+      {% if has_dates or entry.credential_id %}
+        <p class="mb-2" style="font-size: 0.85rem; color: #6c757d;">
+          {% if has_dates %}
+            <i class="fa-regular fa-calendar mr-1"></i>
+            {% if entry.date and entry.date != '' %}{{ entry.date | split: '-' | slice: 0, 1 | join: '' }}{% endif %}
+            {% if entry.date and entry.date != '' and entry.valid_through and entry.valid_through != '' %} to {% endif %}
+            {% if entry.valid_through and entry.valid_through != '' %}{{ entry.valid_through | split: '-' | slice: 0, 1 | join: '' }}{% endif %}
+          {% endif %}
+          {% if has_dates and entry.credential_id %}
+            <span class="mx-2">|</span>
+          {% endif %}
+          {% if entry.credential_id %}
+            <i class="fa-solid fa-id-badge mr-1"></i>#{{ entry.credential_id }}
+          {% endif %}
+        </p>
       {% endif %}
+
     </li>
   {% endfor %}
 </ul>

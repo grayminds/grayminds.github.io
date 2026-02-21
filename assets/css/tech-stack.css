@@ -1,0 +1,479 @@
+/* assets/css/tech-stack.css
+   Written specifically for al-folio theme.
+
+   KEY FACTS from theme SCSS:
+   - Light mode: :root sets --global-text-color, --global-theme-color (#b509ac purple)
+   - Dark mode:  html[data-theme="dark"] overrides those variables
+     (NOT @media prefers-color-scheme -- al-folio uses a data attribute toggle)
+   - _typography.scss applies color: var(--global-text-color) to
+     p, h1-h6, em, div, li, span, strong -- i.e. everything in our component
+   - _typography.scss applies color: var(--global-theme-color) to a tags
+
+   STRATEGY:
+   - Use var(--global-text-color) and var(--global-theme-color) directly so
+     our component inherits the theme's own dark/light switching automatically.
+   - Override only where we need different colors (badges, tags, buttons).
+   - Use section.tech-stack as the scope prefix for specificity.
+   - Badge and button backgrounds are hardcoded per-mode since they don't
+     correspond to any theme variable.
+*/
+
+/* ============================================================
+   JUMP NAV
+   ============================================================ */
+section.tech-stack .tech-stack-jumpnav {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+section.tech-stack .tech-stack-jumpnav a {
+  color: var(--global-theme-color);
+  margin: 0 0.3rem;
+}
+
+section.tech-stack .tech-stack-jumpnav strong {
+  margin-right: 0.2rem;
+}
+
+/* ============================================================
+   INTRO
+   The theme's p rule applies var(--global-text-color) which is correct.
+   We just need to ensure our structural styles apply.
+   ============================================================ */
+section.tech-stack p.tech-stack__intro {
+  font-size: 0.95rem;
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  /* color intentionally omitted -- inherits --global-text-color from theme */
+}
+
+/* ============================================================
+   LEGEND
+   ============================================================ */
+section.tech-stack .tech-stack__legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 6px;
+  column-gap: 6px;
+  font-size: 0.78rem;
+  margin: 0.5rem 0 1.5rem 0;
+  padding: 0.6rem 0.85rem;
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+html[data-theme="dark"] section.tech-stack .tech-stack__legend {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+section.tech-stack .legend-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+section.tech-stack .legend-sep {
+  margin: 0 4px;
+  opacity: 0.4;
+}
+
+section.tech-stack .legend-label {
+  font-weight: 700;
+  margin-right: 3px;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   SECTION HEADING + COLLAPSE
+   ============================================================ */
+section.tech-stack .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
+}
+
+html[data-theme="dark"] section.tech-stack .section-heading {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+section.tech-stack .section-heading h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  flex: 1;
+  /* color from theme --global-text-color */
+}
+
+section.tech-stack .section-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Match col-toggle width + col-sentiment width so h2 aligns under Vendor */
+  width: 20px;
+  height: 20px;
+  margin-right: calc(36px + 24px - 20px);  /* fill to Vendor column start */
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  line-height: 1;
+}
+
+html[data-theme="dark"] section.tech-stack .section-toggle-btn {
+  background: #555555;
+}
+
+section.tech-stack .section-toggle-btn:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] section.tech-stack .section-toggle-btn:hover {
+  background: #888888;
+}
+
+section.tech-stack .section-toggle-btn[aria-expanded="true"] {
+  background: #1a7a34;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] section.tech-stack .section-toggle-btn[aria-expanded="true"] {
+  background: #22a347;
+}
+
+section.tech-stack .section-body.is-collapsed {
+  display: none;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+section.tech-stack .tech-stack__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+
+section.tech-stack .tech-stack__table th {
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 700;
+  /* color from theme */
+}
+
+html[data-theme="dark"] section.tech-stack .tech-stack__table th {
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+section.tech-stack .tech-stack__table td {
+  padding: 0.4rem 0.65rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  vertical-align: top;
+  /* color from theme --global-text-color */
+}
+
+html[data-theme="dark"] section.tech-stack .tech-stack__table td {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Override theme's purple link color inside table cells */
+section.tech-stack .tech-stack__table a,
+section.tech-stack .tech-stack__table a:visited {
+  color: var(--global-theme-color);
+}
+
+section.tech-stack .tech-stack__table tbody tr:hover td {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="dark"] section.tech-stack .tech-stack__table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+section.tech-stack .tech-stack__table tbody tr.status--retired td {
+  opacity: 0.6;
+}
+
+section.tech-stack .col-toggle    { padding: 0.3rem; text-align: center; }
+section.tech-stack .col-sentiment { padding: 0.4rem 0.3rem 0.4rem 0.5rem; }
+
+/* 6-column fixed widths: toggle, dot, Vendor, Model, Status, Notes */
+section.tech-stack .col-toggle    { width: 36px; }
+section.tech-stack .col-sentiment { width: 24px; }
+section.tech-stack .col-vendor    { width: 120px; }
+section.tech-stack .col-model     { width: 150px; }
+section.tech-stack .col-status    { width: 90px; }
+/* col-notes gets remaining width */
+
+/* ============================================================
+   BADGES
+   Solid backgrounds with white text -- hardcoded, not theme variables.
+   Light/dark variants via html[data-theme="dark"].
+   ============================================================ */
+section.tech-stack .badge {
+  display: inline-block;
+  padding: 0.18em 0.55em;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 1px 2px 1px 0;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+/* Light mode */
+section.tech-stack .badge--active       { background: #1a7a34; color: #ffffff; }
+section.tech-stack .badge--retired      { background: #9b1c1c; color: #ffffff; }
+section.tech-stack .badge--evaluating   { background: #7a5c00; color: #ffffff; }
+section.tech-stack .badge--open-source  { background: #1455a4; color: #ffffff; }
+section.tech-stack .badge--commercial   { background: #5a2d82; color: #ffffff; }
+section.tech-stack .badge--freeware     { background: #0e6b72; color: #ffffff; }
+section.tech-stack .badge--subscription { background: #8a3a00; color: #ffffff; }
+
+/* Dark mode -- slightly lighter for contrast on dark bg */
+html[data-theme="dark"] section.tech-stack .badge--active       { background: #22a347; }
+html[data-theme="dark"] section.tech-stack .badge--retired      { background: #c02020; }
+html[data-theme="dark"] section.tech-stack .badge--evaluating   { background: #a07800; }
+html[data-theme="dark"] section.tech-stack .badge--open-source  { background: #1a6fd4; }
+html[data-theme="dark"] section.tech-stack .badge--commercial   { background: #7a3eb0; }
+html[data-theme="dark"] section.tech-stack .badge--freeware     { background: #128a94; }
+html[data-theme="dark"] section.tech-stack .badge--subscription { background: #b04e00; }
+
+/* Context badge -- solid gray, white text, readable on any background */
+section.tech-stack .badge.badge--context {
+  background: #5a5a5a;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] section.tech-stack .badge.badge--context {
+  background: #7a7a7a;
+  color: #ffffff;
+  border: none;
+}
+
+/* ============================================================
+   SENTIMENT DOTS
+   ============================================================ */
+section.tech-stack .sentiment-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 3px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+section.tech-stack .sentiment--positive       { background-color: #1a7a34; }
+section.tech-stack .sentiment--mixed          { background-color: #b04a00; }
+section.tech-stack .sentiment--retired-regret { background-color: #555555; }
+
+html[data-theme="dark"] section.tech-stack .sentiment--positive       { background-color: #22a347; }
+html[data-theme="dark"] section.tech-stack .sentiment--mixed          { background-color: #d06000; }
+html[data-theme="dark"] section.tech-stack .sentiment--retired-regret { background-color: #888888; }
+
+/* ============================================================
+   PROFICIENCY
+   Inherits --global-text-color; just control weight/style.
+   ============================================================ */
+section.tech-stack .proficiency             { font-size: 0.78rem; }
+section.tech-stack .proficiency--expert     { font-weight: 800; }
+section.tech-stack .proficiency--proficient { font-weight: 600; }
+section.tech-stack .proficiency--familiar   { font-weight: 400; font-style: italic; opacity: 0.7; }
+
+/* ============================================================
+   TAGS
+   ============================================================ */
+section.tech-stack .tags { max-width: 180px; }
+
+section.tech-stack .tag {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  font-size: 0.67rem;
+  font-weight: 500;
+  padding: 0.15em 0.45em;
+  border-radius: 3px;
+  margin: 2px 2px 2px 0;
+  letter-spacing: 0.02em;
+}
+
+html[data-theme="dark"] section.tech-stack .tag {
+  background: rgba(255, 255, 255, 0.18);
+  color: #f0f0f0;
+}
+
+/* ============================================================
+   ROW EXPAND BUTTON
+   ============================================================ */
+section.tech-stack .expand-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #444444;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s;
+  user-select: none;
+  line-height: 1;
+}
+
+html[data-theme="dark"] section.tech-stack .expand-btn {
+  background: #555555;
+}
+
+section.tech-stack .expand-btn:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] section.tech-stack .expand-btn:hover {
+  background: #888888;
+}
+
+section.tech-stack .expand-btn[aria-expanded="true"] {
+  background: #1a7a34;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] section.tech-stack .expand-btn[aria-expanded="true"] {
+  background: #22a347;
+}
+
+/* ============================================================
+   DETAIL ROW
+   Two-cell layout:
+     td.detail-spacer  colspan="2"  -- empty, occupies toggle+sentiment cols
+     td.detail-content colspan="7"  -- starts at Vendor column, spans to Notes
+   ============================================================ */
+section.tech-stack .detail-row         { display: none; }
+section.tech-stack .detail-row.is-open { display: table-row; }
+
+section.tech-stack .detail-row td {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="dark"] section.tech-stack .detail-row td {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+section.tech-stack .detail-spacer {
+  padding: 0;
+}
+
+section.tech-stack .detail-content {
+  padding: 0.85rem 1rem 0.85rem 0;
+}
+
+section.tech-stack .detail-sentiment {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-bottom: 0.45rem;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+section.tech-stack .detail-narrative {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: none;
+  width: 100%;
+  margin: 0 0 0.65rem 0;
+  /* color from theme --global-text-color */
+}
+
+section.tech-stack .detail-tags {
+  margin-top: 0.2rem;
+}
+
+
+/* ============================================================
+   DETAIL META (date/license, context, tags, proficiency row)
+   ============================================================ */
+section.tech-stack .detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.2rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.78rem;
+}
+
+section.tech-stack .detail-meta-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+section.tech-stack .detail-meta-label {
+  font-weight: 700;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+section.tech-stack .detail-meta-value {
+  font-size: 0.78rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  section.tech-stack .tech-stack__table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  section.tech-stack .tech-stack__legend {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section.tech-stack .legend-sep { display: none; }
+}

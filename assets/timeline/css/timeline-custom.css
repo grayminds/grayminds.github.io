@@ -1,0 +1,50 @@
+/* Era label positioning */
+.tl-timeera-text-content {
+  top: auto !important;
+  bottom: 2px;
+  font-size: 10px;
+}
+
+/* Light mode readability */
+.tl-timeera {
+  opacity: 0.3;
+}
+
+.tl-timenav {
+  background-color: #f5f5f5;
+}
+
+.tl-timemarker-content-container {
+  border: 1px solid #ccc;
+}
+
+#timeline-embed, #timeline-embed * {
+  color-scheme: light;
+}
+
+Increase the timenav height
+.tl-timenav {
+  height: 350px !important;
+}
+
+/* Give the marker area more room */
+.tl-timegroup {
+  height: auto !important;
+}
+
+/* Make era text larger and more readable */
+.tl-timeera-text-content {
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+}
+
+/* Increase the era band height */
+.tl-timeera {
+  min-height: 250px !important;
+}
+
+/* Add a subtle shadow to media content for better visibility */
+.tl-media-image img,
+.tl-media-content img {
+  cursor: pointer;
+}

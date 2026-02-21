@@ -1,0 +1,800 @@
+intro: >
+  Each person's tech stack is a unique fingerprint driven by their specific needs.
+  I wanted to share some highlights of what I am -- or have been -- working with.
+  Sometimes this is enough to spark ideas in others, or to start a conversation
+  over a piece of tech.
+
+sections:
+
+  # ============================================================
+  # HOME LAB - INFRASTRUCTURE
+  # ============================================================
+  - id: homelab-infra
+    title: "Home Lab: Infrastructure"
+    type: hardware
+    items:
+
+      - vendor: Breezeline
+        model: Cable Modem / ISP
+        url: https://www.breezeline.com
+        date:
+        context:
+          - home-office
+        status: active
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - networking
+          - isp
+        notes: Better priced than the competition and mostly stable. Holding until fiber becomes available.
+
+      - vendor: Firewalla
+        model: Gold SE
+        url: https://firewalla.com/products/firewalla-gold-se
+        date: 2025-10
+        context:
+          - home-office
+        status: active
+        proficiency: proficient
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Added late 2025 to get proper network segmentation and protection around IoT devices.
+          Setup was straightforward.  The main friction has been discovering limitations in existing
+          network hardware that the Firewalla exposes -- a sunk-cost problem, not a Firewalla problem.
+          Enabled new VLANs and significantly improved visibility into traffic across the home lab.
+        tags:
+          - networking
+          - security
+          - firewall
+          - vlan
+          - iot
+        notes: Network segmentation, VLAN support, IoT isolation, and traffic monitoring.
+
+      - vendor: Amplifi
+        model: Alien Mesh (trio)
+        url: https://store.amplifi.com/products/amplifi-alien
+        date:
+        context:
+          - home-office
+        status: active
+        proficiency: proficient
+        sentiment: mixed
+        highlight: true
+        narrative: >
+          When this came out, it solved every problem I had with Netgear routers and repeaters.
+          I was so impressed I installed a trio across two locations: a pair at home and a third
+          at my parents' place, with an outbuilding connected via MoCA and a hardwired repeater.
+          Over time my enthusiasm dropped.  Ubiquiti effectively discontinued the Amplifi line
+          to push other products, and as I upskilled on networking I discovered real limitations:
+          no proper VLAN support, and the "IoT network" feature is not truly isolated.
+          It also forces you to reuse the same Wi-Fi password across networks.
+          Would not choose it again knowing what I know now.
+        tags:
+          - networking
+          - wifi
+          - mesh
+          - moca
+        notes: Trio across two locations. Parents' outbuilding via MoCA and hardwired repeater. No real VLAN support.
+
+  # ============================================================
+  # HOME LAB - HARDWARE
+  # ============================================================
+  - id: homelab-hardware
+    title: "Home Lab: Hardware"
+    type: hardware
+    items:
+
+      - vendor: ASUS
+        model: ROG Flow X16 (GV601VI)
+        url: https://rog.asus.com/laptops/rog-flow/rog-flow-x16-2023/
+        date: 2023-01
+        context:
+          - home-office
+          - remote
+        status: active
+        proficiency: expert
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Primary workstation and daily driver.  96GB RAM with an Intel CPU and NVIDIA discrete GPU
+          makes it capable of running local LLMs, WhisperX transcription, and Hyper-V VMs without
+          breaking a sweat.  The ROG line's build quality has been solid; the only limitation is
+          thermals under sustained GPU load.
+        tags:
+          - workstation
+          - development
+          - ai
+          - local-llm
+        notes: Intel CPU, NVIDIA GPU, 96GB RAM. Primary dev and AI workstation.
+
+      - vendor: Synology
+        model: DS920+
+        url: https://www.synology.com/en-us/products/DS920+
+        date:
+        context:
+          - home-office
+        status: active
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - nas
+          - storage
+          - backup
+        notes: Primary NAS (APEX). Mapped as I:\ for home directory and M:\ for media via JellyFin.
+
+      - vendor: DJI
+        model: Mini 3 Pro
+        url: https://www.dji.com/mini-3-pro
+        date: 2023-06
+        context:
+          - home-office
+          - remote
+        status: active
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - drone
+          - video
+          - studio
+        notes: Aerial footage for skytimestudio.com drone services.
+
+      - vendor: Corsair
+        model: K95 RGB Platinum
+        url: https://www.corsair.com
+        date: 2020-03
+        context:
+          - home-office
+        status: active
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - productivity
+          - peripherals
+        notes: Custom macro profiles for workflow automation.
+
+      - vendor: Corsair
+        model: M65 RGB Mouse
+        url: https://www.corsair.com
+        date:
+        context:
+          - home-office
+        status: active
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - productivity
+          - peripherals
+        notes: Primary mouse. Configurable DPI and side buttons mapped for productivity workflows.
+
+      - vendor: Jabra
+        model: Speak 510
+        url: https://www.jabra.com/business/speakerphones/jabra-speak-series/jabra-speak-510
+        date:
+        context:
+          - home-office
+          - remote
+        status: active
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - audio
+          - meetings
+          - ttrpg
+        notes: USB speakerphone. Used for remote meetings and TTRPG session recording input.
+
+  # ============================================================
+  # HOME LAB - AI & LLM
+  # ============================================================
+  - id: homelab-ai
+    title: "Home Lab: AI & LLM"
+    type: software
+    items:
+
+      - vendor: Anthropic
+        product: Claude
+        url: https://claude.ai
+        context:
+          - home-office
+          - remote
+          - smb
+        status: active
+        license: subscription
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - llm
+          - productivity
+          - automation
+        notes: Primary AI assistant for research, writing, coding support, and workflow design.
+
+      - vendor: OpenAI
+        product: ChatGPT
+        url: https://chatgpt.com
+        context:
+          - home-office
+          - remote
+        status: active
+        license: subscription
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - llm
+          - productivity
+        notes: Secondary AI assistant. Useful for cross-referencing responses and model comparison.
+
+      - vendor: Google
+        product: Gemini
+        url: https://gemini.google.com
+        context:
+          - home-office
+          - remote
+        status: active
+        license: subscription
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - llm
+          - productivity
+        notes: Google's LLM. Used selectively for tasks with strong Google ecosystem integration.
+
+      - vendor: LM Studio
+        product: LM Studio
+        url: https://lmstudio.ai
+        context:
+          - home-office
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - local-llm
+          - privacy
+        notes: Local LLM inference; fully offline. Powers the TTRPG session analysis pipeline.
+
+      - vendor: WhisperX
+        product: WhisperX
+        url: https://github.com/m-bain/whisperX
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - transcription
+          - ttrpg
+          - wsl
+        notes: Offline transcription with speaker diarization for TTRPG session recordings. Runs in WSL2.
+
+  # ============================================================
+  # HOME LAB - CLOUD SERVICES
+  # ============================================================
+  - id: homelab-cloud
+    title: "Home Lab: Cloud Services"
+    type: software
+    items:
+
+      - vendor: Microsoft
+        product: Azure AI / Cognitive Services
+        url: https://azure.microsoft.com/en-us/products/ai-services
+        context:
+          - remote
+          - smb
+          - corporate
+        status: active
+        license: subscription
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - ai
+          - cloud
+          - automation
+          - enterprise
+        notes: AI services supporting IDP pipelines and enterprise ML workloads.
+
+      - vendor: Microsoft
+        product: Azure
+        url: https://azure.microsoft.com
+        context:
+          - remote
+          - smb
+          - corporate
+        status: active
+        license: subscription
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - cloud
+          - automation
+          - enterprise
+        notes: IDP pipelines, ML workloads, and enterprise integrations.
+
+      - vendor: GitHub
+        product: GitHub Pages
+        url: https://pages.github.com
+        context:
+          - home-office
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - hosting
+          - portfolio
+          - development
+        notes: Hosts grayminds.github.io. Free static site hosting integrated with the repo.
+
+  # ============================================================
+  # HOME LAB - DEV TOOLS
+  # ============================================================
+  - id: homelab-devtools
+    title: "Home Lab: Code & Tools"
+    type: software
+    items:
+
+      - vendor: Microsoft
+        product: Visual Studio Code
+        url: https://code.visualstudio.com
+        context:
+          - home-office
+          - remote
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - ide
+          - productivity
+        notes: Primary code editor for scripts, Liquid templates, YAML, and Markdown.
+
+      - vendor: Jekyll
+        product: Jekyll
+        url: https://jekyllrb.com
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - static-site
+          - ruby
+        notes: Static site generator powering grayminds.github.io via GitHub Pages.
+
+      - vendor: GitHub
+        product: GitHub Desktop
+        url: https://desktop.github.com
+        context:
+          - home-office
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - git
+          - portfolio
+        notes: Source control GUI for managing grayminds.github.io and personal repos.
+
+      - vendor: Git
+        product: Git
+        url: https://git-scm.com
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - git
+          - version-control
+        notes: Underlying version control. Used via GitHub Desktop and CLI.
+
+      - vendor: Ruby
+        product: Ruby
+        url: https://www.ruby-lang.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - runtime
+          - jekyll
+        notes: Runtime for Jekyll. Managed via RubyInstaller on Windows.
+
+      - vendor: Python
+        product: Python
+        url: https://www.python.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - scripting
+          - automation
+          - ai
+        notes: Scripting and automation. Used for data processing, AI pipelines, and utility scripts.
+
+      - vendor: Node.js
+        product: Node.js
+        url: https://nodejs.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - runtime
+          - javascript
+        notes: JavaScript runtime for tooling and package management.
+
+      - vendor: Microsoft
+        product: C#
+        url: https://learn.microsoft.com/en-us/dotnet/csharp/
+        context:
+          - home-office
+          - corporate
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - dotnet
+          - enterprise
+        notes: Primary enterprise development language for automation and IDP integrations.
+
+      - vendor: Nationalist Software
+        product: grepWin
+        url: https://tools.stefankueng.com/grepWin.html
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - productivity
+          - search
+          - development
+          - windows
+        notes: Regex-capable file search and replace across directory trees. Essential for bulk code edits.
+
+      - vendor: Thingamahoochie Software
+        product: WinMerge
+        url: https://winmerge.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - diff
+          - merge
+          - windows
+        notes: Visual diff and merge tool for files and folders. Go-to for code and config comparisons.
+
+      - vendor: FFmpeg
+        product: FFmpeg
+        url: https://ffmpeg.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - video
+          - audio
+          - automation
+        notes: Command-line media processing. Used for video conversion and studio workflow automation.
+
+      - vendor: Phil Harvey
+        product: ExifTool
+        url: https://exiftool.org
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - metadata
+          - photography
+          - automation
+        notes: Metadata read/write for photos and video. Used in drone footage organization workflows.
+
+      - vendor: jdupes
+        product: jdupes
+        url: https://github.com/jbruchon/jdupes
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - storage
+          - deduplication
+          - automation
+        notes: Fast duplicate file finder. Used for NAS cleanup and media library maintenance.
+
+  # ============================================================
+  # HOME LAB - WINDOWS APPLICATIONS
+  # ============================================================
+  - id: homelab-apps
+    title: "Home Lab: Windows Applications"
+    type: software
+    items:
+
+      - vendor: GP Softworks
+        product: Directory Opus
+        url: https://www.gpsoft.com.au
+        context:
+          - home-office
+        status: active
+        license: commercial
+        proficiency: proficient
+        sentiment: positive
+        highlight: true
+        narrative: >
+          A fantastic, deeply customizable Windows Explorer replacement.
+          The one gap I keep wishing for: it does not replace the system file dialog boxes
+          that pop up inside other applications.  Would love to see that addressed.
+        tags:
+          - productivity
+          - file-management
+          - windows
+        notes: Primary Windows file manager; full scripting, layout control, and mapped drive management.
+
+      - vendor: Obsidian
+        product: Obsidian
+        url: https://obsidian.md
+        context:
+          - home-office
+          - remote
+        status: active
+        license: freeware
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - pkm
+          - productivity
+          - notes
+        notes: Personal knowledge management vault; daily journaling and technical documentation.
+
+      - vendor: mRemoteNG
+        product: mRemoteNG
+        url: https://mremoteng.org
+        context:
+          - home-office
+          - smb
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - remote-access
+          - rdp
+          - ssh
+          - networking
+        notes: Multi-protocol remote connection manager. Consolidates RDP, SSH, VNC into one tabbed interface.
+
+      - vendor: Microsoft
+        product: Power BI Desktop
+        url: https://powerbi.microsoft.com
+        context:
+          - home-office
+          - smb
+          - corporate
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - analytics
+          - bi
+          - data
+          - enterprise
+        notes: Data visualization and business intelligence reporting. Used across SMB and corporate engagements.
+
+      - vendor: Microsoft
+        product: Excel
+        url: https://www.microsoft.com/en-us/microsoft-365/excel
+        context:
+          - home-office
+          - smb
+          - corporate
+        status: active
+        license: subscription
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - productivity
+          - data
+          - analytics
+          - enterprise
+        notes: Core tool for data analysis, project tracking, and financial modeling.
+
+  # ============================================================
+  # HOME LAB - STUDIO & MEDIA
+  # ============================================================
+  - id: homelab-studio
+    title: "Home Lab: Media & Content"
+    type: software
+    items:
+
+      - vendor: Wondershare
+        product: Filmora
+        url: https://filmora.wondershare.com
+        context:
+          - home-office
+        status: active
+        license: subscription
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - video
+          - editing
+          - studio
+          - drone
+        notes: Video editing for drone footage. Used for skytimestudio.com client deliverables.
+
+      - vendor: Amazon
+        product: Amazon Music
+        url: https://music.amazon.com
+        context:
+          - home-office
+        status: active
+        license: subscription
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - media
+          - music
+          - productivity
+        notes: Background music during development and focus sessions.
+
+      - vendor: Google
+        product: YouTube
+        url: https://youtube.com
+        context:
+          - home-office
+        status: active
+        license: subscription
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - media
+          - video
+          - reference
+        notes: Technical reference, tutorials, and background video. Also a distribution channel for drone footage.
+
+  # ============================================================
+  # SMALL BUSINESS - INFRASTRUCTURE
+  # ============================================================
+  - id: smb-infra
+    title: "Small Business: Infrastructure"
+    type: hardware
+    items:
+
+      - vendor: Ubiquiti
+        model: UniFi Dream Machine Pro
+        url: https://store.ui.com/us/en/products/udm-pro
+        date:
+        context:
+          - smb
+        status: active
+        proficiency: proficient
+        sentiment: mixed
+        highlight: true
+        narrative: >
+          More challenging to stand up than consumer gear, but very powerful for small business
+          use cases.  Generally rock-solid until it randomly decides to block a website via
+          content filtering with no clear audit trail explaining why.
+          Worth the investment if you have the patience to learn the UniFi ecosystem properly.
+        tags:
+          - networking
+          - firewall
+          - smb
+          - unifi
+        notes: Primary gateway and security appliance for small business deployments.
+
+  # ============================================================
+  # CORPORATE / ENTERPRISE - SOFTWARE
+  # ============================================================
+  - id: corporate-software
+    title: "Corporate: Software"
+    type: software
+    items:
+
+      - vendor: Tungsten Automation
+        product: Kofax Capture / TotalAgility
+        url: https://www.tungstenautomation.com
+        context:
+          - smb
+          - corporate
+        status: active
+        license: commercial
+        proficiency: expert
+        sentiment: positive
+        highlight: false
+        tags:
+          - idp
+          - automation
+          - enterprise
+          - document-processing
+        notes: 25+ years of IDP platform expertise; primary enterprise intelligent document processing tool.
+
+      - vendor: UiPath
+        product: UiPath Platform
+        url: https://www.uipath.com
+        context:
+          - smb
+          - corporate
+        status: active
+        license: commercial
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - rpa
+          - automation
+          - enterprise
+        notes: RPA orchestration; attended and unattended bot deployment.

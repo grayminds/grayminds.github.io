@@ -60,6 +60,14 @@ layout: default
         {% comment %} RenderCV format {% endcomment %}
         {% assign cv = site.data.cv.cv %}
 
+        {% comment %}
+          ============================================================
+          Explicit section ordering for this CV.
+          Sections are rendered in the sequence defined below rather
+          than relying on YAML key order or the generic loop alone.
+          ============================================================
+        {% endcomment %}
+
         <!-- Header/Contact Information -->
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">
@@ -73,8 +81,14 @@ layout: default
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Title</b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.domain %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Domain</b></td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.domain }}</td>
                 </tr>
               {% endif %}
               {% if cv.email %}
@@ -112,16 +126,58 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- Summary -->
-        {% if cv.summary %}
+        <!-- 1. Professional Summary -->
+        {% if cv.summary_lead or cv.summary_body %}
+          <a class="anchor" id="professional-summary"></a>
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Professional Summary</h3>
-            <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            {% assign body_parts = cv.summary_body | split: '
+
+' %}
+            <p><strong>{{ cv.summary_lead }}</strong> <span class="font-weight-light">{{ body_parts[0] }}</span></p>
+            {% if body_parts[1] %}
+              <p class="font-weight-light">{{ body_parts[1] }}</p>
+            {% endif %}
           </div>
         {% endif %}
 
-        <!-- RenderCV Sections - Merge Experience and Volunteer -->
-        {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
+        <!-- 2. Overview -->
+        {% if cv.sections.Overview %}
+          <a class="anchor" id="overview"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Overview</h3>
+            <div>
+              {% assign entries = cv.sections.Overview %}
+              {% include cv/overview.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- 3. Key Accomplishments -->
+        {% if cv.sections['Key Accomplishments'] %}
+          <a class="anchor" id="key-accomplishments"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Key Accomplishments</h3>
+            <div>
+              {% assign entries = cv.sections['Key Accomplishments'] %}
+              {% include cv/accomplishments.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- 4. Core Competencies -->
+        {% if cv.sections['Core Competencies'] %}
+          <a class="anchor" id="core-competencies"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Core Competencies</h3>
+            <div>
+              {% assign entries = cv.sections['Core Competencies'] %}
+              {% include cv/competencies.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- 5. Experience (merged with Volunteer) -->
         {% assign empty_array = '' | split: ',' %}
         {% assign exp = cv.sections.Experience | default: empty_array %}
         {% assign vol = cv.sections.Volunteer | default: empty_array %}
@@ -137,13 +193,62 @@ layout: default
           </div>
         {% endif %}
 
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        <!-- 6. Education -->
+        {% if cv.sections.Education %}
+          <a class="anchor" id="education"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Education</h3>
+            <div>
+              {% assign entries = cv.sections.Education %}
+              {% include cv/education.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- 7. Certificates -->
+        {% if cv.sections.Certificates %}
+          <a class="anchor" id="certificates"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Certifications</h3>
+            <div>
+              {% assign entries = cv.sections.Certificates %}
+              {% include cv/certificates.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- 8. Skills -->
+        {% if cv.sections.Skills %}
+          <a class="anchor" id="skills"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Skills</h3>
+            <div>
+              {% assign entries = cv.sections.Skills %}
+              {% include cv/skills.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% comment %}
+          ============================================================
+          Catch-all loop for any sections NOT handled above.
+          This ensures new sections added to cv.yml still render
+          without requiring a layout edit every time.
+          ============================================================
+        {% endcomment %}
+        {% assign handled_sections = 'Experience,Volunteer,Overview,Key Accomplishments,Core Competencies,Education,Certificates,Skills' | split: ',' %}
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
 
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
+          {% assign is_handled = false %}
+          {% for handled in handled_sections %}
+            {% if section_title == handled %}
+              {% assign is_handled = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if is_handled %}
             {% continue %}
           {% endif %}
 
@@ -151,27 +256,18 @@ layout: default
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
             <div>
-              {% if section_title == 'Education' %}
-                {% assign entries = section_entries %}
-                {% include cv/education.liquid %}
-              {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
+              {% if section_title == 'Awards' or section_title == 'Honors and Awards' %}
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
               {% elsif section_title == 'Publications' %}
                 {% assign entries = section_entries %}
                 {% include cv/publications.liquid %}
-              {% elsif section_title == 'Skills' %}
-                {% assign entries = section_entries %}
-                {% include cv/skills.liquid %}
               {% elsif section_title == 'Languages' %}
                 {% assign entries = section_entries %}
                 {% include cv/languages.liquid %}
               {% elsif section_title == 'Interests' or section_title == 'Academic Interests' %}
                 {% assign entries = section_entries %}
                 {% include cv/interests.liquid %}
-              {% elsif section_title == 'Certificates' %}
-                {% assign entries = section_entries %}
-                {% include cv/certificates.liquid %}
               {% elsif section_title == 'Projects' or section_title == 'Open Source Projects' %}
                 {% assign entries = section_entries %}
                 {% include cv/projects.liquid %}
@@ -179,7 +275,7 @@ layout: default
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
               {% else %}
-                <!-- Generic section -->
+                <!-- Generic fallback -->
                 {% for entry in section_entries %}
                   {% if entry.bullet %}
                     <ul class="card-text font-weight-light list-group list-group-flush">

@@ -1,34 +1,42 @@
 ---
-layout: about
+layout: about_custom
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: Technologist | AI Automation | PMP
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: wmg-revised-20241027_125531.jpg
+  image_circular: true
+  more_info:
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 5
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<p class="lead-question">I have spent my career at the intersection of humans and technology, trying to answer one question: <strong>why do we keep making people conform to systems instead of building systems that work for people?</strong></p>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+That question has driven me across to dive-deep across multiple paths of [intelligent tutoring systems](/cognitive-systems-engineer), [theatrical combat choreography](/stage-combat-choreogaphy), and [enterprise solutions delivery](/technologist) focused on [AI and Automation](/what-i-believe).  At the heart of it is leveraging technology to better enable human judgment.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<span class="concept-highlight">I am a catalyst.</span>
+
+I work as a **change-catalyst** between disciplines, connecting patterns that single-domain thinkers miss and turning those connections into tested, measurable outcomes.  Where others see unrelated experience, I see convergent systems waiting to be mapped.
+
+As the tapestry is woven each discipline adds a thread, and the threads reinforce each other in ways a single strand never could.  Designing a fight scene and designing a document processing workflow both demand the same thing: understanding how humans move through a system, where they stumble, and how to make the next step obvious.  My arts background didn't happen before my technology career.  **It enhanced it.**
+
+---
+
+Today I work as a **Senior Technical Product Manager** specializing in Intelligent Document Processing and AI-driven automation.  I turn complex requirements into shipped products, helping organizations replace repetitive manual work with intelligent systems that scale.  My approach: validate assumptions early, measure what matters, and keep humans in the loop where judgment counts.
+
+I operate from the Columbus Ohio Metro-area, where I bridge business and technology, and build tools and workflows for my own use.  The best way to understand automation is to live it.
+
+---

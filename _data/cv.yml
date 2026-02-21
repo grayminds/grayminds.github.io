@@ -1,189 +1,182 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Michael Gray
+  label: Senior Technical Product Manager 
+  domain: Intelligent Automation | Applied AI
+  email: michael [dot] gray [at] grayminds [dot] com
+  #phone: "+1 773-793-6566"
+  location: Columbus, OH
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary_lead: Strategic Technical Product Manager
+  summary_body: |
+    who drives intelligent automation products (AI/ML, IDP) from concept through production, connecting technical feasibility, business value, and the human judgment layer that makes AI deliver reliable business outcomes.
+
+    Known for transforming ambiguous, chaotic problem spaces into structured delivery with measurable results.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: graym
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        area: Human-Machine Systems Engineering
+        studyType: Master of Science (M.S.)
+        start_date: ""
+        end_date: ""
         highlights:
-          - Description 1.
-          - Description 2.
+          - Thesis-based program
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: The Ohio State University
+        location: Columbus, OH
+        area: Industrial & Systems Engineering
+        studyType: Bachelor of Science (B.S.)
+        start_date: ""
+        end_date: ""
         highlights:
-          - Description 1.
-          - Description 2.
+          - Magna Cum Laude
+          - Medieval Studies Minor
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Gray Minds LLC
+        position: Technical Product Manager / Solutions Architect
+        location: Columbus, OH (Remote)
+        start_date: 2024-08
+        end_date: ""
+        summary: IDP platform delivery on Tungsten TotalAgility for healthcare insurance clients.
         highlights:
-          - Relativity
-          - Description 2.
+          - Owned product roadmap and backlog for an IDP platform built on Tungsten TotalAgility; translated large healthcare insurance client requirements into prioritized features through discovery, stakeholder workshops, and process re-engineering.
+          - Identified platform bottlenecks and validated solutions hands-on through prototyping, solution architecture, and development in C#/.NET, SQL, and Azure; pioneered API integrations with Salesforce and CloudDocs to enable downstream automation.
+          - Designed a configurable document case management framework that cut implementation times by 40%; identified a gap in native troubleshooting tooling and built a custom support utility that improved issue resolution capability by 80%.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Canon Business Process Services
+        position: Senior Manager, Digital Transformation & Intelligent Automation
+        location: Remote
+        start_date: 2017-11
+        end_date: 2024-07
+        summary: Owned product roadmap for Intelligent Automation SaaS portfolio across multiple enterprise clients.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Owned product roadmap for Intelligent Automation SaaS portfolio (Tungsten TotalAgility, Kofax Capture, UiPath); made prioritization calls across competing client needs by assessing implementation effort against business value and reuse potential.
+          - Navigated conflicting priorities between internal engineering, client operations, and sales by establishing scope boundaries and transparent trade-off discussions; kept delivery on track without sacrificing quality.
+          - Led product expansion by identifying which automation capabilities had market demand, building prototypes, and presenting to prospective clients; partnered with sales to align demos to specific client pain points rather than generic feature lists.
+          - Determined which document fields AI could extract reliably and which required human verification by analyzing edge case failures and downstream error costs. Set confidence thresholds per field type, routing high-risk extractions to human review while allowing low-risk fields through automated processing.
+          - Built BI data architecture and Power BI dashboards from scratch when no reporting existed; chose KPIs that connected AI performance to business outcomes (ROI, deployment velocity, error rates) so executives could make portfolio decisions with real data.
+          - Filled product owner, solutions architect, and scrum master roles as project needs demanded; led full SDLC delivery in Agile and Waterfall with structured change management across concurrent client engagements.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Gray Minds LLC
+        position: Solutions Architect / Product & Delivery Manager
+        location: Columbus, OH
+        start_date: 2012-09
+        end_date: 2017-10
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Delivered enterprise automation initiatives using Kofax Capture and TotalAgility for Fortune 100 clients across healthcare, financial services, retail, and construction.
+          - Became SME for multi-million-dollar IBM FileNet P8/Case Manager document imaging and enterprise content management program at JP Morgan Chase; facilitated adoption across 8 lines of business through requirements workshops, sprint planning, cross-training, and hands-on support.
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - company: PharmaShield LLC
+        position: Director of Technology
+        location: Chicago, IL
+        start_date: ""
+        end_date: ""
+        highlights:
+          - Built 0-to-1 pharmaceutical patent risk-analysis product from concept to launch using C#/.NET and SQL Server. Owned product delivery, IT infrastructure, and vendor ecosystem for early-stage insurance startup.
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: Diamond Management & Technology Consultants
+        position: Senior IT Product Manager, PeopleSoft Financials
+        location: Chicago, IL
+        start_date: ""
+        end_date: ""
+        highlights:
+          - Owned global product roadmap for Oracle PeopleSoft ERP/SCM across 8 countries and 10+ modules.
+          - Developed custom audit module that recovered $2.5M+ in expense compliance and automated ACH workflows that improved pay-cycle efficiency 80%.
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - company: Georgia Institute of Technology
+        position: Graduate Research Assistant, Center for Human-Machine Systems Research
+        location: Atlanta, GA
+        start_date: ""
+        end_date: ""
+        highlights:
+          - Built intelligent tutoring system for pilot training by conducting user research to define model requirements for adaptive instruction.
+          - Applied cognitive engineering principles to translate expert knowledge into rule-based decision systems, establishing early credentials in AI model design and human-machine interaction.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+    Key Accomplishments:
+      - title: "$750K Cost Savings"
+        icon: fa-solid fa-sack-dollar
+        summary: Delivered $750K in cost savings for a $121B enterprise by engineering an AI/ML/LLM document management solution, remediating where automated extraction failed, redesigning human review activities to catch errors before downstream impact, and establishing accuracy thresholds for 16 business units.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+      - title: "40% Faster Deployments"
+        icon: fa-solid fa-rocket
+        summary: Reduced deployment timelines by 40% by identifying which document processing components were reusable as frameworks versus client-specific; standardized the patterns that repeated across implementations while preserving flexibility for edge cases.
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - title: "60% RPA Cost Reduction"
+        icon: fa-solid fa-scissors
+        summary: Cut RPA costs by 60% by diagnosing that one-off implementations were root cause; established design principles for reusable automation and implemented KPIs connecting performance to business outcomes.
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - title: "40+ Person Global Team"
+        icon: fa-solid fa-people-group
+        summary: Cultivated and mentored a global 40+ person cross-functional engineering organization of developers, business analysts, project managers, and data engineers with Disciplined Agile practices; earned Canon's Commitment to Excellence award for driving client adoption and innovation impact.
 
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - title: "0-to-1 Data Product"
+        icon: fa-solid fa-lightbulb
+        summary: Built 0-to-1 data product at startup from concept through launch, owning roadmap, customer research, and technical delivery; increased research efficiency 250% over manual processes.
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: Project Management Professional (PMP)
+        date: 2019-02
+        issuer: Project Management Institute
+        icon: fa-solid fa-certificate
+        valid_through: 2028-02
+        credential_id: "2312469"
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+      - name: Disciplined Agile Senior Scrum Master (DASSM)
+        date: 2022-06
+        issuer: Project Management Institute
+        icon: fa-solid fa-certificate
+        valid_through: 2027-06
+        credential_id: "3210067"
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+    Skills:
+      - name: Automation Platforms
+        level: Expert
+        icon: fa-solid fa-robot
+        keywords: "Tungsten TotalAgility (TTA/KTA), Kofax Capture/Transformation (KC/KTM), UiPath Document Understanding (DU), Microsoft Power Platform"
 
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+      - name: AI & IDP Specializations
+        level: Expert
+        icon: fa-solid fa-brain
+        keywords: "Intelligent Document Processing (IDP), Robotic Process Automation (RPA), Business Process Management (BPM), OCR/ICR, Machine Learning Classification and Extraction, ERP/SCM Integration"
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Technical Stack
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "C#/.NET, SQL Server/T-SQL, Azure AI Services, REST APIs, Power BI, Data Modeling, SaaS/Cloud Architecture, GenAI/LLM"
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Product & Delivery
+        level: Expert
+        icon: fa-solid fa-diagram-project
+        keywords: "Agile/Scrum, SAFe, SDLC, Roadmap Workshops, Vendor Management, Stakeholder Engagement, Cross-Functional Leadership"
+
+    Core Competencies:
+      - title: Product Management
+        icon: fa-solid fa-bullseye
+        summary: "Product Strategy & Roadmap, Stakeholder Alignment, Requirements Engineering, Agile Delivery, Component Architecture & Reusability, Scalable Design Patterns, Go-to-Market Planning"
+
+      - title: AI & Intelligent Automation
+        icon: fa-solid fa-microchip
+        summary: "Intelligent Document Processing, Human-in-the-Loop Design, Training Data Strategy, Model Performance Optimization, Workflow Automation, API Integration & Orchestration"
+
+      - title: Human-Machine Systems
+        icon: fa-solid fa-users-gear
+        summary: "ML Confidence Tuning, Training Data Strategy, Cognitive Engineering, Human Factors, User Trust Optimization, Edge Case Analysis"
+
+    Overview:
+      - title: End-to-End Operational Awareness
+        icon: fa-solid fa-arrows-turn-to-dots
+        summary: Brings direct experience operating where automation output meets real business processes across healthcare, insurance, and finance, informing core strategic business decisions that scale for edge cases, cognitive load, and operational risk from day one.
+
+      - title: Human-Machine Systems Expertise
+        icon: fa-solid fa-brain
+        summary: Defines where automation thrives and where human review is required, combining ML confidence tuning, training data strategy, and formal human factors education at Georgia Tech to optimize both accuracy and user trust as a trusted advisor to all stakeholders.
+
+      - title: Hands-On Technical Fluency
+        icon: fa-solid fa-microchip
+        summary: Foundational experience in GenAI, LLMs, SQL, .NET, Azure, and platforms like Tungsten TotalAgility and UiPath, enabling sharper architecture tradeoffs and build-vs-buy decisions grounded in engineering reality versus marketing hype for real value-proposition analysis.

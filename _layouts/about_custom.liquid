@@ -1,0 +1,123 @@
+---
+layout: default
+---
+
+<div class="post">
+  <article>
+    {% if page.profile %}
+      <div class="profile-container row">
+
+        <!-- LEFT COLUMN: Name + Bio + Connect -->
+        <div class="col-md-8 bio-column">
+          <header class="post-header">
+            <h1 class="post-title">
+              {% if site.title == "blank" %}
+                <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+                {{ site.last_name }}
+              {% else %}
+                {{ site.title }}
+              {% endif %}
+            </h1>
+            <p class="about-subtitle">{{ page.subtitle }}
+              <!-- Connect (end of bio column = natural CTA position) -->
+              <div class="bio-connect">
+                <div class="connect-row">
+                  <a href="https://www.linkedin.com/in/graym" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </a>
+                  <a href="https://github.com/grayminds" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> YouTube
+                  </a>
+                  <a href="mailto:grayminds@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                  </a>
+                </div>
+              </div>
+            </p>
+          </header>
+
+          <div class="clearfix">
+            {{ content }}
+          </div>
+
+          <p></p>
+          <!-- Latest Posts (if enabled) -->
+          {% if page.latest_posts.enabled %}
+            <h2>
+              <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+            </h2>
+            {% include latest_posts.liquid %}
+          {% endif %}
+        </div>
+
+        <!-- RIGHT COLUMN: Photo + Sidebar cards + Clusters -->
+        <div class="col-md-4 sidebar-column">
+          <div class="profile-photo">
+            {% if page.profile.image %}
+              {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+              {% if page.profile.image_circular %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+              {% else %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+              {% endif %}
+              <img
+                src="{{ profile_image_path | relative_url }}"
+                class="{{ profile_image_class }}"
+                alt="{{ site.first_name }} {{ site.last_name }}"
+              >
+            {% endif %}
+            {% if page.profile.more_info %}
+              <div class="more-info">{{ page.profile.more_info }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Sidebar: What I Believe -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">
+              <a href="{{ '/what-i-believe/' | relative_url }}">What I Believe</a>
+            </h3>
+            <p class="sidebar-card-excerpt">
+              Good technology is invisible.  It removes friction, preserves human judgment, and gives people back the hours they were never supposed to lose.
+            </p>
+            <a href="{{ '/what-i-believe/' | relative_url }}" class="sidebar-card-link">Read more &rarr;</a>
+          </div>
+
+          <!-- Sidebar: What Keeps Me Up -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">
+              <a href="{{ '/what-keeps-me-up/' | relative_url }}">What Keeps Me Up</a>
+            </h3>
+            <p class="sidebar-card-excerpt">
+              Technology lands on real people with real constraints.  The gaps between design intent and lived experience are where the damage happens.
+            </p>
+            <a href="{{ '/what-keeps-me-up/' | relative_url }}" class="sidebar-card-link">Read more &rarr;</a>
+          </div>
+
+          <!-- Identity Facets (data-driven from _data/facets.yml) -->
+          {% include facets.liquid %}
+        </div>
+      </div>
+    {% else %}
+      <div class="clearfix">{{ content }}</div>
+    {% endif %}
+  </article>
+
+  <!-- News -->
+  {% if page.announcements.enabled %}
+    <h2>
+      <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+    </h2>
+    {% include news.liquid limit=true %}
+  {% endif %}
+
+  <!-- Selected papers -->
+  {% if page.selected_papers %}
+    <h2>
+      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+    </h2>
+    {% include selected_papers.liquid %}
+  {% endif %}
+</div>

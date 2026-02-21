@@ -1,0 +1,226 @@
+# -------------------------------------------------------------------
+# TimelineJS3 YAML Reference
+#
+# All fields are optional unless noted.
+# Dates: only "year" is required.  Others may be omitted.
+#
+# ---- Root ----
+# title:
+#   media:
+#     url: image, youtube, vimeo, soundcloud, twitter, or webpage
+#     caption: text shown under media
+#     credit: attribution text
+#   text:
+#     headline: large opening title (required for title slide)
+#     text: HTML or markdown supported
+#
+# events:
+#   - start_date: (required)
+#       year: 2020
+#       month: 1
+#       day: 15
+#       hour: 13
+#       minute: 45
+#
+#     end_date:
+#       year: 2021
+#       month: 3
+#       day: 1
+#
+#     display_date: "Human readable date override"
+#
+#     text:
+#       headline: event title
+#       text: description body (markdown allowed)
+#
+#     media:
+#       url: media URL (image/video/webpage/etc)
+#       thumbnail: optional custom thumbnail image
+#       caption: caption under media
+#       credit: attribution
+#
+#     background:
+#       color: "#RRGGBB"
+#       opacity: 50
+#
+#     group: "Groups events together in navigation"
+#
+#     location:
+#       name: "Location label"
+#       lat: 39.9612
+#       lon: -82.9988
+#       zoom: 10
+#       line: true   # draws map path line
+#
+# eras:
+#   - start_date:
+#       year: 2010
+#     end_date:
+#       year: 2015
+#     text:
+#       headline: "Era label"
+#
+# Notes:
+# • Only start_date.year is truly required for an event.
+# • display_date overrides how the date prints on the slide.
+# • media.url accepts: jpg, png, gif, youtube, vimeo, soundcloud,
+#   twitter links, wikipedia pages, and normal websites.
+# -------------------------------------------------------------------
+
+title:
+  text:
+    headline: "The Household Cats"
+    text: "A chronological record of the cats who have shared my home."
+
+events:
+
+  matisse:
+    start_date:
+      year: 1997
+      month: 8
+    end_date:
+      year: 2000
+      month: 8
+    display_date: "Atlanta (Aug 1997–Aug 2000)"
+    text:
+      headline: "Matisse"
+      text: |
+        Orange tabby, male.
+
+        Matisse was the first cat to adopt me away from being a dog
+        person during my years renting a room with a family while in 
+        grad school.  He eventually reached about nineteen years of 
+        age, placing his birth around 1981.
+    media:
+      url: "/assets/img/timeline_cats/matisse.01 2001-EDIT.jpg"
+      thumbnail: "/assets/img/timeline_cats/thumbs/matisse.01 2001-EDIT_thumb.jpg"
+      caption: "Matisse"
+    images:
+      - url: "/assets/img/timeline_cats/matisse.01 2001-EDIT.jpg"
+        caption: "Matisse"
+      - url: "/assets/img/timeline_cats/matisse.02 2001-EDIT.jpg"
+        caption: "Matisse ... and 90s computing"
+
+  oscar:
+    start_date:
+      year: 2001
+      month: 2
+    end_date:
+      year: 2001
+      month: 12
+    display_date: "Chicago (2001)"
+    text:
+      headline: "Oscar"
+      text: |
+        Gray tabby, male.
+
+        Oscar came along shortly after I arrived in Chicago.  His time
+        with me was brief but memorable.  Even though he was sickly with FIP
+        he was a sweet and affectionate cat. He was only about three when he passed.
+    media:
+      url: "/assets/img/timeline_cats/oscar.wmg-oscar3.jpg"
+      thumbnail: "/assets/img/timeline_cats/thumbs/oscar.wmg-oscar3_thumb.jpg"
+      caption: "Oscar"
+
+  casey:
+    start_date:
+      year: 2002
+      month: 4
+    end_date:
+      year: 2011
+      month: 5
+    display_date: "Chicago (2002–May 2011)"
+    text:
+      headline: "Casey"
+      text: |
+        Tabby, male.
+
+        Adopted as a young kitten in Chicago, Casey quickly became part
+        of the rhythm of daily life.  He adopted me first by sitting in
+        my lap.  He was the quiet one who would curl across the shoulders
+        - always there, never in the way.  His loss to heart disease at
+        nine was a deeply felt shock.
+    media:
+      url: "/assets/img/timeline_cats/casey.20070413 IMG_0368.JPG"
+      thumbnail: "/assets/img/timeline_cats/thumbs/casey.20070413 IMG_0368_thumb.JPG"
+      caption: "Casey"
+
+  merlin:
+    start_date:
+      year: 2002
+      month: 4
+    end_date:
+      year: 2015
+      month: 11
+    display_date: "Chicago and Ohio (2002–Nov 2015)"
+    text:
+      headline: "Merlin"
+      text: |
+        Tabby, male.
+
+        Merlin and Casey came home together as littermates. Whereas
+        Casey was the quiet one, Merlin was the outspoken chirper of
+        birds.  He also liked to chew cardboard boxes and groom your
+        forehead ... at 3 am in the morning.
+    media:
+      url: "/assets/img/timeline_cats/merlin.20070711.IMG_8498 Perfect Pose.crop.JPG"
+      thumbnail: "/assets/img/timeline_cats/thumbs/merlin.20070711.IMG_8498 Perfect Pose.crop_thumb.jpg"
+      caption: "Merlin"
+
+  peekaboo:
+    start_date:
+      year: 2016
+      month: 1
+    end_date:
+      year: 2050
+      month: 1
+    display_date: "Jan 2016–Present"
+    text:
+      headline: "Peekaboo"
+      text: |
+        White and gray tabby, male.
+
+        Peekaboo was a rehome after his first family had to move; he
+        got his name from his habit of hiding under things and only
+        peeking out.  But he quickly settled in and is known to be the 
+        most affectionate cat I've had.  
+    media:
+      url: "/assets/img/timeline_cats/peekaboo.20190128_131512.jpg"
+      thumbnail: "/assets/img/timeline_cats/thumbs/peekaboo.20190128_131512_thumb.jpg"
+      caption: "Peekaboo"
+    images:
+      - url: "/assets/img/timeline_cats/peekaboo.20190128_131512.jpg"
+        caption: "Peekaboo"
+      - url: "/assets/img/timeline_cats/peekaboo+kaelie.20190730_110941.jpg"
+        caption: "Peekie and Kaelie"
+      - url: "/assets/img/timeline_cats/peekaboo+kaelie.20210915_131744.jpg"
+        caption: "Peekie and Kaelie"       
+
+  kaelieko:
+    start_date:
+      year: 2018
+      month: 6
+    end_date:
+      year: 2050
+      month: 1
+    display_date: "Summer 2018–Present"
+    text:
+      headline: "Kaelieko"
+      text: |
+        Tortoiseshell, female.
+
+        Born December 17, 2017, she joined the household in the 
+        late spring.  Never liked to be held, always squirming away,
+        until late 2025 when now she wants her cuddles and pets.
+    media:
+      url: "/assets/img/timeline_cats/kaelieko.20250727_103817.jpg"
+      thumbnail: "/assets/img/timeline_cats/thumbs/kaelieko.20250727_103817_thumb.jpg"
+      caption: "Kaelieko"
+    images:
+      - url: "/assets/img/timeline_cats/kaelieko.20250727_103817_thumb.jpg"
+        caption: "Kaelieko"
+      - url: "/assets/img/timeline_cats/peekaboo+kaelie.20190730_110941.jpg"
+        caption: "Peekie and Kaelie"
+      - url: "/assets/img/timeline_cats/peekaboo+kaelie.20210915_131744.jpg"
+        caption: "Peekie and Kaelie" 
+      

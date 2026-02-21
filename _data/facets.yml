@@ -1,0 +1,32 @@
+# _data/facets.yml
+# Identity facets displayed on the homepage.
+# Edit this file to add, remove, or reorder items without touching layouts.
+#
+# Fields:
+#   category  - Group label (displayed as uppercase heading)
+#   items     - List of facets in this group
+#     label   - Display name
+#     url     - Link to the facet's detail page (optional; omit to render as plain text)
+
+- category: Build
+  items:
+    - label: Technologist
+      url: /technologist/
+    - label: Human-Systems Engineer
+      url: /cognitive-systems-engineer/
+
+- category: Create
+  items:
+    - label: Stage Combat Choreography
+      url: /stage-combat-choreography/
+    - label: Drone Videography
+      url: /drone-videography/
+
+- category: Explore
+  items:
+    - label: Medieval Studies
+      url: /medieval-studies/
+    - label: Music and Film
+      url: /music-and-film/
+    - label: Family Genealogist
+      url: /family-genealogist/      

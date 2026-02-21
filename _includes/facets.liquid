@@ -1,0 +1,20 @@
+<!-- _includes/facets.liquid -->
+<!-- Renders identity facets from _data/facets.yml -->
+<!-- Reuses existing sidebar-clusters / cluster CSS classes -->
+
+<div class="sidebar-clusters">
+  {% for group in site.data.facets %}
+    <div class="cluster">
+      <span class="cluster-label">{{ group.category }}</span>
+      <span class="cluster-links">
+        {% for item in group.items %}
+          {% if item.url %}
+            <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+          {% else %}
+            <span>{{ item.label }}</span>
+          {% endif %}
+        {% endfor %}
+      </span>
+    </div>
+  {% endfor %}
+</div>

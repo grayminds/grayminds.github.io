@@ -1,0 +1,28 @@
+eras:
+
+  - start_date:
+      year: 1997
+      month: 8
+    end_date:
+      year: 2000
+      month: 8
+    text:
+      headline: "The Atlanta GA Years"
+
+  - start_date:
+      year: 2000
+      month: 8
+    end_date:
+      year: 2013
+      month: 6
+    text:
+      headline: "The Chicago IL Years"
+
+  - start_date:
+      year: 2013
+      month: 6
+    end_date:
+      year: 2100
+      month: 1
+    text:
+      headline: "The Pickerington OH Years"

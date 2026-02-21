@@ -1,0 +1,18 @@
+{% comment %}
+  Overview section with icon, title, and summary for each differentiator
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      {% if entry.icon %}
+        <i class="{{ entry.icon }} mr-1"></i>
+      {% endif %}
+      <strong>{{ entry.title }}</strong>
+      {% if entry.summary %}
+        <br />
+        <span class="font-weight-lighter">{{ entry.summary }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

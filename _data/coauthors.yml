@@ -1,34 +1,19 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"mitchell":
+  - firstname: ["Christine", "C.", "C. M.", "Christine M."]
+    #url: https://www.isye.gatech.edu/users/christine-mitchell
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"chappell":
+  - firstname: ["Alan", "A.", "A. R.", "Alan R."]
+    #url: https://www.researchgate.net/scientific-contributions/Alan-R-Chappell-7924180
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"thurman":
+  - firstname: ["David", "D.", "D. A.", "David A."]
+    #url: https://www.researchgate.net/scientific-contributions/David-A-Thurman-7207628
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"quinn":
+  - firstname: ["Alexander", "A.", "A. B.", "Alexander B."]
+    #url: https://www.researchgate.net/scientific-contributions/Alexander-B-Quinn-7202069
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
-
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"palmer":
+  - firstname: ["Michael", "M.", "M. T.", "Michael T."]
+    #url: https://www.researchgate.net/scientific-contributions/Michael-T-Palmer-72636602
