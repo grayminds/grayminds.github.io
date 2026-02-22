@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Skytime Studio
-permalink: /skytime/
-description: Sky Time Studio: Aerial drone videography and cinematography by Michael Gray.
+permalink: /skytimestudio/
+description: Sky Time Studio - Aerial drone videography and cinematography by Michael Gray.
 nav: false
 ---
 
 ## Skytime Studio
 
-Skytime Studio is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach. Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling — not just footage, but a sense of place.
+**Sky Time Studio** is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach. Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling — not just footage, but a sense of place.
 
 ### Selected Work
 

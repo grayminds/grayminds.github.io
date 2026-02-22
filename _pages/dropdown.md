@@ -7,8 +7,12 @@ dropdown: true
 children:
   - title: Tech Stack
     permalink: /tech-stack/
-  - title: Timeline Testing with Cats
+  - title: Timeline (Cat Tested)
     permalink: /timeline-cats/
+  - title: Labyrinthian
+    permalink: /labyrinthian/
+  - title: Sky Time Studio
+    permalink: /skytimestudio/
   - title: Publications
     permalink: /publications/
 
