@@ -30,12 +30,26 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/tech-stack/";
               },
-            },{id: "dropdown-timeline-testing-with-cats",
-              title: "Timeline Testing with Cats",
+            },{id: "dropdown-timeline-cat-tested",
+              title: "Timeline (Cat Tested)",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "/timeline-cats/";
+              },
+            },{id: "dropdown-labyrinthian",
+              title: "Labyrinthian",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/labyrinthian/";
+              },
+            },{id: "dropdown-sky-time-studio",
+              title: "Sky Time Studio",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/skytimestudio/";
               },
             },{id: "dropdown-publications",
               title: "Publications",
