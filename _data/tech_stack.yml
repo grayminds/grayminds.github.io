@@ -339,6 +339,7 @@ sections:
           - development
         notes: Hosts grayminds.github.io. Free static site hosting integrated with the repo.
 
+
   # ============================================================
   # HOME LAB - DEV TOOLS
   # ============================================================
@@ -788,3 +789,109 @@ sections:
           - automation
           - enterprise
         notes: RPA orchestration; attended and unattended bot deployment.
+
+
+# ============================================================
+  # ONLINE PORTFOLIO - grayminds.github.io
+  # ============================================================
+  - id: my-github-io
+    title: "Online Portfolio: grayminds.github.io"
+    type: software
+    items:
+      - vendor: Cloudflare
+        product: DNS
+        url: https://developers.cloudflare.com/dns/
+        context:
+          - home-office
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - dns
+          - networking
+          - portfolio
+          - hosting
+        notes: DNS management for grayminds.github.io. Free tier covers custom domain routing and HTTPS.
+
+      - vendor: GitHub
+        product: GitHub Pages
+        url: https://docs.github.com/en/pages/getting-started-with-github-pages
+        context:
+          - home-office
+        status: active
+        license: freeware
+        proficiency: proficient
+        sentiment: positive
+        highlight: false
+        tags:
+          - hosting
+          - portfolio
+          - development
+          - static-site
+        notes: Static site hosting directly from the repo. Zero infrastructure to manage.
+
+      - vendor: al-folio
+        product: al-folio Jekyll Theme
+        url: https://github.com/alshedivat/al-folio/blob/main/CUSTOMIZE.md
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: proficient
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Academic-oriented Jekyll theme that provided a strong foundation for the portfolio site.
+          Heavily customized with data-driven YAML components, custom SCSS imports, and restructured
+          identity facets (BUILD/CREATE/EXPLORE/CULTIVATE).  The theme's opinionated structure
+          required learning its conventions, but the payoff is a clean, professional result
+          with minimal front-end effort.
+        tags:
+          - development
+          - jekyll
+          - portfolio
+          - static-site
+          - template
+        notes: Base theme for grayminds.github.io. Customized with YAML-driven components and custom SCSS in _sass/main.scss.
+
+      - vendor: Knight Lab
+        product: TimelineJS3
+        url: https://timeline.knightlab.com/#make
+        context:
+          - home-office
+        status: active
+        license: open-source
+        proficiency: familiar
+        sentiment: positive
+        highlight: false
+        tags:
+          - development
+          - portfolio
+          - visualization
+          - javascript
+        notes: Interactive timeline component embedded in the portfolio. Data-driven via structured JSON.
+
+      - vendor: Anthropic
+        product: Claude Code
+        url: https://docs.anthropic.com/en/docs/claude-code
+        context:
+          - home-office
+        status: active
+        license: subscription
+        proficiency: proficient
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Used extensively during site development for converting JavaScript-based components
+          into YAML-driven data structures, refactoring Liquid templates, and accelerating
+          the build-test-deploy cycle.  The agentic workflow made it practical to restructure
+          the entire site architecture in a fraction of the time it would have taken manually.
+        tags:
+          - ai
+          - development
+          - automation
+          - portfolio
+          - cli
+        notes: Agentic coding assistant used for JS-to-YAML conversions, Liquid template refactoring, and site architecture work.
