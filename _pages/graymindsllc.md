@@ -23,10 +23,8 @@ My consulting practice focuses on:
 
 ### Background
 
-My approach to technology is grounded in human factors research dating back to work at Georgia Tech's Center for Human-Machine Systems Research, where I studied how people interact with automated systems in high-stakes environments.  That foundation shapes how I approach every engagement: automation should augment human judgment, not replace it without thought.
+My approach to technology is grounded in human factors research dating back to work at Georgia Tech's Center for Human-Machine Systems Research, where I studied how people interact with automated systems in high-stakes environments. That foundation shapes how I approach every engagement: automation should augment human judgment, not replace it without thought.
 
 ### Work With Me
 
 For consulting inquiries, reach me at michael [at] grayminds [dot] llc.
-
-

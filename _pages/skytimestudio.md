@@ -8,11 +8,11 @@ nav: false
 
 ## Skytime Studio
 
-Skytime Studio is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach.  Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling — not just footage, but a sense of place.
+Skytime Studio is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach. Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling — not just footage, but a sense of place.
 
 ### Selected Work
 
-A few favorites from the channel.  Swap the video IDs below with your actual YouTube video IDs.
+A few favorites from the channel. Swap the video IDs below with your actual YouTube video IDs.
 
 {% include video.liquid path="https://www.youtube.com/embed/XeIhQg9jwPo" class="img-fluid rounded z-depth-1" %}
 
@@ -34,10 +34,8 @@ A few favorites from the channel.  Swap the video IDs below with your actual You
 
 ### More on YouTube
 
-The full catalog of Skytime Studio work lives on YouTube.  Subscribe for new footage as it is released.
+The full catalog of Skytime Studio work lives on YouTube. Subscribe for new footage as it is released.
 
 <div class="text-center mt-4">
   <a href="https://www.youtube.com/@skytimestudio" target="_blank" class="btn btn-primary">Visit Skytime Studio on YouTube</a>
 </div>
-
- 

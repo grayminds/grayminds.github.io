@@ -339,7 +339,6 @@ sections:
           - development
         notes: Hosts grayminds.github.io. Free static site hosting integrated with the repo.
 
-
   # ============================================================
   # HOME LAB - DEV TOOLS
   # ============================================================
@@ -790,8 +789,7 @@ sections:
           - enterprise
         notes: RPA orchestration; attended and unattended bot deployment.
 
-
-# ============================================================
+  # ============================================================
   # ONLINE PORTFOLIO - grayminds.github.io
   # ============================================================
   - id: my-github-io
