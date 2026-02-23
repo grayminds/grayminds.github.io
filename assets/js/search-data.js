@@ -98,9 +98,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/eq-side-of-ai/";
           
         },
-      },{id: "post-ai-is-not-a-differentiator",
+      },{id: "post-ai-is-not-a-differentiator-it-is-a-force-multiplier",
         
-          title: "AI is not a Differentiator",
+          title: "AI is not a Differentiator, It is a Force Multiplier",
         
         description: "",
         section: "Posts",
