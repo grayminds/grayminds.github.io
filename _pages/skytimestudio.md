@@ -6,7 +6,7 @@ description: Sky Time Studio - Aerial drone videography and cinematography by Mi
 nav: false
 ---
 
-**Sky Time Studio** is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach.  Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling, not just footage, but a sense of place.
+**Sky Time Studio** is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach. Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling, not just footage, but a sense of place.
 
 ### Current Highlights
 
@@ -30,7 +30,7 @@ nav: false
 
 ### More on YouTube
 
-The full catalog of Skytime Studio work lives on YouTube.  Subscribe for new footage as it is released.
+The full catalog of Skytime Studio work lives on YouTube. Subscribe for new footage as it is released.
 
 <div class="text-center mt-4">
   <a href="https://www.youtube.com/@skytimestudio" target="_blank" class="btn btn-primary">Visit Skytime Studio on YouTube</a>
