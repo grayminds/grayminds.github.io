@@ -23,7 +23,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-the-eq-side-of-ai",
+        },{id: "post-ai-doesn-39-t-have-motivation-you-do",
+        
+          title: "AI Doesn&#39;t Have Motivation.  You Do.",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/you-bring-motivation-not-ai/";
+          
+        },
+      },{id: "post-why-i-39-m-building-a-website-in-2026-and-why-you-should-too",
+        
+          title: "Why I&#39;m Building a Website in 2026 (And Why You Should Too)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/evolving-website/";
+          
+        },
+      },{id: "post-the-eq-side-of-ai",
         
           title: "The EQ Side of AI",
         
@@ -54,6 +76,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/international-lego-day/";
+          
+        },
+      },{id: "post-why-i-39-m-building-a-website-in-2026-and-why-you-should-too",
+        
+          title: "Why I&#39;m Building a Website in 2026 (And Why You Should Too)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/why-website-branding/";
           
         },
       },{id: "books-the-godfather",
