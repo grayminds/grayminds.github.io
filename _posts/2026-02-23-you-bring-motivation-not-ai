@@ -1,0 +1,49 @@
+---
+layout: post
+title: AI Doesn't Have Motivation.  You Do.
+date: 2026-02-23
+categories:
+tags:
+  - personal-brand
+  - product-management
+  - thought-leadership
+---
+
+
+Here's the thing nobody tells you about working with AI on a real project: it gets confused about 30% of the time.
+
+It references older, outdated approaches.  It forgets what you already established.  It confidently presents something that contradicts a decision you made together three prompts ago.
+
+And that 30% is the entire point.
+
+## The Result Is Only as Good as the Instruction
+
+At the end of every session, the AI output was only as good as the instruction I gave it.  Vague input produced vague results.  Precise input, with clear patterns and explicit constraints, produced work I could actually use.
+
+This isn't a criticism of the technology.  It's an observation about the skill required to use it well.  The gap between "AI can do this" and "AI did this well" is filled entirely by the human operating it.
+
+## Knowledge Curation Is the Real Work
+
+Building a website with AI forced me into a role I didn't expect: knowledge curator.
+
+What should AI remember from our prior work?  What should it forget?  When it references something outdated, how do I correct course without losing momentum?
+
+This is just knowledge curation.  It's the same discipline that applies to managing documentation, onboarding new team members, or maintaining institutional memory in any organization.  The difference is that with AI, the feedback loop is faster and the cost of poor curation is immediate.  You see the consequences of ambiguity in real time.
+
+## AI Has No Motivation
+
+AI wouldn't power up one morning and decide, "Let's build a website for Michael today."  It needed human input.  It needed direction, context, and judgment.
+
+What it created, in combination with that human input, was something neither of us would have produced alone.  Not a replacement.  An augmentation.
+
+I defined the goals.  I made the architectural decisions.  I caught the errors.  AI handled the implementation velocity, the pattern translation, and the breadth of technical knowledge I hadn't maintained in years.
+
+The result: an augmented human who could ship a project that would have taken weeks in a fraction of the time.
+
+## The Bridge
+
+This is the bridge I'm traveling right now.  Learning what to delegate, what to verify, and what to keep in my own hands.  Building the instinct for when AI is saving me time and when it's leading me sideways.
+
+That instinct doesn't come from reading about AI.  It comes from using it on real work, hitting the 30% failure rate, and developing the judgment to navigate it.
+
+The technology will keep evolving.  The skill of working with it is what compounds.

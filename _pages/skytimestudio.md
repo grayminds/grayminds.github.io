@@ -6,35 +6,31 @@ description: Sky Time Studio - Aerial drone videography and cinematography by Mi
 nav: false
 ---
 
-## Skytime Studio
+**Sky Time Studio** is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach.  Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling, not just footage, but a sense of place.
 
-**Sky Time Studio** is my aerial drone videography practice, capturing landscapes, events, and places from perspectives that ground-level cameras can't reach. Based in Columbus, Ohio, I shoot with a focus on cinematic composition and storytelling — not just footage, but a sense of place.
+### Current Highlights
 
-### Selected Work
-
-A few favorites from the channel. Swap the video IDs below with your actual YouTube video IDs.
-
-{% include video.liquid path="https://www.youtube.com/embed/XeIhQg9jwPo" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">
-    Cathedral Falls, WV
+<P> </P>
+<div class="caption">Cathedral Falls, WV</div>
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/XeIhQg9jwPo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-{% include video.liquid path="https://www.youtube.com/embed/vMj21hQH2N0" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">
-    Sullivan Island, Charleston SC
+<P> </P>
+<div class="caption">Sullivan Island, Charleston SC</div>
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/vMj21hQH2N0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-{% include video.liquid path="https://www.youtube.com/embed/BIfa2jprXmA" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">
-    Kuhn Honors House used to be more than offices, during my time at The Ohio State University it was a place of community, activity, and colleagues.  I hosted fireside chats for three seasons with professors (occassionally with a real fire), lead various organizations in various capacities, and cultivated leadership skills that have served me well over the years.  Partly nostalgia, partly DNA.
+<P> </P>
+<div class="caption">Kuhn Honors House used to be more than offices, during my time at The Ohio State University it was a place of community, activity, and colleagues.  I hosted fireside chats for three seasons with professors (occasionally with a real fire), led various organizations in various capacities, and cultivated leadership skills that have served me well over the years.  Partly nostalgia, partly DNA.</div>
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/BIfa2jprXmA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ### More on YouTube
 
-The full catalog of Skytime Studio work lives on YouTube. Subscribe for new footage as it is released.
+The full catalog of Skytime Studio work lives on YouTube.  Subscribe for new footage as it is released.
 
 <div class="text-center mt-4">
   <a href="https://www.youtube.com/@skytimestudio" target="_blank" class="btn btn-primary">Visit Skytime Studio on YouTube</a>

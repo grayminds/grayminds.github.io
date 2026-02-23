@@ -27,7 +27,7 @@ latest_posts:
 
 That question has driven me across to dive-deep across multiple paths of [intelligent tutoring systems](/cognitive-systems-engineer), [theatrical combat choreography](/stage-combat-choreogaphy), and [enterprise solutions delivery](/technologist) focused on [AI and Automation](/what-i-believe). At the heart of it is leveraging technology to better enable human judgment.
 
-<span class="concept-highlight">I am a catalyst.</span>
+<span class="concept-highlight">My curiosity makes me a catalyst.</span>
 
 I work as a **change-catalyst** between disciplines, connecting patterns that single-domain thinkers miss and turning those connections into tested, measurable outcomes. Where others see unrelated experience, I see convergent systems waiting to be mapped.
 

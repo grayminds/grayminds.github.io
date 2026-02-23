@@ -9,12 +9,15 @@ children:
     permalink: /tech-stack/
   - title: Timeline (Cat Tested)
     permalink: /timeline-cats/
-  - title: Labyrinthian
-    permalink: /labyrinthian/
-  - title: Sky Time Studio
-    permalink: /skytimestudio/
+  
   - title: Publications
     permalink: /publications/
+- title: Labyrinthian
+    permalink: /labyrinthian/
+  - title: Gray Minds LLC
+    permalink: /graymindsllc/
+  - title: Sky Time Studio
+    permalink: /skytimestudio/
 
 #  - title: bookshelf
 #    permalink: /books/
