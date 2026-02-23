@@ -23,7 +23,49 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-ai-doesn-39-t-have-motivation-you-do",
+        },{id: "dropdown-tech-stack",
+              title: "Tech Stack",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/tech-stack/";
+              },
+            },{id: "dropdown-timeline-cat-tested",
+              title: "Timeline (Cat Tested)",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/timeline-cats/";
+              },
+            },{id: "dropdown-publications",
+              title: "Publications",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/publications/";
+              },
+            },{id: "dropdown-labyrinthian",
+              title: "Labyrinthian",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/labyrinthian/";
+              },
+            },{id: "dropdown-gray-minds-llc",
+              title: "Gray Minds LLC",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/graymindsllc/";
+              },
+            },{id: "dropdown-sky-time-studio",
+              title: "Sky Time Studio",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/skytimestudio/";
+              },
+            },{id: "post-ai-doesn-39-t-have-motivation-you-do",
         
           title: "AI Doesn&#39;t Have Motivation.  You Do.",
         
