@@ -9,10 +9,9 @@ children:
     permalink: /tech-stack/
   - title: Timeline (Cat Tested)
     permalink: /timeline-cats/
-  
   - title: Publications
     permalink: /publications/
-- title: Labyrinthian
+  - title: Labyrinthian
     permalink: /labyrinthian/
   - title: Gray Minds LLC
     permalink: /graymindsllc/
