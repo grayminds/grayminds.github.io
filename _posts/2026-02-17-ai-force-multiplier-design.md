@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI is not a Differentiator"
+title: "AI is not a Differentiator, It is a Force Multiplier"
 date: 2026-02-17
 categories:
   - ai

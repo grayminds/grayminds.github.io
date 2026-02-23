@@ -5,6 +5,6 @@ module.exports = {
   skippedContentGlobs: ["_site/assets/**/*.html"],
   safelist: {
     standard: ["video-wrapper"],
-    deep: [/video-wrapper/],
+    deep: [/video-wrapper/, /pagination/, /page-item/, /page-link/],
   },
 };
