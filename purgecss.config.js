@@ -6,5 +6,6 @@ module.exports = {
   safelist: {
     standard: ["video-wrapper"],
     deep: [/video-wrapper/, /pagination/, /page-item/, /page-link/],
+    greedy: [/^btn/, /^col-/, /^modal/, /^nav/, /^dropdown/],
   },
 };
