@@ -31,7 +31,10 @@ That question has driven me across to dive-deep across multiple paths of [intell
 
 I work as a **change-catalyst** between disciplines, connecting patterns that single-domain thinkers miss and turning those connections into tested, measurable outcomes. Where others see unrelated experience, I see convergent systems waiting to be mapped.
 
-As the tapestry is woven each discipline adds a thread, and the threads reinforce each other in ways a single strand never could. Designing a fight scene and designing a document processing workflow both demand the same thing: understanding how humans move through a system, where they stumble, and how to make the next step obvious. My arts background didn't happen before my technology career. **It enhanced it.**
+As the tapestry is woven each discipline adds a thread, and the threads reinforce each other in ways a single strand never could. Designing a fight scene and designing a document processing workflow both demand the same thing: understanding how humans move through a system, where they stumble, and how to make the next step obvious.  The arts taught me how identify cues and motivations within processes, technology simply gave me a different kind of stage.
+
+
+My arts background didn't happen before my technology career. **It enhanced it.**
 
 ---
 
