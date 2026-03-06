@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The EQ Side of AI"
+title: The EQ Side of AI
 date: 2026-02-18
 categories:
   - ai
