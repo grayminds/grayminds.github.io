@@ -65,7 +65,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-ai-doesn-39-t-have-motivation-you-do",
+            },{id: "post-claude-code-obsidian-the-addiction-nobody-warned-me-about",
+        
+          title: "Claude Code + Obsidian: The Addiction Nobody Warned Me About",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/claude-code-obsidian-addiction/";
+          
+        },
+      },{id: "post-ai-doesn-39-t-have-motivation-you-do",
         
           title: "AI Doesn&#39;t Have Motivation.  You Do.",
         
