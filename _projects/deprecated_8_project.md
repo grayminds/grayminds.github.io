@@ -1,10 +1,12 @@
 ---
+published: false
 layout: page
-title: project 9
-description: another project with an image 🎉
-img: assets/img/al-folio-default/6.jpg
-importance: 4
-category: fun
+title: project 8
+description: an other project with a background image and giscus comments
+img: assets/img/al-folio-default/9.jpg
+importance: 2
+category: work
+giscus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.

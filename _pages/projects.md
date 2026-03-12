@@ -2,11 +2,11 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
+description: Technical builds and digital archival work, powered by curiosity and Claude Code.
+nav: true
 nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+display_categories: [technical, archival]
+horizontal: true
 ---
 
 <!-- pages/projects.md -->

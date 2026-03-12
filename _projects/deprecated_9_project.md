@@ -1,9 +1,10 @@
 ---
+published: false
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
+title: project 9
+description: another project with an image 🎉
+img: assets/img/al-folio-default/6.jpg
+importance: 4
 category: fun
 ---
 

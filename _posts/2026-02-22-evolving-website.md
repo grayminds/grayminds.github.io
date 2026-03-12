@@ -6,6 +6,7 @@ categories:
 tags:
   - personal-brand
   - product-management
+ai_assisted: true
 ---
 
 I'll be honest. I haven't paid attention to front-end code in years. My specialization is data and backend automation; within corporate, my user interfaces are constrained by the automation tool's development environment.
@@ -56,3 +57,7 @@ I want to give a shoutout to the contributors behind the [al-folio](https://gith
 And then my curiosity says, "and then what?" I knew I wanted timelines, so I found a working timeline solution. But it wasn't in the format I needed. So I use Claude to translate it from one architecture to another.
 
 That's the pattern. Find a foundation someone else built. Learn from it. Extend it with AI as your co-developer. Mentorship doesn't have to be in person; sometimes it's the prior work that others left for you to build on.
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting, code generation, and architectural problem-solving, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_

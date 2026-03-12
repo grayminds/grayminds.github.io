@@ -1,10 +1,12 @@
 ---
+published: false
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/al-folio-default/1.jpg
+title: project 3 with very long name
+description: a project that redirects to another website
+img: assets/img/al-folio-default/7.jpg
+redirect: https://unsplash.com
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
