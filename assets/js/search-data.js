@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Technical builds and digital archival work, powered by curiosity and Claude Code.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
@@ -65,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-claude-code-obsidian-the-addiction-nobody-warned-me-about",
+            },{id: "post-the-future-caught-up-to-the-past",
+        
+          title: "The Future Caught Up to the Past",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/future-catching-up-to-the-past/";
+          
+        },
+      },{id: "post-claude-code-obsidian-the-addiction-nobody-warned-me-about",
         
           title: "Claude Code + Obsidian: The Addiction Nobody Warned Me About",
         
@@ -147,51 +165,26 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-standing-up-grayminds-com",
+          title: 'Standing Up grayminds.com',
+          description: "Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/1_github-site/";
+            },},{id: "projects-bbs-ansi-art-recovery",
+          title: 'BBS ANSI Art Recovery',
+          description: "Converting early-1990s TheDraw ANSI animation files into viewable animated GIFs using Claude Code.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/2_ansi-conversion/";
+            },},{id: "projects-legacy-document-conversion",
+          title: 'Legacy Document Conversion',
+          description: "Converting decades of documents from dead formats (PFS First Choice, Microsoft Works, WordPerfect, early Word) into searchable markdown.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/3_legacy-docs/";
+            },},{id: "projects-photo-archive-consolidation",
+          title: 'Photo Archive Consolidation',
+          description: "Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/4_photo-organization/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
