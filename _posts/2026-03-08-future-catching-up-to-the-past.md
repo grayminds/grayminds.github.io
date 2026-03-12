@@ -56,3 +56,7 @@ The tools I have today can read files I created before those tools were imaginab
 Every person accumulates a digital past. Files in dead formats. Creative work locked inside applications that no longer run. That accumulation used to represent permanent loss, measured in format obsolescence.
 
 It doesn't have to anymore. The future is not just catching up to the present. It is reaching back, reading what was left behind, and making it whole again.
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_

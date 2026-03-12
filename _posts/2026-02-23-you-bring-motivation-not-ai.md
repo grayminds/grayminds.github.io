@@ -46,3 +46,7 @@ This is the bridge I'm traveling right now. Learning what to delegate, what to v
 That instinct doesn't come from reading about AI. It comes from using it on real work, hitting the 30% failure rate, and developing the judgment to navigate it.
 
 The technology will keep evolving. The skill of working with it is what compounds.
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_

@@ -33,3 +33,7 @@ Those are exactly the abilities still required when working with AI. AI produces
 Human-centric technology is not technology that replaces people. It is technology designed around how people think, decide, trust, and collaborate. AI multiplies capability. Design makes it usable. Emotional intelligence makes it responsible.
 
 Organizations that combine all three will outperform those that rely on AI alone. The value of AI is not in what it produces, but in what people can responsibly do with it together.
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_

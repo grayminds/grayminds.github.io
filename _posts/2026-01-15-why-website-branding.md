@@ -40,3 +40,7 @@ None of this is complicated. It's just discipline. The same phased approach that
 Define the target. Break it into phases. Adapt along the way.
 
 The website is just the first deliverable. The real product is the system behind it.
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_

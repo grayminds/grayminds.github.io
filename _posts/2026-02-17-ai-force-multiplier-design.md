@@ -41,3 +41,7 @@ Don Norman's [_The Design of Everyday Things_](https://a.co/d/05G9J4o2) influenc
 Design, however, is not sufficient by itself. The critical element is still the human who connects other humans to interactive systems. Not the IQ of model builders, but the EQ of the people guiding how AI is used as a multiplier.
 
 I explore that idea further in a companion post: [The EQ Side of AI](/2026/02/18/eq-side-of-ai).
+
+---
+
+_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_
