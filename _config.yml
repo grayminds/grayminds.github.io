@@ -201,9 +201,11 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - jw-yearbook/
 keep_files:
   - CNAME
   - .nojekyll
+  - jw-yearbook
 
 # Plug-ins
 plugins:
