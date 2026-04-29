@@ -76,7 +76,7 @@ Every Claude Code session reads the identity layer at startup.  This is what let
 
 A voice contract is a file inside the identity layer that tells your AI what your writing actually sounds like.  Not what you want it to sound like in some aspirational sense.  What it sounds like when you are at your best.  The voice contract is the file that prevents that.  It sits next to the other identity files and loads on every session.  It is the single most editorially valuable file in the whole brain.
 
-Fortunately for me, I'm a digital packrat who has writing samples across several different growth cycles of my personal and professional life.  (Side note, see my earlier post on [the future catching up to the past](/2026/03/08/future-catching-up-to-the-past/) for the project that converted long-defunct file formats into Markdown.)
+Fortunately for me, I'm a digital packrat who has writing samples across several different growth cycles of my personal and professional life.  (Side note, see my earlier post on [the future catching up to the past](/blog/2026/future-catching-up-to-the-past/) for the project that converted long-defunct file formats into Markdown.)
 
 ### The Project Registry
 
@@ -96,10 +96,10 @@ If the conceptual model is enough for you, stop here.  What follows is the live 
 
 ## Read More
 
-If you want the implementation details, the folder layout, the three places Claude Code reads from, and the project-registry frontmatter, that is the technical companion to this post.  [Mission Foundations: Behind the Curtain](/2026/04/27/c-mission-foundations-tech-specs/).
+If you want the implementation details, the folder layout, the three places Claude Code reads from, and the project-registry frontmatter, that is the technical companion to this post.  [Mission Foundations: Behind the Curtain](/blog/2026/c-mission-foundations-tech-specs/).
 
 ## Mission Control Series
 
-1.  [Entropic Drift](/2026/04/27/a-entropic-drift/)
+1.  [Entropic Drift](/blog/2026/a-entropic-drift/)
 2.  **Mission Foundations: Where Things Live** *(this post)*
-3.  [Mission Foundations: Behind the Curtain](/2026/04/27/c-mission-foundations-tech-specs/)
+3.  [Mission Foundations: Behind the Curtain](/blog/2026/c-mission-foundations-tech-specs/)

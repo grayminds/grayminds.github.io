@@ -94,10 +94,10 @@ Shows the full history:
 
 ## Read More
 
-The conceptual model for the room itself, the two pillars, the identity layer, and the voice contract is in the next post.  [Mission Foundations: Where Things Live](/2026/04/27/b-mission-foundations/).
+The conceptual model for the room itself, the two pillars, the identity layer, and the voice contract is in the next post.  [Mission Foundations: Where Things Live](/blog/2026/b-mission-foundations/).
 
 ## Mission Control Series
 
 1.  **Entropic Drift** *(this post)*
-2.  [Mission Foundations: Where Things Live](/2026/04/27/b-mission-foundations/)
-3.  [Mission Foundations: Behind the Curtain](/2026/04/27/c-mission-foundations-tech-specs/)
+2.  [Mission Foundations: Where Things Live](/blog/2026/b-mission-foundations/)
+3.  [Mission Foundations: Behind the Curtain](/blog/2026/c-mission-foundations-tech-specs/)

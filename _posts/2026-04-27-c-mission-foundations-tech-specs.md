@@ -130,10 +130,10 @@ Post 5 in this series covers how Mission Control's indexer parses these files in
 
 ## Read More
 
-If you want the conceptual model behind these specs, the two pillars, the identity layer, and the project registry pattern, that is the conceptual companion to this post.  [Mission Foundations: Where Things Live](/2026/04/27/b-mission-foundations/).
+If you want the conceptual model behind these specs, the two pillars, the identity layer, and the project registry pattern, that is the conceptual companion to this post.  [Mission Foundations: Where Things Live](/blog/2026/b-mission-foundations/).
 
 ## Mission Control Series
 
-1.  [Entropic Drift](/2026/04/27/a-entropic-drift/)
-2.  [Mission Foundations: Where Things Live](/2026/04/27/b-mission-foundations/)
+1.  [Entropic Drift](/blog/2026/a-entropic-drift/)
+2.  [Mission Foundations: Where Things Live](/blog/2026/b-mission-foundations/)
 3.  **Mission Foundations: Behind the Curtain** *(this post)*
