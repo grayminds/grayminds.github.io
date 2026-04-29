@@ -72,7 +72,40 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-the-future-caught-up-to-the-past",
+            },{id: "post-mission-foundations-behind-the-curtain",
+        
+          title: "Mission Foundations: Behind the Curtain",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/c-mission-foundations-tech-specs/";
+          
+        },
+      },{id: "post-mission-foundations-where-things-live",
+        
+          title: "Mission Foundations: Where Things Live",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-mission-foundations/";
+          
+        },
+      },{id: "post-entropic-drift",
+        
+          title: "Entropic Drift",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-entropic-drift/";
+          
+        },
+      },{id: "post-the-future-caught-up-to-the-past",
         
           title: "The Future Caught Up to the Past",
         
@@ -165,26 +198,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-standing-up-grayminds-com",
-          title: 'Standing Up grayminds.com',
-          description: "Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_github-site/";
-            },},{id: "projects-bbs-ansi-art-recovery",
-          title: 'BBS ANSI Art Recovery',
-          description: "Converting early-1990s TheDraw ANSI animation files into viewable animated GIFs using Claude Code.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_ansi-conversion/";
-            },},{id: "projects-legacy-document-conversion",
-          title: 'Legacy Document Conversion',
-          description: "Converting decades of documents from dead formats (PFS First Choice, Microsoft Works, WordPerfect, early Word) into searchable markdown.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_legacy-docs/";
-            },},{id: "projects-photo-archive-consolidation",
-          title: 'Photo Archive Consolidation',
-          description: "Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_photo-organization/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
