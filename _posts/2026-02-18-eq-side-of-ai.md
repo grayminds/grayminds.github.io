@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: The EQ Side of AI
 date: 2026-02-18
@@ -36,4 +36,4 @@ Organizations that combine all three will outperform those that rely on AI alone
 
 ---
 
-_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_
+*This post was created with AI assistance.  I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent.  I take full responsibility for the final product.  [Read my full AI disclosure.](/ai-disclosure/)*

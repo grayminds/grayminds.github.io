@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: BBS ANSI Art Recovery
 description: Converting early-1990s TheDraw ANSI animation files into viewable animated GIFs using Claude Code.
@@ -18,25 +18,25 @@ tags:
 
 ## Why
 
-In the pre-internet days, there were BBSes (Bulletin Board Systems). That's right - all the dial tones of the modem to dial up local numbers (also back in the days of long-distance calling charges). One of my early technical hobbies was drawing ANSI animation files for BBSes (both mine and others). These were home screens for bulletin board systems, hand-drawn character by character in TheDraw, animated frame by frame, designed to greet every caller who dialed in. I collaborated with friends who ran BBSes, and the home screen was everything.
+In the pre-internet days, there were BBSes (Bulletin Board Systems).  That's right - all the dial tones of the modem to dial up local numbers (also back in the days of long-distance calling charges).  One of my early technical hobbies was drawing ANSI animation files for BBSes (both mine and others).  These were home screens for bulletin board systems, hand-drawn character by character in TheDraw, animated frame by frame, designed to greet every caller who dialed in.  I collaborated with friends who ran BBSes, and the home screen was everything.
 
-These files survived every platform transition I put them through. Hard drives, NAS devices, directory reorganizations spanning decades. They outlasted the applications that created them and the operating systems those applications ran on. They persisted, unopenable, because I refused to throw them away.
+These files survived every platform transition I put them through.  Hard drives, NAS devices, directory reorganizations spanning decades.  They outlasted the applications that created them and the operating systems those applications ran on.  They persisted, unopenable, because I refused to throw them away.
 
 I wanted to see them again.
 
 ## How
 
-I pointed Claude Code at the files. "These are ANSI animation files from TheDraw. Convert them to animated gifs."
+I pointed Claude Code at the files.  "These are ANSI animation files from TheDraw. Convert them to animated gifs."
 
-Claude identified the TheDraw format, parsed the ANSI escape codes for color and positioning, reconstructed the frame sequences, and converted them into animated GIFs. The color palette and frame timing were preserved. No hunting for obscure conversion utilities. No uploading personal files to random websites.
+Claude identified the TheDraw format, parsed the ANSI escape codes for color and positioning, reconstructed the frame sequences, and converted them into animated GIFs.  The color palette and frame timing were preserved.  No hunting for obscure conversion utilities.  No uploading personal files to random websites.
 
 The process was direct: point at the folder, describe the goal, review the output.
 
 ## Result
 
-Screens I had not seen in over thirty years, rendered on a modern display. Old screen handles I had completely forgotten stared back at me. One was unmistakably a Douglas Adams reference. I must have been deep into _The Hitchhiker's Guide to the Galaxy_ that year. I don't remember choosing that handle. But the file does.
+Screens I had not seen in over thirty years, rendered on a modern display.  Old screen handles I had completely forgotten stared back at me.  One was unmistakably a Douglas Adams reference.  I must have been deep into *The Hitchhiker's Guide to the Galaxy* that year.  I don't remember choosing that handle.  But the file does.
 
-The part of AI that rarely gets discussed is not what it builds forward, but what it recovers from behind. These files were locked in format obsolescence for three decades. The future showed up and read them.
+The part of AI that rarely gets discussed is not what it builds forward, but what it recovers from behind.  These files were locked in format obsolescence for three decades.  The future showed up and read them.
 
 <details markdown="1">
 <summary><strong>Gallery: Recovered ANSI Art</strong></summary>
@@ -113,13 +113,13 @@ The part of AI that rarely gets discussed is not what it builds forward, but wha
 
 ### What Are TheDraw ANSI Files?
 
-TheDraw was a DOS-based ANSI art editor popular in the BBS scene from the late 1980s through the mid-1990s. It produced files containing:
+TheDraw was a DOS-based ANSI art editor popular in the BBS scene from the late 1980s through the mid-1990s.  It produced files containing:
 
 - **ANSI escape codes** for 16-color text formatting (foreground/background)
 - **CP437 character set** (the DOS extended ASCII set with box-drawing characters, shading blocks, and special symbols)
 - **Animation sequences** using cursor positioning and timed delays between frames
 
-These files were designed to be rendered by terminal emulators at specific baud rates. The animation timing was often tied to the speed of the modem connection.
+These files were designed to be rendered by terminal emulators at specific baud rates.  The animation timing was often tied to the speed of the modem connection.
 
 ### Conversion Process
 
@@ -149,7 +149,7 @@ If you have your own TheDraw or ANSI files and want to try this:
 
 1. Gather your `.ANS`, `.THD`, or `.ICE` files into a single folder
 2. Use Claude Code with access to the local filesystem
-3. Prompt: "These are ANSI art/animation files from the BBS era. Convert them to animated GIFs preserving the original colors and timing."
+3. Prompt: "These are ANSI art/animation files from the BBS era.  Convert them to animated GIFs preserving the original colors and timing."
 4. Claude will generate Python scripts using Pillow; ensure Pillow is installed (`pip install Pillow`)
 5. Review the output GIFs and adjust frame timing if the animations feel too fast or slow
 

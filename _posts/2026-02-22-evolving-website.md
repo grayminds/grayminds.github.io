@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Why I'm Building a Website in 2026 (And Why You Should Too)
 date: 2026-02-22
@@ -60,4 +60,4 @@ That's the pattern. Find a foundation someone else built. Learn from it. Extend 
 
 ---
 
-_This post was created with AI assistance. I used AI tools for drafting, code generation, and architectural problem-solving, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_
+*This post was created with AI assistance.  I used AI tools for drafting, code generation, and architectural problem-solving, and reviewed all content for accuracy and alignment with my intent.  I take full responsibility for the final product.  [Read my full AI disclosure.](/ai-disclosure/)*

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Photo Archive Consolidation
 description: Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.
@@ -9,34 +9,35 @@ project_status: in-progress
 started: 2026-03-01
 tags:
   - project
-  - photo-organization
+  - photo
+  - photo/organization
   - claude-code
   - digital-preservation
 ---
 
 ## Why
 
-Everyone has a digital closet. Mine spans 25 years of digital photography scattered across backup drives, NAS volumes, laptop migrations, and phone sync folders. The same photos exist in multiple places with different filenames. Albums from the same trip are split across three directories. Folder names range from descriptive ("2014 Vacation Outer Banks") to useless ("Camera Upload" or "New Folder (2)"). Plus there are backups of backups.
+Everyone has a digital closet.  Mine spans 25 years of digital photography scattered across backup drives, NAS volumes, laptop migrations, and phone sync folders.  The same photos exist in multiple places with different filenames.  Albums from the same trip are split across three directories.  Folder names range from descriptive ("2014 Vacation Outer Banks") to useless ("Camera Upload" or "New Folder (2)").  Plus there are backups of backups.
 
-I had been putting off this consolidation for years because the scale of the problem made it feel manual and tedious. Thousands of photos, no consistent naming, no reliable deduplication. The kind of project that sits on a to-do list permanently.
+I had been putting off this consolidation for years because the scale of the problem made it feel manual and tedious.  Thousands of photos, no consistent naming, no reliable deduplication.  The kind of project that sits on a to-do list permanently.
 
 ## How
 
-I pointed Claude Code at the problem. The approach was systematic:
+I pointed Claude Code at the problem.  The approach was systematic:
 
 1. **Discovery** -- Scan all source locations (backup drives, NAS directories, local folders) and build an inventory of every image file with its metadata
-2. **Deduplication** -- Identify duplicate files using content hashing, not just filename matching. Same photo with different names gets caught; different photos with the same name get preserved
+2. **Deduplication** -- Identify duplicate files using content hashing, not just filename matching.  Same photo with different names gets caught; different photos with the same name get preserved
 3. **Date grouping** -- Organize photos by date using EXIF metadata (date taken), falling back to file modification date when EXIF is missing
 4. **Album labeling** -- Automatically label groups based on geolocation data embedded in the photos, turning GPS coordinates into meaningful place names
 5. **Consolidation** -- Move the deduplicated, organized collection to the target location on the Synology NAS
 
-Claude Code handled the menial lifting. I pointed it in the right direction, reviewed the proposed organization, and approved the moves. This is intelligent automation: the AI does the repetitive scanning, hashing, and sorting while the human makes the judgment calls about what matters.
+Claude Code handled the menial lifting.  I pointed it in the right direction, reviewed the proposed organization, and approved the moves.  This is intelligent automation: the AI does the repetitive scanning, hashing, and sorting while the human makes the judgment calls about what matters.
 
 ## Result
 
-The consolidation is ongoing, but the pattern is established. Photos are grouped by date, labeled by location, and deduplicated across sources. What used to be a sprawl of redundant copies across multiple drives is becoming a single organized archive on the NAS.
+The consolidation is ongoing, but the pattern is established.  Photos are grouped by date, labeled by location, and deduplicated across sources.  What used to be a sprawl of redundant copies across multiple drives is becoming a single organized archive on the NAS.
 
-The unexpected benefit is rediscovery. When photos are scattered and disorganized, you stop looking at them. When they are sorted and browsable, you find things you forgot you had. Trips you haven't thought about in a decade. People in contexts you don't remember. The organization itself is a form of recovery.
+The unexpected benefit is rediscovery.  When photos are scattered and disorganized, you stop looking at them.  When they are sorted and browsable, you find things you forgot you had.  Trips you haven't thought about in a decade.  People in contexts you don't remember.  The organization itself is a form of recovery.
 
 <details markdown="1">
 <summary><strong>Technical Details</strong></summary>
@@ -88,8 +89,8 @@ If you want to tackle your own photo consolidation:
 1. Inventory all source locations first; do not start moving files until you have the full picture
 2. Use content hashing (not filenames) for deduplication; you will be surprised how many duplicates have different names
 3. EXIF metadata is your best friend for dating and locating photos; files without it will require manual sorting
-4. Work in stages: inventory, deduplicate, organize, then move. Do not combine steps
+4. Work in stages: inventory, deduplicate, organize, then move.  Do not combine steps
 5. Keep a log of every move operation for rollback if needed
-6. Prompt for Claude Code: "Scan [directory] for all image files. Build an inventory with file hash, EXIF date, GPS coordinates, and file size. Identify duplicates and propose an organization by date and location."
+6. Prompt for Claude Code: "Scan [directory] for all image files.  Build an inventory with file hash, EXIF date, GPS coordinates, and file size.  Identify duplicates and propose an organization by date and location."
 
 </details>

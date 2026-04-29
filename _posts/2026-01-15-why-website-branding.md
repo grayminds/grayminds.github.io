@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Why I'm Building a Website in 2026 (And Why You Should Too)
 date: 2026-01-15
@@ -43,4 +43,4 @@ The website is just the first deliverable. The real product is the system behind
 
 ---
 
-_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_
+*This post was created with AI assistance.  I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent.  I take full responsibility for the final product.  [Read my full AI disclosure.](/ai-disclosure/)*

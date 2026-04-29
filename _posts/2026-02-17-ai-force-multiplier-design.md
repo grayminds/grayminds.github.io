@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: AI is not a Differentiator, It is a Force Multiplier
 date: 2026-02-17
@@ -44,4 +44,9 @@ I explore that idea further in a companion post: [The EQ Side of AI](/2026/02/18
 
 ---
 
-_This post was created with AI assistance. I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent. I take full responsibility for the final product. [Read my full AI disclosure.](/ai-disclosure/)_
+*This post was created with AI assistance.  I used AI tools for drafting and editorial review, and reviewed all content for accuracy and alignment with my intent.  I take full responsibility for the final product.  [Read my full AI disclosure.](/ai-disclosure/)*
+
+## See Also
+
+- [[Claude Code for Terminal]]
+- [[Prompt Engineering Course Recommendations]]
