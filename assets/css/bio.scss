@@ -83,6 +83,11 @@ body.bio-page-body {
 }
 
 // ===== Hero card =====
+// Background is split into THREE layers, two on the element itself
+// (radial-gradient ambient + glass color) and the hex pattern moved to
+// a dedicated ::after pseudo-element.  Splitting the pattern off the
+// shorthand prevents url() from being silently dropped by any browser
+// or CDN that normalizes the multi-layer background string.
 .bio-hero {
   @extend %card-glow;
   margin: 24px 16px 12px;
@@ -92,14 +97,25 @@ body.bio-page-body {
   border-radius: 22px;
   position: relative;
   overflow: hidden;
-  background: url("/assets/img/bio/hex-pattern.svg"), radial-gradient(ellipse at 50% 0%, rgba(43, 109, 240, 0.28) 0%, transparent 65%), $card-bg;
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-size:
-    28px 49px,
-    auto,
-    auto;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(43, 109, 240, 0.28) 0%, transparent 65%),
+    $card-bg;
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+// Hex pattern as a dedicated layer.  The ?v=2 query forces any regional
+// Cloudflare or browser cache to fetch fresh, independent of the bio.css
+// cache-bust hash.
+.bio-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/img/bio/hex-pattern.svg?v=2");
+  background-repeat: repeat;
+  background-size: 28px 49px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .bio-avatar-frame {
