@@ -88,6 +88,13 @@ Not pursuing.  Canonical URL is `https://grayminds.com/bio`.  Cloudflare DNS for
 
 ---
 
+## Operations notes
+
+- **Hex pattern** lives on `.bio-hero::after`, not in the hero's main `background:` shorthand.  Splitting it off was deliberate; multi-layer shorthand was being silently dropped by some browser / CDN combinations.  The SVG URL carries `?v=2` for cache-busting.  Bump that query when the SVG content changes.
+- **Cache-busting on `bio.css`** is wired via the `bust_css_cache` Liquid filter (same one al-folio uses on `main.css`).  Future SCSS edits will get a fresh hash automatically and Cloudflare will not serve stale CSS.
+- **Cloudflare Email Address Obfuscation** should be enabled at Cloudflare → grayminds.com → Scrape Shield → Email Address Obfuscation → On.  This rewrites the `mailto:michael.gray@grayminds.com` link in the rendered HTML to a Cloudflare-encoded token at the edge.  Verify by viewing source on the live page; the literal email address should be absent.
+- **Prettier and auto-workflows.**  The `update-tocs.yml` workflow auto-commits to `main` after content edits and can leave files in a state that fails the Prettier Check.  When the Prettier Check goes red after an auto-TOC commit, run `npx prettier --write <flagged files>`, commit, push.  Two recurring offenders so far:  `CUSTOMIZE.md` and `assets/css/bio.scss`.
+
 ## Local preview
 
 ```
