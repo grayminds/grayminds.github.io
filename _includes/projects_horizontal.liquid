@@ -11,10 +11,16 @@
           <div class="card-body">
             <h3 class="card-title">{{ project.title }}</h3>
             <p class="card-text">{{ project.description }}</p>
-            <p class="card-text"><small class="text-muted">
-              {% if project.started %}{{ project.started | date: "%b %Y" }}{% endif %}
-              {% if project.completed %} – {{ project.completed | date: "%b %Y" }}{% elsif project.project_status == "in-progress" %} – present{% endif %}
-            </small></p>
+            <p class="card-text">
+              <small class="text-muted">
+                {% if project.started %}{{ project.started | date: '%b %Y' }}{% endif %}
+                {% if project.completed %}
+                  – {{ project.completed | date: '%b %Y' -}}
+                {%- elsif project.project_status == 'in-progress' %}
+                  – present
+                {%- endif %}
+              </small>
+            </p>
             <div class="row ml-1 mr-1 p-0">
               {% if project.github %}
                 <div class="github-icon">

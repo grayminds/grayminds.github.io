@@ -59,8 +59,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ '/assets/css/bio.css' | relative_url }}">
+    <!-- Styles (cache-bust hash appended so CDN does not serve stale CSS after a deploy) -->
+    <link rel="stylesheet" href="{{ '/assets/css/bio.css' | relative_url | bust_css_cache }}">
 
     <link rel="icon" href="{{ bio.profile.avatar | relative_url }}">
   </head>
