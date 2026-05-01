@@ -80,6 +80,7 @@ sections:
       - Intelligent Automation (IDP, ECM, BPM) product delivery services
       - Personal knowledge infrastructures
 
-# AI diligence footer per _identity/ai-diligence.md in the vault.
-# Values: editor-only | collaborator | none
-ai_diligence: editor-only
+# AI diligence footer is intentionally omitted on this page (Michael's
+# express decision 2026-04-30; bio paragraphs are his verbatim words).
+# See _identity/ai-diligence.md "Agent Guidance" for the carve-out rule.
+# Do NOT re-add the footer on subsequent edits unless Michael asks.

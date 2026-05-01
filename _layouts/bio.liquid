@@ -51,47 +51,17 @@
   }
   </script>
 
-  <!-- Fonts (display font swaps per variation; Inter is shared) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  {%- if page.style == 'glass' -%}
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  {%- elsif page.style == 'warm' -%}
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  {%- else -%}
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  {%- endif -%}
 
-  <!-- Styles (per-variation CSS file) -->
-  {%- assign bio_css = 'bio' -%}
-  {%- if page.style -%}{%- assign bio_css = 'bio-' | append: page.style -%}{%- endif -%}
-  <link rel="stylesheet" href="{{ '/assets/css/' | append: bio_css | append: '.css' | relative_url }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/bio.css' | relative_url }}">
 
   <link rel="icon" href="{{ bio.profile.avatar | relative_url }}">
-
-  {%- comment -%} Inline demo-nav styles only when this is one of the comparison routes. {%- endcomment -%}
-  {%- if page.demo -%}
-  <style>
-    .bio-demo-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 8px 12px; background: rgba(0,0,0,0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: rgba(255,255,255,0.7); font-family: system-ui, -apple-system, sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .bio-demo-nav a { color: rgba(255,255,255,0.85); text-decoration: none; padding: 4px 10px; margin: 0 2px; border-radius: 6px; }
-    .bio-demo-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
-    .bio-demo-nav a.is-active { background: rgba(255,255,255,0.12); color: #fff; }
-    .bio-demo-nav .sep { opacity: 0.4; margin: 0 4px; }
-    body.bio-page-body { padding-top: 44px; }
-  </style>
-  {%- endif -%}
 </head>
 <body class="bio-page-body">
-
-  {%- if page.demo -%}
-  <nav class="bio-demo-nav" aria-label="Bio design variations">
-    <span>Variation {{ page.demo_n }} of 3</span>
-    <span class="sep">|</span>
-    <a href="{{ '/bio1/' | relative_url }}"{% if page.demo_n == 1 %} class="is-active"{% endif %}>1 &middot; Cover</a>
-    <a href="{{ '/bio2/' | relative_url }}"{% if page.demo_n == 2 %} class="is-active"{% endif %}>2 &middot; Bento</a>
-    <a href="{{ '/bio3/' | relative_url }}"{% if page.demo_n == 3 %} class="is-active"{% endif %}>3 &middot; Brutal</a>
-  </nav>
-  {%- endif -%}
 
   {%- comment -%} Lucide icons inlined as SVG sprite, referenced via <use>. {%- endcomment -%}
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">

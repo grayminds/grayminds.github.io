@@ -10,18 +10,13 @@ Architectural rationale, voice contract, and iteration log live in `~/.claude/pl
 
 ```
 _data/bio.yml                              <- canonical content source
-_pages/bio.md                              <- /bio/ page (style: bento)
-_pages/bio1.md                             <- /bio1/ demo (Editorial Cover)
-_pages/bio2.md                             <- /bio2/ demo (Bento, same as canonical)
-_pages/bio3.md                             <- /bio3/ demo (Brutalist Tech)
-_layouts/bio.liquid                        <- standalone HTML, conditional CSS by page.style
+_pages/bio.md                              <- /bio/ page
+_layouts/bio.liquid                        <- standalone HTML, no al-folio chrome
 _sass/_bio.scss                            <- stub redirect note
-assets/css/bio.scss                        <- Editorial Cover SCSS (compiles to bio.css)
-assets/css/bio-bento.scss                  <- Bento SCSS (compiles to bio-bento.css)
-assets/css/bio-brutal.scss                 <- Brutalist SCSS (compiles to bio-brutal.css)
+assets/css/bio.scss                        <- the only bio stylesheet (compiles to bio.css)
 assets/img/bio/globe-bg.jpg                <- 10%-opacity body background
-assets/img/bio/wmg-revised-20241027_125531.jpg  <- avatar (lives at assets/img/, not assets/img/bio/)
-assets/img/bio/qr/grayminds-bio.svg        <- QR (vector, used inline)
+assets/img/wmg-revised-20241027_125531.jpg <- avatar
+assets/img/bio/qr/grayminds-bio.svg        <- QR (vector, used inline; rendered with filter: invert)
 assets/img/bio/qr/grayminds-bio-1024.png   <- QR (print)
 assets/img/bio/qr/grayminds-bio-256.png    <- QR (slide / on-page)
 assets/files/bio/michael-gray.vcf          <- Save Contact target (generated)
@@ -29,8 +24,6 @@ assets/pdf/michaelgray_resume.pdf          <- Resume link target
 scripts/New-VCard.ps1                      <- Regenerate the vCard
 scripts/New-BioQrCode.ps1                  <- Regenerate QR artifacts
 ```
-
-`_pages/bio1.md`, `bio2.md`, and `bio3.md` are comparison demos.  Delete them once the canonical is locked.
 
 ---
 
@@ -89,14 +82,9 @@ A Layer-3 fallback (JS-assembly on click) is in `_layouts/bio.liquid` as a comme
 
 ---
 
-## Phase 2 — `bio.grayminds.com` subdomain
+## Phase 2 — `bio.grayminds.com` subdomain (deprecated)
 
-Cloudflare DNS for the subdomain is configured.  GitHub Pages limits one custom domain per repo, so the canonical `grayminds.com/bio` cannot serve `bio.grayminds.com` from the same repo.  Two viable shapes:
-
-1.  **Separate repo `grayminds/bio`.**  New GH Pages site with its own `CNAME` file containing `bio.grayminds.com`.  Two deploy pipelines.  Recommended path.
-2.  **Cloudflare worker** on `bio.grayminds.com` proxying to `grayminds.com/bio`.  One repo, one deploy, but uptime is tied to the Cloudflare worker.
-
-Whenever Phase 2 ships, `grayminds.com/bio` becomes a 301 redirect to `bio.grayminds.com`.  Printed QR codes encoding the original URL keep working.
+Not pursuing.  Canonical URL is `https://grayminds.com/bio`.  Cloudflare DNS for the subdomain is configured but not wired through.  The `-Url` parameter on `scripts/New-BioQrCode.ps1` remains in place if the decision reverses, but no current need.
 
 ---
 
