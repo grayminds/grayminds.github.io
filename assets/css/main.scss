@@ -41,3 +41,6 @@
 // Custom page styles
 @use "about_custom";
 //@use "facets";
+
+// NOTE: bio styles compile separately via assets/css/bio.scss to keep
+// the /bio/ standalone layout free of al-folio CSS.  Do not @use "bio" here.

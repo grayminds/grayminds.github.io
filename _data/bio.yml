@@ -1,0 +1,85 @@
+# _data/bio.yml
+# Single source of truth for the /bio/ page.  Lives in this repo.  Edit,
+# commit, push.  GitHub Actions deploys.  See plans/grayminds-biosite.md
+# in ~/.claude/plans/ for the architecture notes.
+#
+# After editing email user/domain or any vCard-relevant field, regenerate
+# the contact card:
+#     pwsh ./scripts/New-VCard.ps1
+# After changing the bio URL, regenerate QR codes:
+#     pwsh ./scripts/New-BioQrCode.ps1
+
+profile:
+  name: Michael Gray
+  title: Senior Technical Product Manager
+  subtitle: Intelligent Automation | Applied AI
+  avatar: /assets/img/wmg-revised-20241027_125531.jpg
+  avatar_alt: Michael Gray
+  # Bio paragraphs render under the photo, in order.  Three short paragraphs
+  # is the target.  Skip receipts (dollar figures, percentages, clients) -
+  # those live on the resume.  Close para 3 on something specific and warm.
+  paragraphs:
+    - Michael is hands-on in the Applied AI sector at the intersection of business and technology.  He is a proponent of human-centric design using advanced tooling.
+    - As a Senior Technical Product Manager, he has focused on technology delivery from startup to global enterprise.  With a background in Consulting, he has spent the past decade in Intelligent Automation and Digital Transformation.
+    - Michael resides in Columbus Ohio where he juggles technology projects, drone operation, a not-so-green-thumb, and too many cat pictures on his phone.
+
+# Structured fields for the downloadable vCard (Save Contact button).  Page
+# rendering does not use these; only scripts/New-VCard.ps1 reads them.
+# Phone number is on his current resume header as +1 773-793-6566; uncomment
+# to include it in the contact card recruiters download.
+vcard:
+  title: Senior Technical Product Manager
+  city: Columbus
+  region: OH
+  country: US
+  phone: "+1-614-636-3969"
+
+# Credentials, max 4, rendered small caps under the title.
+credentials:
+  - PMP
+  - DASSM
+  - MS Georgia Tech
+  - BS Ohio State
+
+# Primary CTA.  One only.  This is the conference button.
+primary_action:
+  label: Save Contact
+  type: vcard
+  href: /assets/files/bio/michael-gray.vcf
+
+# Secondary actions, max 3.  Email is split user/domain so the public
+# repo does not contain a clean address.  See "Email obfuscation" in
+# ~/.claude/plans/grayminds-biosite.md for the layered defense.
+secondary_actions:
+  - label: Email
+    type: email
+    user: michael.gray
+    domain: grayminds.com
+  - label: Phone
+    type: phone
+    number: 614-636-3969
+
+# Grouped link cards.  Keep it tight; this is one screen on a phone.
+sections:
+  - heading: Online
+    links:
+      - label: Portfolio (grayminds.com)
+        href: https://grayminds.com
+      - label: GitHub Public (grayminds)
+        href: https://github.com/grayminds
+      - label: Sky Time Studio (drone)
+        href: https://skytimestudio.com
+      - label: Resume (PDF)
+        href: /assets/pdf/michaelgray_resume.pdf
+      - label: LinkedIn (in/graym)
+        href: https://linkedin.com/in/graym
+
+  - heading: Working on
+    notes:
+      - Human-centered AI solutions at Gray Minds LLC
+      - Intelligent Automation (IDP, ECM, BPM) product delivery services
+      - Personal knowledge infrastructures
+
+# AI diligence footer per _identity/ai-diligence.md in the vault.
+# Values: editor-only | collaborator | none
+ai_diligence: editor-only

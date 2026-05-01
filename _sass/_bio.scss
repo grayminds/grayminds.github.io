@@ -1,0 +1,6 @@
+// Bio page SCSS source moved to assets/css/bio.scss (entry point + source
+// in one file).  jekyll-sass-converter 3.1.0 in this repo refused to
+// resolve partials from a secondary entry point; only main.scss can pull
+// from _sass/.  Keeping this stub so the file path doesn't surprise anyone.
+//
+// See assets/css/bio.scss for the actual editorial-dark + bronze styles.

@@ -1,0 +1,444 @@
+---
+# Variation 3:  Brutalist Tech
+# Pure black, massive Inter Black name, duotone (electric-blue + black)
+# portrait, hard 90deg corners, monospace section labels, dense type-block
+# paragraphs.  No glass, no rounded corners, no soft shadows.  Confident.
+---
+
+// ===== Tokens =====
+$bg: #000;
+$bg-step: #0a0a0a;
+$text: #fff;
+$text-muted: rgba(255, 255, 255, 0.62);
+$text-faint: rgba(255, 255, 255, 0.4);
+$accent: #2b6df0;
+$accent-hover: #4a86ff;
+$rule: rgba(255, 255, 255, 0.18);
+
+$font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Consolas", "JetBrains Mono", monospace;
+
+// ===== Reset =====
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body.bio-page-body {
+  margin: 0;
+  background: $bg;
+  color: $text;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ===== Hero — duotone portrait + massive name =====
+.bio-hero {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: $bg;
+  border-bottom: 2px solid $accent;
+}
+
+// Brutal wraps the avatar in a frame; ring used by Bento is hidden.
+.bio-avatar-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 60vh, 540px);
+}
+
+.bio-avatar-ring { display: none; }
+
+.bio-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: grayscale(1) contrast(1.1) brightness(0.85);
+  clip-path: none;
+}
+
+// Blue duotone overlay
+.bio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: clamp(360px, 60vh, 540px);
+  background: $accent;
+  mix-blend-mode: lighten;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+// Black low-light overlay so the name reads
+.bio-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: clamp(360px, 60vh, 540px);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 90%);
+  pointer-events: none;
+}
+
+// Name overlaid bottom-left, massive, sans-serif Black weight
+.bio-name {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+  margin: 0;
+  font-family: $font-display;
+  font-weight: 900;
+  font-size: clamp(2.8rem, 14vw, 6rem);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+// Title block in mono caps under name (sits in the hero overlay)
+.bio-title {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 18px;
+  z-index: 2;
+  margin: 0;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
+}
+
+.bio-subtitle {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 44px;
+  z-index: 2;
+  margin: 0;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $accent;
+  line-height: 1.5;
+}
+
+// ===== Content =====
+.bio-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.bio-rule {
+  border: 0;
+  height: 2px;
+  background: $accent;
+  margin: 32px 0;
+}
+
+// ===== Bio paragraphs =====
+.bio-paragraphs { margin: 0; }
+
+.bio-paragraphs p {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: $text;
+  margin: 0 0 18px;
+}
+
+.bio-paragraphs p:last-child { margin-bottom: 0; }
+
+// ===== Credentials =====
+.bio-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $rule;
+  border-bottom: 1px solid $rule;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $text-muted;
+  font-weight: 500;
+}
+
+.bio-credentials li {
+  padding: 14px 16px 14px 0;
+  border-right: 1px solid $rule;
+  white-space: nowrap;
+}
+
+.bio-credentials li:last-child { border-right: 0; }
+.bio-credentials li + li { padding-left: 16px; }
+
+// ===== Status pill — sharp rectangle =====
+.bio-status-wrapper { text-align: left; margin: 24px 0 0; }
+
+.bio-status {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid $accent;
+  border-radius: 0;
+  background: transparent;
+  color: $accent;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.bio-status::before {
+  content: "● ";
+  color: $accent;
+}
+
+// ===== Primary CTA — hard slab =====
+.bio-cta-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 0;
+  background: $accent;
+  color: #fff;
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s linear;
+}
+
+.bio-cta-primary:hover, .bio-cta-primary:focus-visible {
+  background: $accent-hover;
+  color: #fff;
+  text-decoration: none;
+}
+
+.bio-cta-primary svg { width: 22px; height: 22px; }
+
+.bio-cta-secondary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.bio-cta-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 16px;
+  border: 1px solid $rule;
+  border-top: 0;
+  border-radius: 0;
+  background: transparent;
+  color: $text;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.15s linear, color 0.15s linear;
+}
+
+.bio-cta-secondary + .bio-cta-secondary { border-left: 0; }
+
+.bio-cta-secondary:hover, .bio-cta-secondary:focus-visible {
+  background: $accent;
+  color: #fff;
+  border-color: $accent;
+  text-decoration: none;
+}
+
+.bio-cta-secondary svg { width: 16px; height: 16px; }
+
+// ===== Sections =====
+.bio-section { margin-top: 40px; }
+
+.bio-section-heading {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin: 0 0 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $accent;
+}
+
+.bio-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bio-link-list li { border-bottom: 1px solid $rule; }
+
+.bio-link-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 4px;
+  color: $text;
+  font-family: $font-body;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.15s linear, color 0.15s linear, padding 0.15s ease;
+}
+
+.bio-link-list a:hover, .bio-link-list a:focus-visible {
+  background: $accent;
+  color: #fff;
+  padding-left: 12px;
+  text-decoration: none;
+}
+
+.bio-link-list a:hover .bio-chevron,
+.bio-link-list a:focus-visible .bio-chevron {
+  opacity: 1;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.bio-chevron {
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+  color: $text-muted;
+  transition: transform 0.15s linear, opacity 0.15s linear, color 0.15s linear;
+}
+
+.bio-note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: $font-body;
+  font-size: 1rem;
+  color: $text;
+}
+
+.bio-note-list li {
+  padding: 12px 0 12px 28px;
+  position: relative;
+  line-height: 1.5;
+  border-bottom: 1px solid $rule;
+}
+
+.bio-note-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: $font-mono;
+  font-size: 1rem;
+  color: $accent;
+  font-weight: 700;
+}
+
+// ===== QR card (Brutal demo: hard rectangle) =====
+.bio-qr {
+  margin-top: 48px;
+  text-align: center;
+  border: 2px solid $accent;
+  padding: 24px;
+}
+
+.bio-qr-frame {
+  display: inline-block;
+  position: relative;
+}
+
+.bio-qr-ring { display: none; }
+
+.bio-qr-card {
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+}
+
+.bio-qr-img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 0;
+}
+
+.bio-qr-caption {
+  margin: 14px 0 0;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+// ===== AI diligence (unused; markup removed) =====
+.bio-ai-diligence {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 2px solid $accent;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: $text-faint;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.bio-ai-diligence p { margin: 0; }
+.bio-ai-diligence a {
+  color: $accent;
+  text-decoration: underline;
+  text-decoration-color: $accent;
+  text-underline-offset: 3px;
+}
+.bio-ai-diligence a:hover, .bio-ai-diligence a:focus-visible {
+  background: $accent;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-cta-primary, .bio-cta-secondary, .bio-link-list a, .bio-chevron { transition: none; }
+}
+
+@media (max-width: 360px) {
+  .bio-hero::before, .bio-hero::after, .bio-avatar { height: clamp(320px, 56vh, 480px); }
+  .bio-content { padding: 32px 16px 48px; }
+  .bio-credentials { font-size: 0.65rem; }
+  .bio-credentials li { padding: 10px 12px 10px 0; }
+  .bio-credentials li + li { padding-left: 12px; }
+}
