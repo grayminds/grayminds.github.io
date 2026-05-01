@@ -19,11 +19,22 @@ $card-bg: rgba(255, 255, 255, 0.03);
 $card-border: rgba(255, 255, 255, 0.08);
 
 $font-display: "DM Serif Display", Georgia, serif;
-$font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif;
 
 // ===== Reset =====
-*, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
 
 body.bio-page-body {
   margin: 0;
@@ -35,7 +46,7 @@ body.bio-page-body {
   // (which knocks the globe down to a 10% reveal), the globe image, and a
   // dark base.  Hex pattern in .bio-hero remains untouched.
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(43, 109, 240, 0.20) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% -10%, rgba(43, 109, 240, 0.2) 0%, transparent 55%),
     radial-gradient(ellipse at 0% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
     linear-gradient(rgba(10, 14, 26, 0.9), rgba(6, 8, 15, 0.92)),
     url("/assets/img/bio/globe-bg.jpg") center top / cover no-repeat,
@@ -62,12 +73,12 @@ body.bio-page-body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, transparent 50%, rgba(43,109,240,0.18) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, transparent 50%, rgba(43, 109, 240, 0.18) 100%);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   pointer-events: none;
 }
 
@@ -81,12 +92,12 @@ body.bio-page-body {
   border-radius: 22px;
   position: relative;
   overflow: hidden;
-  background:
-    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z' fill='%232b6df0' fill-opacity='0.13'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 50% 0%, rgba(43, 109, 240, 0.28) 0%, transparent 65%),
-    $card-bg;
+  background: url("/assets/img/bio/hex-pattern.svg"), radial-gradient(ellipse at 50% 0%, rgba(43, 109, 240, 0.28) 0%, transparent 65%), $card-bg;
   background-repeat: repeat, no-repeat, no-repeat;
-  background-size: 28px 49px, auto, auto;
+  background-size:
+    28px 49px,
+    auto,
+    auto;
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
 }
@@ -171,7 +182,9 @@ body.bio-page-body {
   gap: 12px;
 }
 
-.bio-rule { display: none; }
+.bio-rule {
+  display: none;
+}
 
 .bio-paragraphs,
 .bio-credentials,
@@ -198,7 +211,9 @@ body.bio-page-body {
   margin: 0 0 16px;
 }
 
-.bio-paragraphs p:last-child { margin-bottom: 0; }
+.bio-paragraphs p:last-child {
+  margin-bottom: 0;
+}
 
 // ===== Credentials =====
 .bio-credentials {
@@ -218,10 +233,15 @@ body.bio-page-body {
   margin: 0;
 }
 
-.bio-credentials li { white-space: nowrap; }
+.bio-credentials li {
+  white-space: nowrap;
+}
 
 // ===== Status pill =====
-.bio-status-wrapper { text-align: center; margin: 0; }
+.bio-status-wrapper {
+  text-align: center;
+  margin: 0;
+}
 
 .bio-status {
   display: inline-flex;
@@ -250,9 +270,15 @@ body.bio-page-body {
 }
 
 @keyframes bio-pulse {
-  0%   { box-shadow: 0 0 0 0 $accent-glow; }
-  60%  { box-shadow: 0 0 0 12px rgba(43, 109, 240, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(43, 109, 240, 0); }
+  0% {
+    box-shadow: 0 0 0 0 $accent-glow;
+  }
+  60% {
+    box-shadow: 0 0 0 12px rgba(43, 109, 240, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(43, 109, 240, 0);
+  }
 }
 
 // ===== Primary CTA =====
@@ -276,10 +302,13 @@ body.bio-page-body {
   box-shadow:
     0 8px 32px rgba(43, 109, 240, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
-.bio-cta-primary:hover, .bio-cta-primary:focus-visible {
+.bio-cta-primary:hover,
+.bio-cta-primary:focus-visible {
   transform: translateY(-1px);
   color: #fff;
   text-decoration: none;
@@ -288,8 +317,13 @@ body.bio-page-body {
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
-.bio-cta-primary:active { transform: scale(0.985); }
-.bio-cta-primary svg { width: 20px; height: 20px; }
+.bio-cta-primary:active {
+  transform: scale(0.985);
+}
+.bio-cta-primary svg {
+  width: 20px;
+  height: 20px;
+}
 
 // ===== Secondary CTAs =====
 .bio-cta-secondary-row {
@@ -313,16 +347,22 @@ body.bio-page-body {
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.bio-cta-secondary:hover, .bio-cta-secondary:focus-visible {
+.bio-cta-secondary:hover,
+.bio-cta-secondary:focus-visible {
   color: $accent;
   border-color: $accent;
   text-decoration: none;
 }
 
-.bio-cta-secondary svg { width: 18px; height: 18px; }
+.bio-cta-secondary svg {
+  width: 18px;
+  height: 18px;
+}
 
 // ===== Sections =====
 .bio-section {
@@ -340,8 +380,14 @@ body.bio-page-body {
   margin: 0 0 14px;
 }
 
-.bio-link-list { list-style: none; padding: 0; margin: 0; }
-.bio-link-list li + li { border-top: 1px solid $rule; }
+.bio-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bio-link-list li + li {
+  border-top: 1px solid $rule;
+}
 
 .bio-link-list a {
   display: flex;
@@ -355,7 +401,8 @@ body.bio-page-body {
   transition: color 0.2s ease;
 }
 
-.bio-link-list a:hover, .bio-link-list a:focus-visible {
+.bio-link-list a:hover,
+.bio-link-list a:focus-visible {
   color: $accent;
   text-decoration: none;
 }
@@ -372,7 +419,10 @@ body.bio-page-body {
   height: 16px;
   opacity: 0.4;
   color: $text-muted;
-  transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .bio-note-list {
@@ -402,8 +452,12 @@ body.bio-page-body {
 }
 
 @media (min-width: 520px) {
-  .bio-section:nth-of-type(1) { grid-column: 1 / 2; }
-  .bio-section:nth-of-type(2) { grid-column: 2 / 3; }
+  .bio-section:nth-of-type(1) {
+    grid-column: 1 / 2;
+  }
+  .bio-section:nth-of-type(2) {
+    grid-column: 2 / 3;
+  }
 }
 
 // ===== QR card =====
@@ -464,14 +518,35 @@ body.bio-page-body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bio-cta-primary, .bio-cta-secondary, .bio-link-list a, .bio-chevron { transition: none; }
-  .bio-status::before { animation: none; }
-  html { scroll-behavior: auto; }
+  .bio-cta-primary,
+  .bio-cta-secondary,
+  .bio-link-list a,
+  .bio-chevron {
+    transition: none;
+  }
+  .bio-status::before {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @media (max-width: 360px) {
-  .bio-hero { margin: 16px 12px 8px; padding: 28px 20px 24px; }
-  .bio-content { padding: 0 12px 48px; gap: 10px; }
-  .bio-credentials { gap: 12px; padding: 12px 14px; }
-  .bio-section:nth-of-type(1), .bio-section:nth-of-type(2) { grid-column: 1 / -1; }
+  .bio-hero {
+    margin: 16px 12px 8px;
+    padding: 28px 20px 24px;
+  }
+  .bio-content {
+    padding: 0 12px 48px;
+    gap: 10px;
+  }
+  .bio-credentials {
+    gap: 12px;
+    padding: 12px 14px;
+  }
+  .bio-section:nth-of-type(1),
+  .bio-section:nth-of-type(2) {
+    grid-column: 1 / -1;
+  }
 }

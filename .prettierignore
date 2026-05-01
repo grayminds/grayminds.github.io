@@ -20,3 +20,7 @@ _scripts/*
 _data/citations.yml
 # Ignore jw-yearbook (Vite build output, minified)
 jw-yearbook/**
+
+# Component READMEs use two-space sentence separators per voice contract.
+# Prettier collapses them; exclude README_*.md from formatting.
+README_*.md
