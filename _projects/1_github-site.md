@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Standing Up grayminds.com
 description: Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.
@@ -58,7 +58,7 @@ The bigger result was the process itself.  Building with Claude Code was not abo
 1. Author content in Obsidian with full frontmatter (type, status, visibility, tags)
 2. Set `status: ready` when the post is ready for publication
 3. Run `Publish-JekyllContent.ps1` which:
-   - Scans siteposts/ and sitepages/ for eligible notes
+   - Scans 00_sitebase/posts, pages, and projects for eligible notes
    - Auto-promotes `status: ready` to `status: published` + `visibility: public`
    - Strips Obsidian-only frontmatter fields
    - Runs Prettier for consistent formatting
