@@ -198,6 +198,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "projects-standing-up-grayminds-com",
+          title: 'Standing Up grayminds.com',
+          description: "Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_github-site/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
