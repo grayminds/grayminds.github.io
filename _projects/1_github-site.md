@@ -50,7 +50,7 @@ The bigger result was the process itself.  Building with Claude Code was not abo
 - **Hosting:** GitHub Pages (grayminds.github.io)
 - **Domain:** grayminds.com (Cloudflare DNS)
 - **Local preview:** `bundle exec jekyll serve --drafts --livereload`
-- **Content source:** Obsidian vault (D:\brain)
+- **Content source:** Obsidian vault
 - **Sync:** Publish-JekyllContent.ps1 (PowerShell 7)
 
 ### Publish Workflow

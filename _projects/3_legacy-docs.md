@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Legacy Document Conversion
 description: Converting decades of documents from dead formats (PFS First Choice, Microsoft Works, WordPerfect, early Word) into searchable markdown.
@@ -76,7 +76,7 @@ These documents are no longer trapped in amber.  They are part of the personal e
 
 - **Execution:** Claude Code (Opus) running locally on Windows 11
 - **Language:** Python scripts generated on the fly
-- **Storage:** Obsidian vault at D:\brain, synced to Synology NAS via Synology Drive
+- **Storage:** Obsidian vault synced to network-attached storage
 - **No external services** -- All conversion happened locally; no files were uploaded anywhere
 
 ### Replication Notes

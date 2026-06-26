@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Photo Archive Consolidation
 description: Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.
@@ -45,7 +45,7 @@ The unexpected benefit is rediscovery.  When photos are scattered and disorganiz
 ### Source Locations
 
 - Local backup drives (accumulated across laptop and desktop migrations)
-- Synology DS920+ NAS ("APEX" at 10.10.10.10) -- multiple share volumes
+- Network-attached storage with multiple share volumes
 - Phone sync folders (various Android and iOS backup directories)
 - Legacy photo directories with inconsistent naming conventions
 
@@ -79,7 +79,7 @@ Photos/
 - **Execution:** Claude Code (Opus) running locally on Windows 11
 - **Language:** Python scripts generated and executed on the fly
 - **Key libraries:** Pillow (EXIF extraction), imagehash (perceptual hashing), geopy (reverse geocoding)
-- **Storage target:** Synology NAS via mapped drive
+- **Storage target:** network-attached storage via a mapped drive
 - **Scale:** Tens of thousands of images across multiple terabytes of source material
 
 ### Replication Notes

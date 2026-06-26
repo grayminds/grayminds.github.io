@@ -39,16 +39,71 @@ sections:
         highlight: true
         narrative: >
           Added late 2025 to get proper network segmentation and protection around IoT devices.
-          Setup was straightforward.  The main friction has been discovering limitations in existing
-          network hardware that the Firewalla exposes -- a sunk-cost problem, not a Firewalla problem.
-          Enabled new VLANs and significantly improved visibility into traffic across the home lab.
+          Setup was straightforward.  The main friction was discovering limitations in the
+          existing network hardware that the Firewalla exposed, particularly the Amplifi mesh
+          which had no real VLAN support.  Rearchitected the home network in 2026-05 onto a
+          four-VLAN topology (adastra trusted, work, IoT, guest) with Firewalla AP7s and
+          Omada switches.  VqLAN handles microsegmentation inside the IoT tier so the SSID
+          layout can stay simple.
         tags:
           - networking
           - security
           - firewall
           - vlan
           - iot
-        notes: Network segmentation, VLAN support, IoT isolation, and traffic monitoring.
+        notes: Four-VLAN architecture with VqLAN microsegmentation, AP7 wireless, and Omada switching.
+
+      - vendor: Firewalla
+        model: AP7 (x2)
+        url: https://firewalla.com/products/firewalla-ap7
+        date: 2026-05
+        context:
+          - home-office
+        status: active
+        proficiency: proficient
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Added two AP7s in 2026-05 to replace the Amplifi mesh.  One AP7 sits central by
+          the Firewalla; the second is at the office end of the house, linked back via MoCA.
+          Each AP7 broadcasts six SSIDs (adastra trusted, work, guest, and three IoT tiers),
+          each mapped to its own VLAN.  Combined with VqLAN microsegmentation inside the IoT
+          VLAN, this finally gives me the device-level isolation the Amplifi "IoT network"
+          only pretended to.  Setup paired cleanly with the Firewalla; the only friction was
+          learning when to use VqLAN versus Device Isolation versus Allowed Devices, which
+          is genuinely useful complexity rather than busywork.
+        tags:
+          - networking
+          - wifi
+          - access-point
+          - vlan
+          - iot
+        notes: Two units, central plus office (MoCA-linked). Six SSIDs across four VLANs with VqLAN microsegmentation.
+
+      - vendor: TP-Link
+        model: Omada ES210X-M2 (x2)
+        url: https://www.tp-link.com/us/business-networking/easy-smart-switch/es210x-m2/
+        date: 2026-05
+        context:
+          - home-office
+        status: active
+        proficiency: familiar
+        sentiment: positive
+        highlight: true
+        narrative: >
+          Two ES210X-M2 Easy Managed switches added in 2026-05 to carry tagged VLAN traffic
+          on the wired side.  One sits central by the Firewalla, one at the office end.
+          Both run 802.1Q VLAN mode with port-level tagging that lets the work laptop on
+          Omada-Office port 3 land on VLAN 20 without any client-side configuration.  Easy
+          Managed is the second-tier line:  no LACP for proper link aggregation, but VLAN
+          tagging works cleanly and that is the job.  Picking Easy Managed over the full
+          Omada SDN line was a deliberate choice to avoid running another controller
+          alongside the Firewalla.
+        tags:
+          - networking
+          - switch
+          - vlan
+        notes: Two units, central and office. Carry VLAN trunk traffic from Firewalla to AP7s.
 
       - vendor: Amplifi
         model: Alien Mesh (trio)
@@ -56,25 +111,24 @@ sections:
         date:
         context:
           - home-office
-        status: active
+        status: retired
         proficiency: proficient
-        sentiment: mixed
-        highlight: true
+        sentiment: negative
+        highlight: false
         narrative: >
-          When this came out, it solved every problem I had with Netgear routers and repeaters.
-          I was so impressed I installed a trio across two locations: a pair at home and a third
-          at my parents' place, with an outbuilding connected via MoCA and a hardwired repeater.
-          Over time my enthusiasm dropped.  Ubiquiti effectively discontinued the Amplifi line
-          to push other products, and as I upskilled on networking I discovered real limitations:
-          no proper VLAN support, and the "IoT network" feature is not truly isolated.
-          It also forces you to reuse the same Wi-Fi password across networks.
-          Would not choose it again knowing what I know now.
+          Retired 2026-05.  Replaced by Firewalla AP7s.  When the Alien first came out it
+          solved every problem I had with Netgear routers and repeaters, and I installed a
+          trio across two locations.  Over time my enthusiasm dropped.  Ubiquiti effectively
+          discontinued the Amplifi line to push other products, and as I upskilled on
+          networking I hit hard limits:  no proper VLAN support, an "IoT network" feature
+          that is not truly isolated, and forced reuse of the same Wi-Fi password across
+          networks.  The AP7 migration finally retired it.
         tags:
           - networking
           - wifi
           - mesh
           - moca
-        notes: Trio across two locations. Parents' outbuilding via MoCA and hardwired repeater. No real VLAN support.
+        notes: Retired 2026-05. Replaced by Firewalla AP7s for proper VLAN support.
 
   # ============================================================
   # HOME LAB - HARDWARE
@@ -120,7 +174,7 @@ sections:
           - nas
           - storage
           - backup
-        notes: Primary NAS (APEX). Mapped as I:\ for home directory and M:\ for media via JellyFin.
+        notes: Primary NAS for home directories, media, and backups; runs a self-hosted media server.
 
       - vendor: DJI
         model: Mini 3 Pro

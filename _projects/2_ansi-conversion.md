@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: BBS ANSI Art Recovery
 description: Converting early-1990s TheDraw ANSI animation files into viewable animated GIFs using Claude Code.
