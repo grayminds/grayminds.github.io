@@ -79,26 +79,15 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-when-the-memory-lied",
+            },{id: "post-when-the-ai-memory-lied",
         
-          title: "When the Memory Lied",
+          title: "When the (AI) Memory Lied",
         
         description: "",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2026/when-the-memory-lied/";
-          
-        },
-      },{id: "post-two-apps-and-a-sticky-note",
-        
-          title: "Two Apps and a Sticky Note",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/two-apps-sticky-note/";
           
         },
       },{id: "post-don-39-t-hang-the-test-shots",
@@ -154,6 +143,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/keeping-the-transcripts/";
+          
+        },
+      },{id: "post-two-apps-and-a-sticky-note",
+        
+          title: "Two Apps and a Sticky Note",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/two-apps-sticky-note/";
           
         },
       },{id: "post-a-sign-says-please-a-fence-says-no",
