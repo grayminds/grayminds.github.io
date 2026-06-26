@@ -38,14 +38,14 @@ Editing is inline and structured.  Edit affordances cover the panels in place (v
 
 ## The Tabletop Dashboard Series
 
-1.  [Two Apps and a Sticky Note](/2026/06/23/two-apps-sticky-note/)
-2.  [The Painting of Change](/2026/06/23/a-painting-of-change/)
-3.  [It Didn't Need a New Home, It Needed a Better Window](/2026/05/24/ttrpg-dashboard-vault-backed/)
-4.  [Players, GMs, and the Screen Between Them](/2026/06/23/b-players-gms-screen/)
+1.  [Two Apps and a Sticky Note](/blog/2026/two-apps-sticky-note/)
+2.  [The Painting of Change](/blog/2026/a-painting-of-change/)
+3.  [It Didn't Need a New Home, It Needed a Better Window](/blog/2026/ttrpg-dashboard-vault-backed/)
+4.  [Players, GMs, and the Screen Between Them](/blog/2026/b-players-gms-screen/)
 5.  **Show the Trailer, Keep the Ending** *(this post)*
-6.  [Don't Hang the Test Shots](/2026/06/23/d-media-studio/)
-7.  [A Sign Says Please.  A Fence Says No.](/2026/06/18/fence-not-a-sign/)
-8.  [When the Memory Lied](/2026/06/23/when-the-memory-lied/)
+6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
+7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
+8.  [When the Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
 

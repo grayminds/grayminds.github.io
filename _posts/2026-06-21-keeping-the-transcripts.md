@@ -42,11 +42,11 @@ Two rules sit underneath.  Raw transcripts are the system of record and are neve
 
 ## Mission Control Series
 
-1.  [Entropic Drift: Why Complex Work Needs a Mission Control](/2026/04/26/a-entropic-drift-mission-control/)
-2.  [Where Things Live: Structuring Claude Code, Obsidian, and a Voice Contract](/2026/04/26/b-where-things-live/)
-3.  [Two Repositories, One System: Why Mission Control Splits Code From Data](/2026/04/26/c-two-repositories-one-system/)
-4.  [Layer 1 and Layer 2: Truth From Disk vs Meaning From the User](/2026/04/26/d-layer1-layer2-schema/)
-5.  [From index.md to Dashboard: One Source of Truth, Two Surfaces](/2026/04/26/e-index-md-to-dashboard/)
-6.  [Sessions Without Homes: The Triage, Merge, and Archive Workbench](/2026/04/26/f-sessions-without-homes/)
-7.  [Green, Amber, Red: Logging Scheduled Jobs So They Cannot Fail Silently](/2026/04/26/g-logging-scheduled-jobs/)
+1.  [Entropic Drift: Why Complex Work Needs a Mission Control](/blog/2026/a-entropic-drift-mission-control/)
+2.  [Where Things Live: Structuring Claude Code, Obsidian, and a Voice Contract](/blog/2026/b-where-things-live/)
+3.  [Two Repositories, One System: Why Mission Control Splits Code From Data](/blog/2026/c-two-repositories-one-system/)
+4.  [Layer 1 and Layer 2: Truth From Disk vs Meaning From the User](/blog/2026/d-layer1-layer2-schema/)
+5.  [From index.md to Dashboard: One Source of Truth, Two Surfaces](/blog/2026/e-index-md-to-dashboard/)
+6.  [Sessions Without Homes: The Triage, Merge, and Archive Workbench](/blog/2026/f-sessions-without-homes/)
+7.  [Green, Amber, Red: Logging Scheduled Jobs So They Cannot Fail Silently](/blog/2026/g-logging-scheduled-jobs/)
 8.  **Keeping the Transcripts** *(this post)*

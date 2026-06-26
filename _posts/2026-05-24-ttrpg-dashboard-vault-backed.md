@@ -32,7 +32,7 @@ Layout state is the design's hinge.  Each character's arrangement is written bac
 
 What sits on top of that base, shipped across those sessions:  account-based access with per-player visibility, a GM command center (encounter builder, NPC and place dashboards, and live campaign state - Fear, spotlight, countdowns - split into prod-only files so a content deploy cannot revert the table mid-session), offline generators for dice, loot, and ingredients, one metered AI oracle generator, and a media studio that renders character art through a paid image pipeline.
 
-It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inviolable guardrails, several of them hard-blocked by a pre-commit hook because the catastrophic ones - deleting live R2 state, reverting a prod edit, burning render credits - got violated despite being written in bold.  That story is its own post:  [A Sign Says Please.  A Fence Says No.](/2026/06/18/fence-not-a-sign/)
+It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inviolable guardrails, several of them hard-blocked by a pre-commit hook because the catastrophic ones - deleting live R2 state, reverting a prod edit, burning render credits - got violated despite being written in bold.  That story is its own post:  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
 
 </details>
 
@@ -40,14 +40,14 @@ It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inv
 
 ## The Tabletop Dashboard Series
 
-1.  [Two Apps and a Sticky Note](/2026/06/23/two-apps-sticky-note/)
-2.  [The Painting of Change](/2026/06/23/a-painting-of-change/)
+1.  [Two Apps and a Sticky Note](/blog/2026/two-apps-sticky-note/)
+2.  [The Painting of Change](/blog/2026/a-painting-of-change/)
 3.  **It Didn't Need a New Home, It Needed a Better Window** *(this post)*
-4.  [Players, GMs, and the Screen Between Them](/2026/06/23/b-players-gms-screen/)
-5.  [Show the Trailer, Keep the Ending](/2026/06/23/c-teasers-without-leaks/)
-6.  [Don't Hang the Test Shots](/2026/06/23/d-media-studio/)
-7.  [A Sign Says Please.  A Fence Says No.](/2026/06/18/fence-not-a-sign/)
-8.  [When the Memory Lied](/2026/06/23/when-the-memory-lied/)
+4.  [Players, GMs, and the Screen Between Them](/blog/2026/b-players-gms-screen/)
+5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
+6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
+7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
+8.  [When the Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
 

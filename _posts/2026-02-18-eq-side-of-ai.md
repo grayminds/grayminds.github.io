@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: The EQ Side of AI
 date: 2026-02-18
@@ -12,7 +12,7 @@ tags:
   - force-multiplier
 ---
 
-In a [previous post](/2026/02/17/ai-force-multiplier-design), I argued that AI is a force multiplier, not a differentiator, and that good design determines whether AI systems actually work for people. But design alone is not sufficient. The critical element is still the human who connects other humans to interactive systems.
+In a [previous post](/blog/2026/ai-force-multiplier-design/), I argued that AI is a force multiplier, not a differentiator, and that good design determines whether AI systems actually work for people. But design alone is not sufficient. The critical element is still the human who connects other humans to interactive systems.
 
 That requires emotional intelligence.
 
