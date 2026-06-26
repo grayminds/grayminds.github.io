@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
+        },{id: "nav-featured",
+          title: "Featured",
+          description: "Labyrinthian - a vault-backed tabletop RPG dashboard, live in production.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/featured/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "Technical builds and digital archival work, powered by curiosity and Claude Code.",
@@ -72,7 +79,172 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-mission-foundations-behind-the-curtain",
+            },{id: "post-when-the-memory-lied",
+        
+          title: "When the Memory Lied",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/when-the-memory-lied/";
+          
+        },
+      },{id: "post-two-apps-and-a-sticky-note",
+        
+          title: "Two Apps and a Sticky Note",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/two-apps-sticky-note/";
+          
+        },
+      },{id: "post-don-39-t-hang-the-test-shots",
+        
+          title: "Don&#39;t Hang the Test Shots",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/d-media-studio/";
+          
+        },
+      },{id: "post-show-the-trailer-keep-the-ending",
+        
+          title: "Show the Trailer, Keep the Ending",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/c-teasers-without-leaks/";
+          
+        },
+      },{id: "post-players-gms-and-the-screen-between-them",
+        
+          title: "Players, GMs, and the Screen Between Them",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-players-gms-screen/";
+          
+        },
+      },{id: "post-the-painting-of-change",
+        
+          title: "The Painting of Change",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-painting-of-change/";
+          
+        },
+      },{id: "post-keeping-the-transcripts",
+        
+          title: "Keeping the Transcripts",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/keeping-the-transcripts/";
+          
+        },
+      },{id: "post-a-sign-says-please-a-fence-says-no",
+        
+          title: "A Sign Says Please.  A Fence Says No.",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/fence-not-a-sign/";
+          
+        },
+      },{id: "post-the-bag-you-carry-every-day",
+        
+          title: "The Bag You Carry Every Day",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/slimming-session-start-context/";
+          
+        },
+      },{id: "post-it-didn-39-t-need-a-new-home-it-needed-a-better-window",
+        
+          title: "It Didn&#39;t Need a New Home, It Needed a Better Window",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ttrpg-dashboard-vault-backed/";
+          
+        },
+      },{id: "post-let-the-assistant-do-the-voices",
+        
+          title: "Let the Assistant Do the Voices",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/tonespeak-dialect-switch/";
+          
+        },
+      },{id: "post-the-menu-that-has-no-opinions",
+        
+          title: "The Menu That Has No Opinions",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/cnc-menu-terminal-front-door/";
+          
+        },
+      },{id: "post-beyond-mission-control-khimai",
+        
+          title: "Beyond Mission Control: KHIMAI",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/f-beyond-mission-control-khimai/";
+          
+        },
+      },{id: "post-mission-foundations-operating-the-room",
+        
+          title: "Mission Foundations: Operating the Room",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/e-operating-the-room/";
+          
+        },
+      },{id: "post-mission-foundations-from-disk-to-dashboard",
+        
+          title: "Mission Foundations: From Disk to Dashboard",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/d-disk-to-dashboard/";
+          
+        },
+      },{id: "post-mission-foundations-behind-the-curtain",
         
           title: "Mission Foundations: Behind the Curtain",
         
@@ -203,6 +375,21 @@ ninja.data = [{
           description: "Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_github-site/";
+            },},{id: "projects-bbs-ansi-art-recovery",
+          title: 'BBS ANSI Art Recovery',
+          description: "Converting early-1990s TheDraw ANSI animation files into viewable animated GIFs using Claude Code.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_ansi-conversion/";
+            },},{id: "projects-legacy-document-conversion",
+          title: 'Legacy Document Conversion',
+          description: "Converting decades of documents from dead formats (PFS First Choice, Microsoft Works, WordPerfect, early Word) into searchable markdown.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_legacy-docs/";
+            },},{id: "projects-photo-archive-consolidation",
+          title: 'Photo Archive Consolidation',
+          description: "Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_photo-organization/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
