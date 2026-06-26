@@ -1,3 +1,8 @@
 plugins: ["@shopify/prettier-plugin-liquid"]
 printWidth: 150
 trailingComma: "es5"
+# "auto" keeps the check honest across platforms:  the repo is edited on Windows
+# (CRLF working tree via autocrlf) but CI checks out LF on Linux.  Without this,
+# a local prettier --check flags every file on line endings while CI passes,
+# making a local pre-push gate untrustworthy.
+endOfLine: "auto"
