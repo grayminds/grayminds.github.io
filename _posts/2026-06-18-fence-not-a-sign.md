@@ -47,7 +47,7 @@ The reason any of this is dangerous is the architecture underneath.  Production 
 5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
 6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
 7.  **A Sign Says Please.  A Fence Says No.** *(this post)*
-8.  [When the Memory Lied](/blog/2026/when-the-memory-lied/)
+8.  [When the (AI) Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
 

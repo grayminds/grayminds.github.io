@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Don't Hang the Test Shots
-date: 2026-06-23
+date: 2026-06-25
 categories:
   - ttrpg
 tags:
@@ -43,7 +43,7 @@ The file rules are canonical (`docs/image-formats.md`).  Each character has `Med
 5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
 6.  **Don't Hang the Test Shots** *(this post)*
 7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
-8.  [When the Memory Lied](/blog/2026/when-the-memory-lied/)
+8.  [When the (AI) Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show the Trailer, Keep the Ending
-date: 2026-06-23
+date: 2026-06-24
 categories:
   - ttrpg
 tags:
@@ -45,7 +45,7 @@ Editing is inline and structured.  Edit affordances cover the panels in place (v
 5.  **Show the Trailer, Keep the Ending** *(this post)*
 6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
 7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
-8.  [When the Memory Lied](/blog/2026/when-the-memory-lied/)
+8.  [When the (AI) Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
 

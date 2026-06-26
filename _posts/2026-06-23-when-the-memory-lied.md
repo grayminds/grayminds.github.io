@@ -1,7 +1,7 @@
 ---
 layout: post
-title: When the Memory Lied
-date: 2026-06-23
+title: When the (AI) Memory Lied
+date: 2026-06-26
 categories:
   - ai-workflow
 tags:
@@ -49,7 +49,7 @@ One sharp footnote on that gauge:  it had its own version of this exact bug.  It
 5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
 6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
 7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
-8.  **When the Memory Lied** *(this post)*
+8.  **When the (AI) Memory Lied** *(this post)*
 
 ---
 
