@@ -73,6 +73,14 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v6
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v6
+      - name: Install Prettier 💾
+        run: npm ci
+      - name: Prettier Check 🔎
+        # Gate the deploy on formatting.  A failure here stops the job before
+        # the Jekyll build, so a red Prettier never ships to gh-pages.
+        run: npx prettier . --check
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
