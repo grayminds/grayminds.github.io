@@ -112,11 +112,13 @@
                   {%- assign url = p.url -%}
                 {%- endif %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if is_external -%}
-                  <a class="nav-link" href="{{ url }}" target="_blank" rel="noopener noreferrer">
-                  {%- else -%}
-                  <a class="nav-link" href="{{ url | relative_url }}">
-                  {%- endif -%}
+                  <a
+                    class="nav-link"
+                    href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
+                    {%- if is_external %}
+                      target="_blank" rel="noopener noreferrer"
+                    {% endif %}
+                  >
                     {{- p.title }}
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
