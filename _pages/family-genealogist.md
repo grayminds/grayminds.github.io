@@ -1,8 +1,12 @@
 ---
 title: Family Archivist
+layout: page
+permalink: /family-genealogist/
+description:
+nav: false
 ---
 
-# Family Archivist
+## Family Archivist
 
 Genealogy research, photo preservation, and the work of keeping family history intact across generations.
 

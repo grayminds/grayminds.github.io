@@ -127,17 +127,84 @@ ul.task-list input[type="checkbox"] {
 .projects {
   a {
     text-decoration: none;
+  }
 
-    &:hover {
-      .card-title {
-        color: var(--global-theme-color);
-      }
-    }
+  // The whole card is clickable via a stretched-link on the title (this avoids
+  // nesting the card link around the GitHub link, which is invalid HTML and
+  // corrupted the DOM so the image column stopped scaling).
+  .card {
+    position: relative;
+  }
+
+  .card-title a {
+    color: inherit;
+  }
+
+  .hoverable:hover .card-title a,
+  .card-title a:hover {
+    color: var(--global-theme-color);
+  }
+
+  // Keep the GitHub link clickable above the title's stretched-link overlay.
+  .project-links {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Keep card titles from breaking mid-word in the narrow horizontal-card
+  // text column (a single long title like "Labyrinthian" was splitting).
+  .card-title {
+    font-size: 1.4rem;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
   }
 
   .card {
-    img {
+    // The responsive <figure>/<picture> wrappers default to shrink-wrapping
+    // around the image's `sizes`-driven layout width, which made cards scale
+    // inconsistently.  Force the wrappers to fill, then crop to a uniform box.
+    figure,
+    picture {
+      display: block;
       width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    img,
+    .card-img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+    }
+  }
+
+  // Horizontal cards: give the image column a fixed-aspect box and cover-fill
+  // it.  This is deterministic - it does not depend on percentage-height
+  // resolving through the flex/card chain, which scaled cards inconsistently.
+  @media (min-width: 768px) {
+    .card .row.no-gutters > div:first-child {
+      position: relative;
+      align-self: flex-start;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+    .card .row.no-gutters > div:first-child > figure {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      height: 100%;
+    }
+    .card .row.no-gutters > div:first-child picture {
+      display: block;
+      height: 100%;
+    }
+    .card .row.no-gutters > div:first-child img {
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: auto;
+      object-fit: cover !important;
     }
   }
 

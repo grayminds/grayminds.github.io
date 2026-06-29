@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Technical builds and digital archival work, powered by curiosity and Claude Code.
+description: Agentic AI and automation builds, plus technical and digital archival work, powered by curiosity and Claude Code.
 nav: true
 nav_order: 3
-display_categories: [technical, archival]
+display_categories: [AI and automation, technical, archival]
 horizontal: true
 ---
 

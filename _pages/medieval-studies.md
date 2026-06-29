@@ -1,8 +1,12 @@
 ---
 title: Medieval and Renaissance Studies
+layout: page
+permalink: /medieval-studies/
+description:
+nav: false
 ---
 
-# Medievalist
+## Medievalist
 
 Medieval studies, manuscript culture, and the history that quietly informs how I think about systems and knowledge. The importance of studying history to understand the impact of technology from stirrups to the printing press.
 

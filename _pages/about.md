@@ -21,11 +21,13 @@ latest_posts:
   enabled: true
   scrollable: true
   limit: 5
+description:
+nav: false
 ---
 
 <p class="lead-question">I have spent my career at the intersection of humans and technology, trying to answer one question: <strong>why do we keep making people conform to systems instead of building systems that work for people?</strong></p>
 
-That question has driven me across to dive-deep across multiple paths of [intelligent tutoring systems](/cognitive-systems-engineer), [theatrical combat choreography](/stage-combat-choreogaphy), and [enterprise solutions delivery](/technologist) focused on [AI and Automation](/what-i-believe). At the heart of it is leveraging technology to better enable human judgment.
+That question has driven me across to dive-deep across multiple paths of [intelligent tutoring systems](/cognitive-systems-engineer), [theatrical combat choreography](/stage-combat-choreography), and [enterprise solutions delivery](/technologist) focused on [AI and Automation](/what-i-believe). At the heart of it is leveraging technology to better enable human judgment.
 
 <span class="concept-highlight">My curiosity makes me a catalyst.</span>
 
