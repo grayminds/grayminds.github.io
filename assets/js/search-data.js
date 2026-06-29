@@ -17,15 +17,15 @@ ninja.data = [{
             window.location.href = "/blog/";
           },
         },{id: "nav-featured",
-          title: "Featured",
-          description: "Labyrinthian - a vault-backed tabletop RPG dashboard, live in production.",
+          title: "featured",
+          description: "Labyrinthian - a vault-backed tabletop RPG dashboard, live in production on Cloudflare.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/featured/";
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "Technical builds and digital archival work, powered by curiosity and Claude Code.",
+          description: "Agentic AI and automation builds, plus technical and digital archival work, powered by curiosity and Claude Code.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -79,7 +79,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-when-the-ai-memory-lied",
+            },{id: "post-errors-of-omission-and-commission",
+        
+          title: "Errors of Omission and Commission",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/errors-of-omission-and-commission/";
+          
+        },
+      },{id: "post-when-the-ai-memory-lied",
         
           title: "When the (AI) Memory Lied",
         
@@ -365,12 +376,7 @@ ninja.data = [{
             window.location.href = "/blog/2026/why-website-branding/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "projects-standing-up-grayminds-com",
+      },{id: "projects-standing-up-grayminds-com",
           title: 'Standing Up grayminds.com',
           description: "Building a personal portfolio site from scratch using al-folio, Jekyll, and Claude Code as a co-developer.",
           section: "Projects",handler: () => {
@@ -390,6 +396,21 @@ ninja.data = [{
           description: "Organizing and deduplicating 25 years of digital photos across backup drives and NAS storage using Claude Code automation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_photo-organization/";
+            },},{id: "projects-mission-control",
+          title: 'Mission Control',
+          description: "A self-hosted dashboard that gives a single view of every Claude Code project, session, plan, and memory file.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mission-control/";
+            },},{id: "projects-tonespeak",
+          title: 'Tonespeak',
+          description: "A multi-persona skill family for Claude Code that gives output a distinct voice under a strict per-dialect tone budget.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/tonespeak/";
+            },},{id: "projects-labyrinthian",
+          title: 'Labyrinthian',
+          description: "A vault-backed character and game-master dashboard for tabletop RPG sessions, running in production on Cloudflare.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/labyrinthian/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
