@@ -9,7 +9,9 @@
       <div class="{% if project.img %}col-md-6{% else %}col-md-12{% endif %}">
         <div class="card-body">
           <h3 class="card-title">
-            <a class="stretched-link" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
+            <a class="stretched-link" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+              {{- project.title -}}
+            </a>
           </h3>
           <p class="card-text">{{ project.description }}</p>
           <p class="card-text">
