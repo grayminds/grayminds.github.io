@@ -4,7 +4,7 @@
 
 - Repository path: `D:\code\projects\grayminds.github.io` (relocated 2026-05-06 from `D:\code\grayminds\grayminds.github.io`).
 - Publish pipeline: `D:\code\projects\shared\scripts\Jekyll-Publish-Content.ps1`. Use `-WhatIf` to dry-run, `-Push` to commit and push.
-- Dual-remote push: `git push origin main` writes to **both** the NAS Gitea instance (`http://10.10.10.10:3000`) and GitHub. Confirm with `git remote -v`.
+- Dual-remote push: `git push origin main` writes to **both** the private Gitea mirror and GitHub. Confirm with `git remote -v`. The Gitea URL is workstation-local git config; keep it out of this public file.
 - Voice and content rules: load from `D:\brain\_identity\voice-style.md`. Do not duplicate them here.
 
 ## Canonical sources

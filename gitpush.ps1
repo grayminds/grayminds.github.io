@@ -1,3 +1,4 @@
- #git remote set-url --add --push origin http://10.10.10.10:3000/michael/grayminds.github.io.git
+# Push-URL setup lives in local git config (confirm with `git remote -v`); the
+# private mirror URL is intentionally not recorded in this public file.
 # git remote set-url --add --push origin https://github.com/grayminds/grayminds.github.io.git
 git push gitea main
