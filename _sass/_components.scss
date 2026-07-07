@@ -183,24 +183,26 @@ ul.task-list input[type="checkbox"] {
   // Horizontal cards: give the image column a fixed-aspect box and cover-fill
   // it.  This is deterministic - it does not depend on percentage-height
   // resolving through the flex/card chain, which scaled cards inconsistently.
+  // Scoped to .col-md-6 so image-less cards (whose text column is col-md-12
+  // and first child) are not boxed to 3:2 and clipped by overflow: hidden.
   @media (min-width: 768px) {
-    .card .row.no-gutters > div:first-child {
+    .card .row.no-gutters > div.col-md-6:first-child {
       position: relative;
       align-self: flex-start;
       aspect-ratio: 3 / 2;
       overflow: hidden;
     }
-    .card .row.no-gutters > div:first-child > figure {
+    .card .row.no-gutters > div.col-md-6:first-child > figure {
       position: absolute;
       inset: 0;
       margin: 0;
       height: 100%;
     }
-    .card .row.no-gutters > div:first-child picture {
+    .card .row.no-gutters > div.col-md-6:first-child picture {
       display: block;
       height: 100%;
     }
-    .card .row.no-gutters > div:first-child img {
+    .card .row.no-gutters > div.col-md-6:first-child img {
       width: 100% !important;
       height: 100% !important;
       aspect-ratio: auto;

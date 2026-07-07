@@ -18,9 +18,9 @@
             <small class="text-muted">
               {% if project.started %}{{ project.started | date: '%b %Y' }}{% endif %}
               {% if project.completed %}
-                – {{ project.completed | date: '%b %Y' -}}
+                - {{ project.completed | date: '%b %Y' -}}
               {%- elsif project.project_status == 'in-progress' %}
-                – present
+                - present
               {%- endif %}
             </small>
           </p>
@@ -28,7 +28,13 @@
             {% if project.github %}
               <div class="github-icon">
                 <div class="icon" data-toggle="tooltip" title="Code Repository">
-                  <a href="{{ project.github }}" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github gh-icon"></i></a>
+                  <a
+                    href="{{ project.github }}"
+                    rel="external nofollow noopener noreferrer"
+                    target="_blank"
+                    aria-label="View {{ project.title }} on GitHub"
+                    ><i class="fa-brands fa-github gh-icon"></i
+                  ></a>
                 </div>
                 {% if project.github_stars %}
                   <span class="stars" data-toggle="tooltip" title="GitHub Stars">

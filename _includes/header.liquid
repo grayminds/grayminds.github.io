@@ -42,8 +42,8 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          {% for p in site.pages %}
+            {% if p.permalink == '/' %} {% assign about_title = p.title %} {% endif %}
           {% endfor %}
 
           <!-- About -->
@@ -63,7 +63,7 @@
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
-                  {% if page.title == child.title %}
+                  {% if page.url == child.permalink %}
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
@@ -88,7 +88,7 @@
                         <div class="dropdown-divider"></div>
                       {% else %}
                         <a
-                          class="dropdown-item {% if page.title == child.title %}active{% endif %}"
+                          class="dropdown-item {% if page.url == child.permalink %}active{% endif %}"
                           href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}"
                         >
                           {{- child.title -}}
@@ -106,7 +106,7 @@
                 {%- elsif p.permalink contains '://' -%}
                   {%- assign url = p.permalink -%}
                   {%- assign is_external = true -%}
-                {%- elsif p.permalink contains '/blog/' -%}
+                {%- elsif p.permalink == '/blog/' -%}
                   {%- assign url = '/blog/' -%}
                 {%- else -%}
                   {%- assign url = p.url -%}
