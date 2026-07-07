@@ -75,6 +75,8 @@ jobs:
         uses: actions/checkout@v6
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v6
+        with:
+          node-version: "22"
       - name: Install Prettier 💾
         run: npm ci
       - name: Prettier Check 🔎
@@ -101,7 +103,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          pip3 install nbconvert==7.17.1
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Copy jw-yearbook static app 📖
@@ -110,9 +112,8 @@ jobs:
             cp -r jw-yearbook _site/jw-yearbook
           fi
       - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+        # purgecss is a pinned devDependency installed by the npm ci step above.
+        run: npx purgecss -c purgecss.config.js
       - name: Mark static -- skip Pages Jekyll
         run: touch _site/.nojekyll
       - name: Deploy 🚀
