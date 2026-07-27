@@ -79,7 +79,62 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/skytimestudio/";
               },
-            },{id: "post-errors-of-omission-and-commission",
+            },{id: "post-chasing-a-20x-spawn-tax",
+        
+          title: "Chasing a 20x Spawn Tax",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-chasing-a-spawn-tax/";
+          
+        },
+      },{id: "post-the-night-the-dead-man-switch-earned-its-keep",
+        
+          title: "The Night the Dead-Man Switch Earned Its Keep",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-security-on-the-critical-path/";
+          
+        },
+      },{id: "post-wiring-the-dead-man-switch",
+        
+          title: "Wiring the Dead-Man Switch",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-dead-man-switch-wiring/";
+          
+        },
+      },{id: "post-a-dead-man-switch-for-agent-memory",
+        
+          title: "A Dead-Man Switch for Agent Memory",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-dead-man-switch-for-agent-memory/";
+          
+        },
+      },{id: "post-how-i-use-claude-code",
+        
+          title: "How I Use Claude Code",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-i-use-claude-code/";
+          
+        },
+      },{id: "post-errors-of-omission-and-commission",
         
           title: "Errors of Omission and Commission",
         
