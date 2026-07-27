@@ -9,6 +9,9 @@ tags:
   - memory
   - context
 ---
+
+<!-- Metric to fill in:  before/after total session-start bundle size in tokens.  The post already cites ~2,600 tokens saved;  the two totals would sharpen it. -->
+
 Pack a bag you carry every single day and you get ruthless about weight.
 
 The thing you might need once a year does not earn a place if it costs you on every trip.  A bag you pack once, for one trip, can hold anything;  you pay that weight once and forget it.  A bag you shoulder every morning is multiplied by every day you carry it.  The math is not about the item.  It is about how often you lift it.
@@ -27,6 +30,24 @@ The lesson I will keep is that the context loaded at startup is the most expensi
 My startup chain is a user-scope `CLAUDE.md` that imports three identity files, a vault-scope `CLAUDE.md` of project conventions, and a `MEMORY.md` index pointing into a folder of topic files.  All of it loads before the first prompt.
 
 The pass made four moves.  A dated session log left the memory index for a separate history file, with a one-line pointer left behind, since it is parsed by my dashboard but does not need to ride every session.  Every index entry was trimmed to a one-line hook, because the full content already lived in the topic files the index points at.  Two path tables in the context file were merged into one, and duplicated prose about my shell and build pipeline was deleted.  A multi-paragraph description of one of my own tools was compressed to a pointer, because that tool documents itself.  The commit touched four files, removed more lines than it added, and took roughly 2,600 tokens off every session start.
+
+To run the same audit on your own startup bundle, paste this into Claude Code:
+
+```text
+Audit my always-loaded session-start context.
+
+Requirements:
+1. Read every file injected at session start:  the user-scope CLAUDE.md and
+   each file it imports, the project CLAUDE.md, and the memory index.
+2. Estimate the token weight of each file and report a per-file total.
+3. Classify every line as needed-in-hand-every-session or drawer material
+   that a task can open on demand.
+4. Flag any fact stated in more than one file.  Duplication does not teach
+   the model anything;  it just rides every session twice.
+5. Propose moves:  what leaves the bundle, where it goes, and the one-line
+   pointer left behind.  Include a projected token saving per move.
+6. Make NO edits without my approval.  This pass is read-and-report only.
+```
 
 </details>
 

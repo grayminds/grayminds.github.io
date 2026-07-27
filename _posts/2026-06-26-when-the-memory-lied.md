@@ -11,6 +11,8 @@ tags:
   - reliability
 ---
 
+<!-- Metric to fill in:  guardrail-violation count per week before versus after the fix.  The post already carries the after-state gauge reading (10.5/24.4 KB);  the before-state violation number would complete it. -->
+
 Even an AI agent can walk into a room and forget why it's there.  Worse, it can forget and tell you nothing, because a dead smoke detector and a working one sound exactly the same.
 
 Silence.  That is the quiet horror of the thing:  the signal for "all clear" and the signal for "I died months ago" are identical, and you find out which one you have at the worst possible moment.  A detector that fails loud is an annoyance.  A detector that fails silent is a tragedy with a delay on it.
@@ -27,6 +29,8 @@ The lesson is the one I least wanted to learn.  The dangerous failure is not the
 
 A dead detector and a live one sound the same, so you do not wait to hear the alarm.  You walk over and press the test button yourself, on a schedule, because the one reading you can never take on faith is the device telling you it would tell you.
 
+Months after this fix, the same memory system failed silently a second time, in a different way, and I finally built the mechanical test button this post argues for:  [A Dead-Man Switch for Agent Memory](/blog/2026/a-dead-man-switch-for-agent-memory/).
+
 <details markdown="1">
 <summary><strong>For people who build things</strong></summary>
 
@@ -35,6 +39,29 @@ The memory is a `MEMORY.md` index, auto-loaded at session start, that points int
 The remediation was structural, then observable.  Structurally:  the "shipped / built / done" pointers moved out of `MEMORY.md` into a separate index opened on demand, every remaining entry was cut to a one-line hook, a dated session log was relocated to a history file with a pointer left behind, and duplicated prose was deleted - enough to put the index back under budget with headroom.  Observably:  a status-line gauge now prints the live index size against the cap (`mem: 10.5/24.4KB`) every render, with escalating markers as it approaches the limit, so the number can never go silent again.
 
 One sharp footnote on that gauge:  it had its own version of this exact bug.  It derived the memory path from the working directory, and in this vault - whose folder name starts with an underscore, and whose memory had been relocated into the vault itself - it silently resolved to nothing and dropped the reading entirely.  The meter built to keep memory from being silent was, for the one project that needed it most, silent.  I only caught it by looking.  Which is the whole point:  do not trust the thing that reports health;  test that it is actually reporting.
+
+To put the same guard on your own memory setup, paste this into Claude Code:
+
+```text
+Harden my always-on memory index against silent load failure.
+
+Requirements:
+1. Measure the always-loaded memory index against the harness injection
+   cap.  Get the actual limit from the harness documentation or source,
+   not from folklore;  a cap you did not know exists is exactly how this
+   fails.
+2. Move status-history and "shipped / done" pointers out of the index
+   into on-demand topic files, each with a one-line pointer left behind.
+   The always-on part must sit well under the cap with headroom.
+3. Install a status-line gauge showing the index's current/max KB on
+   every render.  It must fail LOUD:  if the memory path cannot be
+   resolved, print an error marker, never a blank.  A gauge that goes
+   silent is the same bug wearing a badge.
+4. Verify end to end:  confirm the gauge appears in the status line and
+   confirm the index loads complete at session start.  Do NOT trust the
+   assistant's report that it loaded;  check the injected context
+   yourself.
+```
 
 </details>
 

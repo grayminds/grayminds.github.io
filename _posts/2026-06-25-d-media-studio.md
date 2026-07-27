@@ -11,6 +11,8 @@ tags:
   - media
 ---
 
+<!-- Metric to fill in:  renders generated versus renders promoted (the keeper rate), or spend per kept image. -->
+
 A portrait photographer shoots a hundred frames to keep one.
 
 The contact sheet is full of almost-rights:  blinks, half-smiles, a good face with a bad hand.  None of that is failure.  It is the working material the keeper is found in.  But you do not frame the contact sheet, and you do not hand the client the blinks.  The whole craft is knowing the difference between what you keep working on and what you commit to and put on the wall.
@@ -29,6 +31,28 @@ The discipline is the photographer's, not the machine's.  Generate freely, keep 
 The studio is a full stack at `/admin/media`:  a generation wizard with hero presets, fal-backed image generation, gallery management (set-as-profile, roles, visibility, pin, reorder, delete, upload), and per-campaign galleries with folder ACL (`Media/` is party-visible, `Media/public/` is public).  Owner-capable `/api/media/*` endpoints back the lightbox controls.  All image work lives inside the campaign vault, not a separate staging tree.
 
 The file rules are canonical (`docs/image-formats.md`).  Each character has `Media/{likeness,gameplay,hero}/` plus a single `Media/Variants/` for WIP that the indexer ignores.  The format ladder is a PNG master with JPEG `display` and `thumb` derivatives - no WebP or HEIC.  Filenames use a stable `<slug>` prefix with a reserved view suffix so variants share a prefix.  Two rules guard the money:  a re-roll uses a new `-v2`/`-v3` slug so a same-slug run cannot wipe the prior PNG, sidecar, and thumb;  and every generation writes a `.prompt.md` sidecar so the prompt survives the image.  Image serving checks an absolute vault path against folder ACL - a relative path returns a misleading 403, which is its own small lesson.
+
+To wire the same discipline into your own image pipeline, paste this into Claude Code:
+
+```text
+Set up contact-sheet discipline for paid AI image generation.
+
+Requirements:
+1. Create a single variants folder for work-in-progress renders and
+   exclude it from everything the site references.  The indexer must
+   ignore it entirely - the contact sheet never hangs on the wall.
+2. Enforce stable-slug filenames.  A re-roll ALWAYS takes the next -vN
+   suffix and NEVER reuses an existing name;  a same-slug run that can
+   overwrite a prior render WILL eventually destroy a keeper you paid for.
+3. Write a prompt sidecar file beside every generation.  The recipe is
+   worth as much as the result, and it does not survive unless it is
+   saved at generation time.
+4. Gate galleries behind the campaign ACL so folder visibility, not
+   filename luck, decides who sees what.
+5. Verify by attempting an overwrite:  re-run a generation against an
+   existing slug and confirm the pipeline refuses or re-slugs.  If the
+   overwrite succeeds, the money guard does not exist.
+```
 
 </details>
 

@@ -32,6 +32,8 @@ Redaction is server-side and per-viewer.  The hot path is a projection step (`pr
 
 The honest part:  the boundary took iterations to get right.  One early audit flagged a real ACL leak (a resolved bug), alongside a couple of reported "leaks" that turned out to be misreads.  The test that matters is adversarial - sign in as a member, with that member's own GUID, and try to reach what the GM can see.  A boundary you have not attacked from the player's seat is a boundary you are only assuming holds.
 
+For the full wiring - the projection step, the ACL-gated images, and a paste-ready prompt to run the adversarial audit yourself - see [Wiring the GM Screen](/blog/2026/gm-screen-wiring/).
+
 </details>
 
 ---

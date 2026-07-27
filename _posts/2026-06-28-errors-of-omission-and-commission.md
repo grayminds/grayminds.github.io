@@ -11,6 +11,8 @@ tags:
   - self-assessment
 ---
 
+<!-- When compass-rose post c (measuring-the-skill) publishes: add a link here to /blog/2026/c-measuring-the-skill-not-the-output/ as the method behind the charts. -->
+
 When you light a stage, the spotlight is the easy decision.  You point it at the one thing the audience cannot miss, and the rest of the stage goes black.  That is the whole trick.  A spotlight is not a tool for showing.  It is a tool for hiding.
 
 I spent years around stage lighting before I spent years around automation, and the two turned out to be the same craft in different clothes.  Both come down to where you decide to put the light.

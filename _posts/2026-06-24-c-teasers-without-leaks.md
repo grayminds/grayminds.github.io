@@ -11,6 +11,8 @@ tags:
   - access-control
 ---
 
+<!-- Metric to fill in:  count of public routes and characters live on the rails, plus the checkable zero-drift claim (0 duplicate "public copy" files on disk). -->
+
 A good trailer sells the movie without spoiling it.
 
 It shows you the best frames, the faces, the one line that lands, and it stops exactly where the secret begins.  You walk out wanting the film, and you still do not know the ending.  The trailer is not a smaller, leakier version of the movie.  It is a deliberate cut, made from the same reel, that knows precisely what to withhold.
@@ -31,6 +33,28 @@ A trailer shows you the best of the film and keeps the ending in the can.  The t
 The public surfaces are real routes:  per-party `/c/` pages, per-character pages, and campaign rails on the homepage.  Rail membership is multi-rail and keyed by `campaignId`, so one character can appear on every campaign it belongs to;  the roster-portrait visibility exception is explicit, not a side effect.  Visibility is a per-object public toggle, and the public render is the same vault note projected through the redaction boundary - there is no separate "public copy" anywhere on disk.
 
 Editing is inline and structured.  Edit affordances cover the panels in place (view and edit are the same view), with structured editors for inventory, leveling, and Q&A rather than free-text blobs.  Characters can be created in-app or imported (a Demiplane importer plus a local create-character flow), and the importer seeds the same structured fields the renderer reads, so an imported sheet behaves like a hand-built one.  The load-bearing detail:  after a create or import, the set cache is invalidated so the new character actually appears.
+
+To run the same leak audit against your own public surfaces, paste this into Claude Code:
+
+```text
+Audit my site's public surfaces for leaks.
+
+Requirements:
+1. Crawl every public (unauthenticated) route:  home rails, party pages,
+   and per-character pages.  Enumerate them from the router, not from
+   memory.
+2. For each field the public render shows, trace it back to the source
+   note and verify the note carries the public flag.  A rendered field
+   with no flagged source is a leak, full stop.
+3. Search the entire content store for duplicate "public copy" files.
+   There must be zero;  a second copy WILL drift the first time someone
+   edits one and forgets the other.
+4. Flag every pass-through exception (mine is the roster portrait) and
+   confirm each one is deliberate - allowed by an explicit rule, not a
+   side effect.
+5. Report per route:  clean or leak, with the offending field and source
+   note for every leak.
+```
 
 </details>
 
