@@ -32,7 +32,7 @@ Layout state is the design's hinge.  Each character's arrangement is written bac
 
 What sits on top of that base, shipped across those sessions:  account-based access with per-player visibility, a GM command center (encounter builder, NPC and place dashboards, and live campaign state - Fear, spotlight, countdowns - split into prod-only files so a content deploy cannot revert the table mid-session), offline generators for dice, loot, and ingredients, one metered AI oracle generator, and a media studio that renders character art through a paid image pipeline.
 
-It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inviolable guardrails, several of them hard-blocked by a pre-commit hook because the catastrophic ones - deleting live R2 state, reverting a prod edit, burning render credits - got violated despite being written in bold.  That story is its own post:  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
+It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inviolable guardrails, several of them hard-blocked by a pre-commit hook because the catastrophic ones - deleting live R2 state, reverting a prod edit, burning render credits - got violated despite being written in bold.  That story is its own post:  [A Sign Says Please.  A Fence Says No.](/blog/2026/a-fence-not-a-sign/)
 
 </details>
 
@@ -46,7 +46,7 @@ It is production, not a toy, so it carries a real project `CLAUDE.md`:  nine inv
 4.  [Players, GMs, and the Screen Between Them](/blog/2026/b-players-gms-screen/)
 5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
 6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
-7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
+7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/a-fence-not-a-sign/)
 8.  [When the (AI) Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---

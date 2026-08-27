@@ -46,7 +46,7 @@ For the full wiring - the projection step, the ACL-gated images, and a paste-rea
 4.  **Players, GMs, and the Screen Between Them** *(this post)*
 5.  [Show the Trailer, Keep the Ending](/blog/2026/c-teasers-without-leaks/)
 6.  [Don't Hang the Test Shots](/blog/2026/d-media-studio/)
-7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/fence-not-a-sign/)
+7.  [A Sign Says Please.  A Fence Says No.](/blog/2026/a-fence-not-a-sign/)
 8.  [When the (AI) Memory Lied](/blog/2026/when-the-memory-lied/)
 
 ---
