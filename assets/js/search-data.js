@@ -101,6 +101,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/a-security-on-the-critical-path/";
           
         },
+      },{id: "post-panels-that-earn-their-place",
+        
+          title: "Panels That Earn Their Place",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-panels-that-earn-their-place/";
+          
+        },
       },{id: "post-wiring-the-dead-man-switch",
         
           title: "Wiring the Dead-Man Switch",
@@ -123,6 +134,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/a-dead-man-switch-for-agent-memory/";
           
         },
+      },{id: "post-from-mission-control-to-compass-rose",
+        
+          title: "From Mission Control to compass-rose",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-mission-control-to-compass-rose/";
+          
+        },
       },{id: "post-how-i-use-claude-code",
         
           title: "How I Use Claude Code",
@@ -132,6 +154,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/how-i-use-claude-code/";
+          
+        },
+      },{id: "post-the-boris-checkride-scorecard",
+        
+          title: "The Boris Checkride Scorecard",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-boris-checkride-scorecard/";
+          
+        },
+      },{id: "post-the-checkride-one-day-against-the-boris-playbook",
+        
+          title: "The Checkride: One Day Against the Boris Playbook",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-boris-playbook-checkride/";
           
         },
       },{id: "post-errors-of-omission-and-commission",
