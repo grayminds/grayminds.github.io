@@ -101,6 +101,39 @@ ninja.data = [{
             window.location.href = "/blog/2026/a-security-on-the-critical-path/";
           
         },
+      },{id: "post-wiring-the-transcript-scorer",
+        
+          title: "Wiring the Transcript Scorer",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/transcript-scorer-wiring/";
+          
+        },
+      },{id: "post-measuring-the-skill-not-the-output",
+        
+          title: "Measuring the Skill, Not the Output",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/c-measuring-the-skill-not-the-output/";
+          
+        },
+      },{id: "post-wiring-the-gm-screen",
+        
+          title: "Wiring the GM Screen",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/gm-screen-wiring/";
+          
+        },
       },{id: "post-panels-that-earn-their-place",
         
           title: "Panels That Earn Their Place",
@@ -244,6 +277,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/a-painting-of-change/";
           
         },
+      },{id: "post-wiring-the-transcript-archive",
+        
+          title: "Wiring the Transcript Archive",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-transcript-archive-wiring/";
+          
+        },
       },{id: "post-keeping-the-transcripts",
         
           title: "Keeping the Transcripts",
@@ -252,7 +296,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/keeping-the-transcripts/";
+            window.location.href = "/blog/2026/a-keeping-the-transcripts/";
           
         },
       },{id: "post-two-apps-and-a-sticky-note",
@@ -266,6 +310,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/two-apps-sticky-note/";
           
         },
+      },{id: "post-building-the-fence",
+        
+          title: "Building the Fence",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/b-building-the-fence/";
+          
+        },
       },{id: "post-a-sign-says-please-a-fence-says-no",
         
           title: "A Sign Says Please.  A Fence Says No.",
@@ -274,7 +329,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/fence-not-a-sign/";
+            window.location.href = "/blog/2026/a-fence-not-a-sign/";
           
         },
       },{id: "post-the-bag-you-carry-every-day",
