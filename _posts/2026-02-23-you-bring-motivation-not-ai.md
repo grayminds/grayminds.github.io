@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: AI Doesn't Have Motivation.  You Do.
 date: 2026-02-23

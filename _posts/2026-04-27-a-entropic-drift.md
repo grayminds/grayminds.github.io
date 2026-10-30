@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Entropic Drift
 date: 2026-04-27

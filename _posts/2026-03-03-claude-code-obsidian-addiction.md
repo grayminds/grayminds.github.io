@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Claude Code + Obsidian: The Addiction Nobody Warned Me About"
 date: 2026-03-03

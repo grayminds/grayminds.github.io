@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Mission Foundations: Behind the Curtain"
 date: 2026-04-27

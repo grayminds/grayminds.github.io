@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Why I'm Building a Website in 2026 (And Why You Should Too)
 date: 2026-02-22

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: The Future Caught Up to the Past
 date: 2026-03-08

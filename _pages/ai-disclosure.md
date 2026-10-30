@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: AI Disclosure
 permalink: /ai-disclosure/

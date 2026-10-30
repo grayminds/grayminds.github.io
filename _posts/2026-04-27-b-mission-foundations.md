@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Mission Foundations: Where Things Live"
 date: 2026-04-27
