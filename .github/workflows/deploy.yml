@@ -116,8 +116,17 @@ jobs:
         run: npx purgecss -c purgecss.config.js
       - name: Mark static -- skip Pages Jekyll
         run: touch _site/.nojekyll
+      - name: Block repo-internal files 🔒
+        # Fails the deploy if root docs or scripts leak into _site; add new ones to `exclude:` in _config.yml.
+        run: |
+          leaked=$(find _site -maxdepth 1 \( -name '*.md' -o -name '*.txt' ! -name robots.txt \) ; find _site \( -name '*.ps1' -o -name '*.sh' \))
+          if [ -n "$leaked" ]; then
+            echo "::error::Repo-internal files in _site:"; echo "$leaked"; exit 1
+          fi
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          # Explicit (v4 default): remove files from gh-pages that are no longer in _site.
+          clean: true

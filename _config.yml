@@ -199,7 +199,16 @@ exclude:
   - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
+  - README_*.md
   - readme_preview/
+  - AGENTS.md
+  - ANALYTICS.md
+  - CLAUDE.md
+  - QUICKSTART.md
+  - SEO.md
+  - TROUBLESHOOTING.md
+  - requirements.txt
+  - scripts/
   - vendor
   - jw-yearbook/
 keep_files:
