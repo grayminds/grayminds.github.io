@@ -30,3 +30,7 @@ README_*.md
 # that prettier insists on escaping.  The two overwrite each other on every
 # push, leaving prettier red.  Let the TOC bot own the file; exclude it here.
 CUSTOMIZE.md
+
+# Handoff docs (docs/next-session-prompt.md and archive) use two-space sentence
+# separators per voice contract; excluded from the site build as well.
+docs/**

@@ -119,7 +119,7 @@ jobs:
       - name: Block repo-internal files 🔒
         # Fails the deploy if root docs or scripts leak into _site; add new ones to `exclude:` in _config.yml.
         run: |
-          leaked=$(find _site -maxdepth 1 \( -name '*.md' -o -name '*.txt' ! -name robots.txt \) ; find _site \( -name '*.ps1' -o -name '*.sh' \))
+          leaked=$(find _site -maxdepth 1 \( -name '*.md' -o -name docs -o -name '*.txt' ! -name robots.txt \) ; find _site \( -name '*.ps1' -o -name '*.sh' \))
           if [ -n "$leaked" ]; then
             echo "::error::Repo-internal files in _site:"; echo "$leaked"; exit 1
           fi
